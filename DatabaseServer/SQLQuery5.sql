@@ -1,0 +1,1 @@
+﻿INSERT INTO Suffix(name) values ('test')

@@ -1,0 +1,1 @@
+﻿INSERT INTO USERCREDENTIALS(username, password) VALUES ('computer_1','790b2e116df381ea2faa3921c611ebedead00c7f4971be647da8d80dc5eae130')

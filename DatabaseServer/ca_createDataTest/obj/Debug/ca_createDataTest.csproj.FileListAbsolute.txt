@@ -1,0 +1,15 @@
+D:\GitHub bachelor\BachelorNew\CreateData\ca_createDataTest\obj\Debug\ca_createDataTest.csprojResolveAssemblyReference.cache
+D:\GitHub bachelor\BachelorNew\CreateData\ca_createDataTest\bin\Debug\Database.mdf
+D:\GitHub bachelor\BachelorNew\CreateData\ca_createDataTest\bin\Debug\Database_log.ldf
+D:\GitHub bachelor\BachelorNew\CreateData\ca_createDataTest\bin\Debug\SuffixArray.mdf
+D:\GitHub bachelor\BachelorNew\CreateData\ca_createDataTest\bin\Debug\SuffixArray_log.ldf
+D:\GitHub bachelor\BachelorNew\CreateData\ca_createDataTest\bin\Debug\ca_createDataTest.dll
+D:\GitHub bachelor\BachelorNew\CreateData\ca_createDataTest\bin\Debug\ca_createDataTest.pdb
+D:\GitHub bachelor\BachelorNew\CreateData\ca_createDataTest\bin\Debug\ba_createData.exe
+D:\GitHub bachelor\BachelorNew\CreateData\ca_createDataTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\GitHub bachelor\BachelorNew\CreateData\ca_createDataTest\bin\Debug\C5.dll
+D:\GitHub bachelor\BachelorNew\CreateData\ca_createDataTest\bin\Debug\ba_createData.pdb
+D:\GitHub bachelor\BachelorNew\CreateData\ca_createDataTest\bin\Debug\C5.pdb
+D:\GitHub bachelor\BachelorNew\CreateData\ca_createDataTest\bin\Debug\C5.xml
+D:\GitHub bachelor\BachelorNew\CreateData\ca_createDataTest\obj\Debug\ca_createDataTest.dll
+D:\GitHub bachelor\BachelorNew\CreateData\ca_createDataTest\obj\Debug\ca_createDataTest.pdb
