@@ -1,0 +1,30 @@
+\BOOKMARK [1][-]{section.1}{Abstract}{}% 1
+\BOOKMARK [1][-]{section.2}{Description}{}% 2
+\BOOKMARK [1][-]{section.3}{Preface}{}% 3
+\BOOKMARK [1][-]{section.4}{Limitations}{}% 4
+\BOOKMARK [1][-]{section.5}{Introduction}{}% 5
+\BOOKMARK [1][-]{section.6}{String Matching}{}% 6
+\BOOKMARK [2][-]{subsection.6.1}{Suffix trees}{section.6}% 7
+\BOOKMARK [2][-]{subsection.6.2}{Operations on suffix trees}{section.6}% 8
+\BOOKMARK [2][-]{subsection.6.3}{Suffix Arrays}{section.6}% 9
+\BOOKMARK [2][-]{subsection.6.4}{Suffix Trees To Suffix Arrays In Linear Time}{section.6}% 10
+\BOOKMARK [2][-]{subsection.6.5}{SAIS - Suffix Array Induced Sorting Algorithm}{section.6}% 11
+\BOOKMARK [2][-]{subsection.6.6}{SAIS - Analysis, Correctness \046 Completeness}{section.6}% 12
+\BOOKMARK [2][-]{subsection.6.7}{SAIS - Linear Time Preprocessing}{section.6}% 13
+\BOOKMARK [2][-]{subsection.6.8}{SAIS-FLS - Space requirement reduction for fixed length strings}{section.6}% 14
+\BOOKMARK [2][-]{subsection.6.9}{Burrows-Wheeler Transform}{section.6}% 15
+\BOOKMARK [2][-]{subsection.6.10}{SAIS-OPT - Optimization of the SA-IS Algorithm using Burrows-Wheeler Transform}{section.6}% 16
+\BOOKMARK [1][-]{section.7}{Malware - Malicious Software}{}% 17
+\BOOKMARK [2][-]{subsection.7.1}{Building database of known malware - MD5 encryption}{section.7}% 18
+\BOOKMARK [1][-]{section.8}{Malware Detection System - An exact string matching approach}{}% 19
+\BOOKMARK [2][-]{subsection.8.1}{Building interactive systems - Windows \(R\) Forms}{section.8}% 20
+\BOOKMARK [2][-]{subsection.8.2}{Database - RAM vs HHD}{section.8}% 21
+\BOOKMARK [2][-]{subsection.8.3}{Network \040security}{section.8}% 22
+\BOOKMARK [1][-]{section.9}{Evaluation and recommendations}{}% 23
+\BOOKMARK [1][-]{section.10}{Discussion}{}% 24
+\BOOKMARK [1][-]{section.11}{Future work}{}% 25
+\BOOKMARK [1][-]{section.12}{Conclussion}{}% 26
+\BOOKMARK [1][-]{section.13}{Literature list and references}{}% 27
+\BOOKMARK [1][-]{section.14}{Appendix}{}% 28
+\BOOKMARK [1][-]{appendix.A}{SAIS Algorithm run}{}% 29
+\BOOKMARK [1][-]{appendix.B}{SAIS Recurssive step}{}% 30
