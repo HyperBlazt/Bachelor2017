@@ -230,57 +230,22 @@ The suffix tree for the string $banana\$$, in lexicographical order, is illustra
 \newline
 To dive into the substring problem using linear preprocessing time, $O(m)$, and linear search time, $O(n)$ we follow the tradition, and starts with a naive and straightforward algorithm to building suffix trees before verturing into the linear time preprocessing approach \cite{gusfield}. 
 
-\subsection{Operations on suffix trees}
 
-Bla bla bla...
-\newline
+\subsection{Suffix Trees To Suffix Arrays In Linear Time}
 
-\textbf{Insertion \& Deletion}
-\textbf{Lowest Common Ancestor}
-
-An interesting application of suffix trees is the $lca$ (Lowest Common Ancestor) problem, that is, finding the lowest common ancestor of node $i$ and $j$ in tree $T$. 
-Lowest common ancestor was first obtained by Harel and Tarjan (1984, published online 2006 \cite{lcaWeb}) and later on simplified by Schieber and Vishkin (1988, published online in 2006 \cite{lcaWebSch})\cite{gusfield}.
-\newline
-Lowest common ancestor is an interesting application given that it is used in application as exact matching with wild cards and the $k$-mismatch problem, amongst others \cite{gusfield}. More interesting is the fact that $lca$ of leaves $i$ and $j$ identifies the longest common prefix of suffixes $i$ and $j$, which will be discussed later on.
-\newline
-By consuming linear time amount of preprocessing a suffix tree, that is a rooted tree, any two nodes can be identified and their $lca$ can be found in constant time, $O(1)$ \cite{gusfield, lca}. This paper will not dwell into the different linear time preprocessing algorithms for the $lca$ predicament, but delivers an overview and clarification of the problem by introducing a simpler but slower algorithm. (maybe linear in the appendix?).
+Firsrt, suppose we used a suffix tree as datastructure for an application that resign on a device with abundance of space, but needed it to run a smaller device where the current datastructure would be too large. Then we could convert the suffix tree to the space efficient suffix array, provided that the current operations on the suffix tree is supported by the suffix array \cite{gusfield}. 
+\\ \\
+\textbf{Deffinition}
 \begin{quote}
-\textbf{Definition}   In a rooted tree $T$ a node $u$ is an ancestor of node $v$, if $u$ is an unique path from the root to $v$ \cite{gusfield}.
+ Let an $edge(v, u)$ in $T$ be lexically less than an $edge(v, w)$ if, and only if the first character in $edge(u, v)$ is lexically less than the first character in $edge(v, w)$ \cite{gusfield}
 \end{quote}
-\begin{quote}
-\textbf{Definition}   In a rooted tree $T$, the lowest common ancestor of two node $u$ and $v$, is the deepest node in tree $T$ that is an ancestor of both $u$ and $v$ \cite{gusfield}.
-\end{quote}
-Let’s suppose for simplification that an application is allowed preprocessing time of an upper bound of $\theta (n lg n)$, which is an acceptable bound for most applications \cite{gusfield}. Then, in the preprocessing state of tree $T$, perform a deept-first traversal of tree $T$ and create a list $L$ of nodes in order as they are visited. Then locating the $lca$ of node $2$ and $8$, $lca[2,8]$, in \cref{fig:travesal}, one only have to find any occurrences of $2$ and $8$ in $L$. Then take the lowest value in interval between $L[1] = 2$ and $L[12]=8$. This value is the lowest common ancestor for node $2$ and $8$ in $T$, $lca[2,8]=1$.
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.5\textwidth]{travesal}
-    \captionsetup{width=0.8\textwidth}
-    \caption{Rooted tree - deept-first travesal with $L = [1,2,1,3,4,3,5,6,5,7,5,3,1,8,9,8,10,8,1]$}
-    \label{fig:travesal}
-\end{figure}
+\\
+As no two edges out of $v$ have labels beginning with the same character, edges out of $v$ lexical ordered. So the path from the root of $T$ following the lexically smallet edge out of each node leads to a leaf in $T$ which represents the lexically smallet suffix in $T$. Then the suffix array $SA$ of $T$ can be constructed in linear time.
+For suffix tree $T$= banana in Figure \ref{fig:suffixTree}, the lexical depth-first traversal visites the nodes 6, 5, 3, 1, 0, 4, 2 in that order \cite{gusfield}. 
+\\
+Latter, suppose that we have no datastructure constructed for our new application, but already know that a suffix tree would be too large for our new device. Then it would be easier if we could construct the suffix array without the need of a pre-constructed suffix tree, especially if we could construct it in linear time. Luckily we can, but besides of being more space effecient a more detailed description is needed.
 
-
-\textbf{Longest Common Prefix}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.4\textwidth]{suffixtree(speeling_anna)}
-    \captionsetup{width=0.8\textwidth}
-    \caption{Rooted tree - deept-first travesal with $L = [1,2,1,3,4,3,5,6,5,7,5,3,1,8,9,8,10,8,1]$}
-    \label{fig:travesal_anna}
-\end{figure}
-
-What are the usages
-
-\textbf{Predecessor $\&$ Successor Amongst Strings}
-
-1 side
-
-\textbf{Lowest Common Extension}
-
-1 side
-
-\subsection{Suffix Arrays}
+\subsection{Suffix Arrays} \label{Suffix Arrays Section}
 
 Suffix array are space efficient alternatives to suffix trees \cite{gusfield,twoeffecient}. Before Manber and Meyers in 1990 introduced the first direct suffix array construction algorithm – SACA, suffix arrays were constructed using lexicographical-order traversal of suffix trees  \cite{gusfield,twoeffecient, performancesuffix, newapproach}. Manber and Meyers made suffix trees obsolete in respect to constructing suffix arrays, and their approach is known as a doubling algorithm, where with each sorting pass, doubles the depth to which each suffix are sorted. This means that suffixes are sorted in logarithmic number of passes, providing a worst case bound of $O(n log n)$ and $O(n)$ expected, assuming linear sort, reminiscent of Radix Sort \cite{performancesuffix} and queries can be answered in $O(P + log n)$ with use of Binary Search \cite{gusfield}.
 \\
@@ -299,15 +264,7 @@ According to a survey paper, SACAs have to fulfill three important requirements:
 Although no current SACAs fulfill the requirements in an optimal way, research into faster and more space reducing SACAs continued \cite{newapproach}. Later on, in 2009, Nong et al. introduced two new linear time construction algorithms, one which outperformed most known and existing SACAs, called Suffix Array Induced Sorting SA-IS algorithm, guaranteeing asymptotic linear time and almost optimal space requirements \cite{newapproach}. 
 
 
-\subsection{Suffix Trees To Suffix Arrays In Linear Time}
-
-
-
-
-
-
-
-\subsection{SAIS - Suffix Array Induced Sorting Algorithm}
+\subsection{SAIS - Suffix Array Induced Sorting Algorithm} \label{SAIS Section}
 
 The SA-IS algorithm  is a divide and conquer and recursion algorithm, using variable-length leftmost S-type substrings and induced sorting \cite{twoeffecient}. In view of the fact that the SA-IS algorithm is unsophisticated to comprehend, implement and guarantees asymptotic linear time construction and close to optimal space,  SA-IS has been chosen as the single algorithm for the implementation of a malware detection system and the experiments which follow. 
 
@@ -461,10 +418,348 @@ It is now demonstrated how the algorithm works step by step. We now proceed to a
     \label{fig:SAIS_Sortedorder}  
 \end{figure}
 
-\subsection{SAIS - Analysis, Correctness \& Completeness}
-5-8 sider
-\subsection{SAIS - Linear Time Preprocessing}
-2 sider
+OBS! BEVISER SKAL FLETTES IND HER!!! 
+
+\subsection{Binary Search} \label{Binary Search Section}
+
+\subsection{Longest Common Prefix - \empth{LCP}} \label{LCPsection}
+
+The basic task of analysing a single genome, is to characterize and locate repeated elements of the genome. When comparring two or more genomes the task is to find similar subsequences of genomes. This makes repeat analysis to play a key role in the study, analysis and comparison of complte genome. 
+A prefix in an definition for an affix placed before a word. Suppose we have $S$=abekat, then $abe$, $ab$ and $abek$ are prefixes, since they are an affixes placed before $kat$, $ekat$ and $at$, respectively. The longest common prefix amongst two string \emph{lcp($S_0, S_1$)} is the length of the longest word both strings share, from left to right. \\
+Let $S_0$=abekat\$ and $S_1$=abe, then the longest common word is $abe$, hence lcp($S_0, S_1$)=3.
+
+\subsection{Burrows-Wheeler Transform} \label{Burrows-Wheeler Transform}
+
+The BWT - Burrow-Wheeler transform, invented by Burrow and Wheeler in 1994, also known as block sorting, is a lossless data compression algorithm and produces a permutation bwt(S) of an input string $S$, such that $S$ can be reversed from bwt(S), but is easier to compress \cite{BWT}. \\
+BWT is a very powerful tool in data compression and even simple algorithms that implement BWT have good performance and achieve a good compression ratio using relative small space. Furthermore, even more powerful BWT-based compression tools, such as Bzip and Szip are still used today \cite{BWT}.
+\\ \\
+Besides data compression, BWT have a remarkable and practical property, namely that it can build a data structure which is sort of a compressed suffix array for a input string $S$ \cite{BWT}. To fully map and understand BWT, and how it succeed to create permutation bwt(S) of an input string $S$ that is easier to compress, this paper gives a precise description of the idea behind cyclic shifts and reversible lossless data compression, before venturing into property of building a data structure resembling compressed suffix array and its importance to the topic at hand. 
+\\ \\
+BWT consist of reversible transformation of input string $S$ denoted bwt(S). This reversible transformation, bwt(S), consist of exactly the same characters as in $S$ over same alphabet $\Sigma$, but is usually easier to compress. The idea is to form a conceptual matrix $M$ whose rows consist of cyclic shifts of $S$ sorted in a left to right lexicographical order \cite{BWT}.
+\\ \\
+Let $F$ denote the first column in $M$ and let $F_i$ denote the $i$-th character of column $F$. Almost equivalent, let $L$ denote the last column in $M$ and let $L_i$ denote the $i$-th character of column $L$ \cite{BWT}.
+\\ \\
+Then the following properties of $M$ can be defined:
+\begin{itemize}
+  \item Every column of $M$ is a permutation of $S$.
+  \item For $i=2, \ldots , |2| + 1$, the character $L_i$ is followed by the character $F_i$ in $S$.
+  \item Any character $\alpha$, the $i$-th occurrence of $\alpha$ in $F$ correspond to $i$-th occurrence of $\alpha$ in $L$. 
+\end{itemize}
+
+We assume that string $S$ is concatenated with the termination symbol $\$$. We first find each rotation of $S$ and place these in a matrix $M$, which can be done by repeatedly taking the end character of $S$ and sticking it to the front of $S$, until all rotations of $S$ is exhausted, as illustrated in Figure \ref{fig:Matrix0}. Then we sort the rows in lexicopgrapical order from top to buttom as in Figure \ref{fig:Matrix1} \cite{bwtfmindex}.
+
+\begin{figure}[H]
+\[
+\begin{array}{*{11}c}
+{\color{blue} F } &  &  & & & & & & & & {\color{red} L }  \\ 
+{\color{blue} \$ } & a_0 & a_1 & a_2 & b_0 & b_1 & a_3 & a_4 & b_2 & a_5 & {\color{red} a_6 } \\
+{\color{blue} a_6 } & \$ & a_0 & a_1 & a_2 & b_0 & b_1 & a_3 & a_4 & b_2 & {\color{red} a_5 }  \\
+{\color{blue} a_5 } & a_6 & \$ & a_0 & a_1 & a_2 & b_0 & b_1 & a_3 & a_4 & {\color{red} b_2 } \\
+{\color{blue} b_2  } & a_5 & a_6 & \$ & a_0 & a_1 & a_2 & b_0 & b_1 & a_3 & {\color{red} a_4 } \\
+{\color{blue} a_4 }  & b_2 & a_5 & a_6 & \$ & a_0 & a_1 & a_2 & b_0 & b_1 & {\color{red} a_3 } \\
+{\color{blue} a_3 }  & b_4 & b_2 & a_5 & a_6 & \$ & a_0 & a_1 & a_2 & b_0 & {\color{red} b_1 } \\
+{\color{blue} b_1 }  & a_3 & b_4 & b_2 & a_5 & a_6 & \$ & a_0 & a_1 & a_2 & {\color{red} b_0 }  \\ 
+{\color{blue} b_0 }  & b_1 & a_3 & b_4 & b_2 & a_5 & a_6 & \$ & a_0 & a_1 & {\color{red} a_2 } \\
+{\color{blue} a_2 } & b_0 & b_1 & a_3 & b_4 & b_2 & a_5 & a_6 & \$ & a_0 & {\color{red} a_1 } \\
+{\color{blue} a_1 } & a_2 & b_0 & b_1 & a_3 & b_4 & b_2 & a_5 & a_6 & \$ & {\color{red} a_0 }  \\
+{\color{blue} a_0 } & a_1 & a_2 & b_0 & b_1 & a_3 & b_4 & b_2 & a_5 & a_6 & {\color{red} \$ } \\
+\end{array}
+\]
+\captionsetup{width=0.8\textwidth}
+\caption{Unsorted}
+\label{fig:Matrix0}
+\end{figure}
+
+Then bwt(aaabbaabaa\$) = aab\$baaaaba, hence the string from $L$ in $M_{sorted}$ read from top to buttom. We notice that the characters tend to stick together in coloumn $L$. This feature is more obvious with longer strings. As an example, take string $S$=''tomorrow and tomorrow and tomorrow'', where bwt(''tomorrow and tomorrow and tomorrow'')= ''wwwdd  nnoooaatttmmmrrrrrooo  \$ooo'', if we were to compress this using run length encoding ($RLE$) we would get the shortened string ''3w2d2 2n3o2a3t3m5r3o2 \$3o'', hence we would have successfully compressed the original string using bwt(S) and RLE, such that RLE(bwt(S)) shortened the string from 34 to 23 characters, which is a reduction of appoximetly 26 \% \cite{bwtfmindex}. It is easy to see how one could reverse RLE compression back to bwt(S), but it is not obvious how one would reverse bwt(S) to the original string $S$ \cite{bwtfmindex}.
+
+\begin{figure}[H]
+\[
+\begin{array}{*{11}c}
+{\color{blue} F } &  &  & & & & & & & & {\color{red} L }  \\ 
+{\color{blue} \$ } & a_0 & a_1 & a_2 & b_0 & b_1 & a_3 & a_4 & b_2 & a_5 & {\color{red} a_6 } \\
+{\color{blue} a_6 } & \$ & a_0 & a_1 & a_2 & b_0 & b_1 & a_3 & a_4 & b_2 & {\color{red} a_5 }  \\
+{\color{blue} a_5 } & a_6 & \$ & a_0 & a_1 & a_2 & b_0 & b_1 & a_3 & a_4 & {\color{red} b_2 } \\
+{\color{blue} a_0 } & a_1 & a_2 & b_0 & b_1 & a_3 & b_4 & b_2 & a_5 & a_6 & {\color{red} \$ } \\
+{\color{blue} a_3 }  & b_4 & b_2 & a_5 & a_6 & \$ & a_0 & a_1 & a_2 & b_0 & {\color{red} b_1 } \\
+{\color{blue} a_1 } & a_2 & b_0 & b_1 & a_3 & b_4 & b_2 & a_5 & a_6 & \$ & {\color{red} a_0 }  \\
+{\color{blue} a_4 }  & b_2 & a_5 & a_6 & \$ & a_0 & a_1 & a_2 & b_0 & b_1 & {\color{red} a_3 } \\
+{\color{blue} a_2 } & b_0 & b_1 & a_3 & b_4 & b_2 & a_5 & a_6 & \$ & a_0 & {\color{red} a_1 } \\
+{\color{blue} b_2  } & a_5 & a_6 & \$ & a_0 & a_1 & a_2 & b_0 & b_1 & a_3 & {\color{red} a_4 } \\
+{\color{blue} b_1 }  & a_3 & b_4 & b_2 & a_5 & a_6 & \$ & a_0 & a_1 & a_2 & {\color{red} b_0 }  \\ 
+{\color{blue} b_0 }  & b_1 & a_3 & b_4 & b_2 & a_5 & a_6 & \$ & a_0 & a_1 & {\color{red} a_2 } \\
+\end{array}
+\]
+\captionsetup{width=0.8\textwidth}
+\caption{Sorted}
+\label{fig:Matrix1}
+\end{figure}
+
+Recall that bwt(aaabbaabaa$) = aab$baaaaba and lets introduce $LF$-mapping, which provides a subscript (rank) for each character in $S$, hence each chraracter in $S$ is given a number, equal to the number of times that character accoured previously in $S$.This proceedure is called S-ranking, since we rank accordingly to $S$. Ranks are already provided in Figure  \ref{fig:Matrix1}. Notice that the first coloum $F$ and last coloum $L$ have characters that occour in the same order, which is represented by color in Figure \ref{fig:Matrix2}. This is actually not surpricing feature, since occourences of character $c$ in $S$ are sorted by its right-context in both $F$ and $L$ \cite{bwtfmindex}.
+
+\begin{figure}[H]
+\[
+\begin{array}{*{11}c}
+ F & L }  \\ 
+ \$  & {\color{red} a_6 } \\
+{\color{red} a_6 }  & {\color{red} a_5 }  \\
+{\color{red} a_5 } & {\color{blue} b_2 } \\
+{\color{red} a_0 }  &  \$ \\
+{\color{red} a_3 }  & {\color{blue} b_1 } \\
+{\color{red} a_1 } & {\color{red} a_0 }  \\
+{\color{red} a_4 }   & {\color{red} a_3 } \\
+{\color{red} a_2 } & {\color{red} a_1 } \\
+{\color{blue} b_2  }  & {\color{red} a_4 } \\
+{\color{blue} b_1 }  & {\color{blue} b_0 }  \\ 
+{\color{blue} b_0 }  & {\color{red} a_2 } \\
+\end{array}
+\]
+\captionsetup{width=0.8\textwidth}
+\caption{Characters in same order}
+\label{fig:Matrix2}
+\end{figure}
+
+Suppose we want to decompress and find the original string of $RLE$ = 2ab\$b4aba, using $bwt$. First we start with the trivial step expanding the $RLE$ compression to get bwt(aab\$baaaaba). Then we count the appearences of each character in $bwt(aab\$baaaaba)$ and place these in a coloum $F$ in matrix $M$, in lexicographical order. Put bwt(aab\$baaaaba) in a coloumn $L$ in matrix $M$ and re-rank according to the number of time each character occour in bwt($S$) for both $F$ and $L$, which we will refer to as $B$-ranking - as in Figure \ref{fig:Matrix3}.
+
+\begin{figure}[H]
+\[
+\begin{array}{*{11}c}
+ F & L }  \\ 
+ \$  & {\color{red} a_0 } \\
+{\color{red} a_0 }  & {\color{red} a_1 }  \\
+{\color{red} a_1 } & {\color{blue} b_0 } \\
+{\color{red} a_2 }  &  \$ \\
+{\color{red} a_3 }  & {\color{blue} b_1 } \\
+{\color{red} a_4 } & {\color{red} a_2 }  \\
+{\color{red} a_5 }   & {\color{red} a_3 } \\
+{\color{red} a_6 } & {\color{red} a_4 } \\
+{\color{blue} b_0  }  & {\color{red} a_5 } \\
+{\color{blue} b_1 }  & {\color{blue} b_2 }  \\ 
+{\color{blue} b_2 }  & {\color{red} a_6 } \\
+\end{array}
+\]
+\captionsetup{width=0.8\textwidth}
+\caption{$B$-ranking}
+\label{fig:Matrix3}
+\end{figure}
+
+We can now reverse bwt(aab\$baaaaba) using matrix $M$. Start at the first row of $M$, which have \$ in the first coloumn, and since rows are rotations of the original string $S$, the coloum to the right of \$, $F$, must contain the character to the left of \$ in $S$: $a_0$ in this case. Hence, we are building the original string from right to left, starting with the termination symbol \$. Now we are in the first row of $L$ containing character $a_0$, we then find $a_0$ in $F$, which mean that the next character in the original string $S$ must be to the right of this index. Continiuing this approach, we end with the string $S$=aaabbaabaa\$ which is indeed the original string, as demonstrated in Figure \ref{fig:bwt0}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{bwt0}
+    \captionsetup{width=0.8\textwidth}
+    \caption{ From F--> L to $S$}
+    \label{fig:bwt0}
+\end{figure}
+
+The FM-Index provide an opportunity for searching in compressed $bwt$ files without full decompressing, which is important for the “Big Data” era of sequencing. 
+We can search in a compressed $bwt(S)$ file using FM-index. Suppose that we want to find an occurrence of pattern $P$=aab in $bwt(S)$=bc\$ababaaa, so we build a FM-index, as illustrated in Figure \?.  We search $P$ from right to left, and find all occurrences of $b$ in $F$. Luckily these are grouped together as part of the design and can be found in index 6 through 8 in $F$. Next we look at index 6 through 8 in $L$, and find any characters $c=a$, since $b$ is preceded by $a$ in $P$. Index 7 and 8 in $T$ both have $a$’s, so we look at the ranks of these, and locate the same characters in $F$ with these ranks, which is in index 3 and 4.  Then we find occurrences of $a$ at index 3 and 4 in $L$, since $a$ is preceded by $a$ in $P$. $P$ is now exhausted, and we can therefore confirm that there is an occurrence of $P$=aab in $bwt(S)$=bc\$ababaaa.  This searching approach find the number of all occurrences of $P$ in $bwt(S)$, but it does not tell us where in the text these occur. 
+FM-index using bwt is a sort of a suffix array, but is easier to compress. 
+
+
+\subsection{Application \& Operation}
+
+We have seen two static datastructures, here the suffix tree and the space efficient suffix array, both which can be constructed in linear time complexity and searched in $O$(n) and $O$(n log m), respectively. Now we tend to the question regarding applications and operation, here if suffix trees and suffix arrays can be used in the same applications and supports equal operations. 
+
+The suffix tree is undouptly one of the most important datastructures in string processing and comparative genomics and once constructed, can efficiently solve a myriad of string processing problems, as demonstrated by Gusfield with almost 70 pages devoted to applications on suffix tress \cite{gusfield, enchancedsuffix}. The application demonstrated by Gusfield can be classified into three kinds of traversals \cite{enchancedsuffix}:
+\begin{itemize}  
+\item a buttom-up traversal of the complete suffix tree 
+\item a top-down traversal of a subtree of the suffix tree 
+\item a traversal of the suffix tree using suffix links 
+\end{itemize}
+Figure \ref{fig:traversalenchanced} shows some of the application discussed in Gusfield, with their traversal kind. Although suffix trees are asymptotically linear and plays a huge role in datstructure algorithmics, they are not as widespread in todays software application as expected. There are a few reasons for that. Space consumption of suffix tree are large and act as a bottleneck in large scale applications, since they require 20 bytes per input character. Moreover, it suffers from poor locality of memory references, which causes significant effeciency loss on cached processor architectures and makes it difficult to store in secondary memory \cite{enchancedsuffix}. In several geonem analysis and geonem comparison applications the above problems have been identified for suffix trees. But as seen, a more space effecient datastructure exist, hence the suffix array which only consumes 4$n$ bytes per input character\cite{enchancedsuffix}.   
+ 
+Mohamed Ibrahim Abouelhoda \emph{et al.} \cite{enchancedsuffix} show that \emph{every} algorithm that uses suffix trees as data structure, can systematically be replaced with an enchanced version of a suffix array (enchanced suffix arrays) and furthermore, solve the same problems in same time complexity. Enchanced suffix array is a datastructure consisting of the suffix array, and some other information or additional tables. Futhermore, enchanced suffix arrays are fast and easy to implement \cite{enchancedsuffix}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{traversalenchanced}
+    \captionsetup{width=0.8\textwidth}
+    \caption{Application on suffix trees and their traversal kind \cite{gusfield, enchancedsuffix}.}
+    \label{fig:traversalenchanced}
+\end{figure}
+
+At this time it is now clear how every algorithm using a sufix tree, can be systematically replaced by an algorithm based on suffix arrays \cite{enchancedsuffix}. So we look at how enchanced suffix arrays conquer the three kinds of travesals which were classified earlier and whos applications we see in Figure \ref{fig:traversalenchanced}.
+\\ \\
+\textbf{Buttom-up traversal}
+\\ \\
+We will first look at problems that are usually solved with buttom-up traversal, and show these can be solved with enchanced suffix arrays, using maximal repeated pairs and Zip-Lempel decomposition of a string, as examples \cite{enchancedsuffix}.
+\\
+Maximal repeated pairs plays an important role in genome analysis, and the algorithm presented by Gusfield was implemented in the \emph{REPuter}-program \cite{gusfield, enchancedsuffix}. \emph{REPuter}-program uses maximal repeated pairs to find approximate repeats in O($\|\Sigma\| n + z$) time, where $z$ is the number of maximal repeated pairs and is based on space effecient suffix trees \cite{enchancedsuffix}. Repetitative structures are seen in the field of biology (but not limited to), where genetic mapping requires the identification of certain markers in a DNA that is variable between individuals, called tandem repeats. What varies, is the number of times a substring repeats in an array, refered to as \emph{variable number of tandem repeats} (VNTR) \cite{gusfield}. The VNTR markers are used during the genetic level to search for specific defective genes or used in forensic DNA fingerprinting, since a small set of VNTR can uniquely charactirize an individual in a population \cite{gusfield}. 
+
+\begin{quote}
+\textbf{Definition} \\
+A maximal pair in a string $S$ is identical sbstring pairs $\alpha$ and $\beta$ such that the character at the immidiate left (right) of $\alpha$ is different from the character to its immidiate left (right) of $\beta$. So extending $\alpha$ or $\beta$ in any direction would destroy the equality of both strings \cite{gusfield}. 
+\end{quote}
+
+\begin{quote}
+\textbf{Definition} \\
+A maximal pair (or maximal repeated pairs) is given by the triple ($p_1, p_2, n'$), where $p_1$ and $p_2$ is starting positions for two substrings and $n'$ is their length. We define $R(S)$ as the set of all triples of maximal pairs in $S$ \cite{gusfield}.
+\end{quote}
+
+Given string $S$ = $xabcyiizabcqabcyrxar$, there are three occurrences of the substring $abc$. The first and third occurrences of $abc$ do not form a maximal pair, but the first and second form the pair (2, 10, 3), and the second and third forms the pair (10, 14, 3). Note that the definition allow maximal pairs to overlap each other, so to model that case we assume that $S$ has a symbol attacted to the start and end that exists nowhere else in $S$ \cite{gusfield}.
+
+
+\begin{quote}
+\textbf{Definition} \\
+A maximal repeat $\alpha$ is defined as a substring of $S$ that occours in a maximal pair in $S$, hence $\alpha$ is a maximal repeat in $S$ is there is a triple ($p_1, p_2, |\alpha|$) $ \in R(S)$  and $\alpha$ occurs in $S$ at startposition $p_1$ and $p_2$. We define $R'(S)$ as maximal repeats in $S$ \cite{gusfield}.
+\end{quote}
+
+In the given string $S$ = $xabcyiizabcqabcyrxar$, both $abc$ and $abcy$ are maximal repeats. Gusfield presents a algorithm using suffix trees, that finds all maximal pairs in O($n$) time for a string of length $n$ and we presented the definition for such pairs \cite{gusfield}.
+\\
+To compute maximal pairs, the implementation presented by Mohamed Ibrahim Abouelhoda \emph{et al.} \cite{enchancedsuffix} requires three tables: \emph{suftab}, \emph{lcptab} and \emph{bwttab}. The \emph{bwttab} contains the Burrows and Wheeler transformation (Section \ref{Burrows-Wheeler Transform}),  \emph{lcptab} contains the  longest common prefix (Section \ref{LCPsection}, though here it is a tree representation), \emph{suftab} is the suffix array (Section \ref{Suffix Arrays Section} and \ref{SAIS Section})\cite{enchancedsuffix}. These tables are accessed in sequencial order, which leads to an improved cache coherence and reducing running time, such that maximal repeated pairs can be computed in O($|\Sigma|n + z$)  time \cite{enchancedsuffix}. Mohamed Ibrahim Abouelhoda \emph{et al.} \cite{enchancedsuffix} and Kasai \emph{et al.} \cite{Kasai} proved that it is posible to compute maximal repeated pairs with suffix arrays and some additional information. We will not dwell into the algorithm for computing maximal repeated pairs, we use this to emphecies that suffix arrays can be used in the same applications which usauly solve problems with buttom-up traversal on suffix trees. Although as an example, we will show how to compute the Ziv-Lempel decomposition using suffix arrays, which is a lossless compression algorithm \cite{LempelZiv}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{LempelWrong}
+    \captionsetup{width=0.8
+    \textwidth}
+    \caption{}
+    \label{fig:LempelWrong}
+\end{figure}
+
+We follow the example conducted by Mohamed Ibrahim Abouelhoda \emph{et al.} doing a Ziv-Lempel decomposition of the string $S$=acaaacatat\$, but with a minor correction. Mohamed Ibrahim Abouelhoda \emph{et al.} claim that there exist a prefix of $i$=3 of $S$ where $l_i$=2 is the longest prefix of S[$i \ldots n$] that is also a substring of $S$ starting at some position $j < i$, hence S[$0 \ldots i-1$]. So S[$3 \ldots n$] = aacatat\$ and S[$0 \ldots$ 2]= aca, which must mean that the longest prefix of S[$3 \ldots n$] which is also a substring of [$0 \ldots$ 2] have to be $a$, with a length of 1, hence $l_i$=1 and $s_i$=0 and not $l_i$=2 and $s_i$=2 as claimed. This correction should yield the Ziv-Lempel decomposition in Figure \ref{fig:Lempeltrue} \cite{enchancedsuffix}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{Lempeltrue}
+    \captionsetup{width=0.8
+    \textwidth}
+    \caption{Ziv–Lempel decomposition of $S$=acaaacatat \cite{enchancedsuffix}.}
+    \label{fig:Lempeltrue}
+\end{figure}
+
+An interesting application of suffix trees is the $lca$ (Lowest Common Ancestor) problem, that is, finding the lowest common ancestor of node $i$ and $j$ in tree $T$. 
+Lowest common ancestor was first obtained by Harel and Tarjan (1984, published online 2006 \cite{lcaWeb}) and later on simplified by Schieber and Vishkin (1988, published online in 2006 \cite{lcaWebSch})\cite{gusfield}.
+\newline
+Lowest common ancestor is an interesting application given that it is used in application as exact matching with wild cards and the $k$-mismatch problem, amongst others \cite{gusfield}. More interesting is the fact that $lca$ of leaves $i$ and $j$ identifies the longest common prefix of suffixes $i$ and $j$, which will be discussed later on.
+\newline
+By consuming linear time amount of preprocessing a suffix tree, that is a rooted tree, any two nodes can be identified and their $lca$ can be found in constant time, $O(1)$ \cite{gusfield, lca}. This paper will not dwell into the different linear time preprocessing algorithms for the $lca$ predicament, but delivers an overview and clarification of the problem by introducing a simpler but slower algorithm. (maybe linear in the appendix?).
+\begin{quote}
+\textbf{Definition}   In a rooted tree $T$ a node $u$ is an ancestor of node $v$, if $u$ is an unique path from the root to $v$ \cite{gusfield}.
+\end{quote}
+\begin{quote}
+\textbf{Definition}   In a rooted tree $T$, the lowest common ancestor of two node $u$ and $v$, is the deepest node in tree $T$ that is an ancestor of both $u$ and $v$ \cite{gusfield}.
+\end{quote}
+Let’s suppose for simplification that an application is allowed preprocessing time of an upper bound of $\theta (n lg n)$, which is an acceptable bound for most applications \cite{gusfield}. Then, in the preprocessing state of tree $T$, perform a deept-first traversal of tree $T$ and create a list $L$ of nodes in order as they are visited. Then locating the $lca$ of node $2$ and $8$, $lca[2,8]$, in \cref{fig:travesal}, one only have to find any occurrences of $2$ and $8$ in $L$. Then take the lowest value in interval between $L[1] = 2$ and $L[12]=8$. This value is the lowest common ancestor for node $2$ and $8$ in $T$, $lca[2,8]=1$.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{travesal}
+    \captionsetup{width=0.8\textwidth}
+    \caption{Rooted tree - deept-first travesal with $L = [1,2,1,3,4,3,5,6,5,7,5,3,1,8,9,8,10,8,1]$}
+    \label{fig:travesal}
+\end{figure}
+
+Ibrahim Abouelhoda \emph{et al.} did an experiment with two different programs computing maximal repeated pairs, using different files (listed here \ref{FILES})\cite{enchancedsuffix}. \emph{REPuter} is based on suffix tree and \emph{esarep} is based on enchanced suffix arrays \cite{enchancedsuffix}. The result is displayed in Figure \ref{fig:ButtomUp}.
+The program \emph{esarep} used almost half of the space required for \emph{REPuter} and in this case 2-3 times faster and in 4-5 times faster. This comparison emphzise the advantages of enchanced suffix arrays over suffix trees \cite{enchancedsuffix}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{ButtomUp}
+    \captionsetup{width=0.8\textwidth}
+    \caption{Table for computing maximal repeated pairs and supermaximal repeats. Running times are in seconds and space requirements are in megabytes. The number of repeats of length $\geq$ l is displayed in column titled \emph{\#reps}. Space requirement is independant of $l$ \cite{enchancedsuffix}.}
+    \label{fig:ButtomUp}
+\end{figure}
+
+\\ \\
+Top-down traversals
+\\ \\
+Exact string matching is usualy computed in a top-down approach when using suffix trees as datastructure as illustrated in Figure \ref{fig:traversalenchanced}.
+The starting positions of $P$ in $T$ are is displayed on every leaf in the subtree below the point of the last match, demonstrated in Figure \ref{fig:ExactMatching}. We match the characters of $P$ down the unique path in $T$ until $P$ is exhausted or a character in $P$ can not be matched. So if $P$ is fully matched from the root along some path in $T$, we can find all occurrences of pattern $P$ in $T$ by buttom-up travesing the subtree below the end of the matching path and note the leaf indexs encountered. We can do this because every internal node has at least two children, so the number of leaves is proportional to the number of traversed edges \cite{gusfield}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.2\textwidth]{ExactMatching}
+    \captionsetup{width=0.8
+    \textwidth}
+    \caption{Suffix tree $T$ for $S$=awyawxawzz, where there are three occurrences of the pattern $P$=aw in $T$, with their positions accordingly \cite{gusfield}.}
+    \label{fig:ExactMatching}
+\end{figure}
+
+Another application exploiting the top-down approach is the exact set matching, where the problem consist of locating all occurrences from a set of patterns $P_{set}$ in some string $S$, where the set is sent as an input all at once \cite{gusfield}. \\ We define a \emph{keyword tree} as:
+
+\begin{quote}
+\textbf{Definition} \\
+The \emph{keyword tree} $T_{key}$ for the set of patterns $P_{set}$ is a rooted directed tree, which must satisfy three conditions:
+\begin{itemize}  
+\item All edges are labeled with exactly one character
+\item Any two labels comming from the same node, must have distinct labels
+\item Any pattern $P_i$ in $P_{set}$ maps a node $v$ of $T_{key}$ in a way that all characters from the root to node $v$ spells out pattern $P_i$ \cite{gusfield}.
+\end{itemize}
+\end{quote}
+
+Suppose that we have a set of patterns $P_{set}$ = \{potato, poetry, pottery, science, school\} and its keyword tree defined as illustrated in Figure \ref{fig:KeywordTree}. Since no two labels comming from the same node have identical labels, we can use the keyword tree to search for any occurrences of $P_{set}$ in string $S$. Notice that we preprocess $P_{set}$ into a \emph{keyword tree} $P_{key}$, such that that we can find all occurrences of patterns in $P_{set}$ in $S$ by taking each position $p$ in $S$ and follow the unique path from $r$ in $T_{key}$ which matches a substring in $S$ starting at character $p$. The \empg{dictionary problem} is one of which where the set matching effeciently solves the problem. In this problem, a known set of strings, forming a dictionary is preprocessed to which a sequence of individual string is presented to the dictionary. Each of these strings is then either contained or not contained in the dictionay. The keyword tree solves ecactly that \cite{gusfield}. Mohamed Ibrahim Abouelhoda \emph{et al.} \cite{enchancedsuffix} proved that any application that uses top-down traversals on suffix trees, can be solved using suffix arrays with some extra information \cite{enchancedsuffix}. Mohamed Ibrahim Abouelhoda \emph{et al.} conducted experiments for answering enumeration queries, with three different programs: \emph{streematch} (linked list representation of suffix trees), \emph{mamy} (suffix arrays with additional buckets) and \emph{esamatch} (based on enchanced suffix arrays) \cite{enchancedsuffix}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{KeywordTree}
+    \captionsetup{width=0.8
+    \textwidth}
+    \caption{The \emph{keyword tree} $T_{key}$ over the set of patterns $P_{set}$=\{potato, poetry, pottery, science, school\}.}
+    \label{fig:KeywordTree}
+\end{figure}
+
+The expriments were conducted on five different files listed below:
+\begin{itemize} label{FILES}  
+\item E. coli : The complete genome of \emph{Escherichia} bactirium (DNA) - $\Sigma$=4, length 4,639,221 
+\item Yeast : The complete genome of \emph{Saccharomyces cerevisiae} (DNA) - $\Sigma$=4, length 12,156,300 
+\item Hs21 : A complete collection of protein sequences - $\Sigma$=4, length 33,917,895
+\item Swissprot : Complete collection of protein sequences - $\Sigma$=20, length 29,165,964
+\item Shaks : A collection of the complete work of William Shakespear - $\Sigma$=92, length 5,582,655 bytes
+\end{itemize}
+
+As illustrated in Figure \ref{fig:TopDown} the program using enchanced suffix array \emph{esamatch}, outperforms all other programs in both time and space consumption, except the file \emph{Sharks}, which is explained by the large alphabet size. The program \emph{esamatch} can thereforee compete with the other programs for small alphabets \cite{enchancedsuffix}.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{TopDown}
+    \captionsetup{width=0.8
+    \textwidth}
+    \caption{Space requirements and running times in megabytes and seconds, respectively. The programs did one million enumeration queries searching for exact patterns in the input strings. Minimal (\emph{minpl}) and maximal (\emp{maxpl}) are the minimal and maximal size of the patterns, respetively \cite{enchancedsuffix}.)}
+    \label{fig:TopDown}
+    
+\end{figure}
+\textbf{Suffix links}
+\\ \\
+Size of suffix trees can be reduced with the help of matching statistics, which is needed in more complex problems than exact string matching. Matching statistics are central to a fast approximate matching method designed for rapid database searching, it furthermore provide a bridge between exact matching methods and appromate string problems \cite{gusfield}.
+\begin{quote}
+\textbf{Notation} 
+Let ms($i$) denote the matching statistics for some $i$ in string $S$
+\end{quote}
+
+Preprocess suffix tree $T$ for the fixed short string $S_p$ and keep suffix links duing the construction of the tree. We define a suffix link as:
+
+\begin{quote}
+\textbf{Definition} 
+Let an arbitrary string be denoted by $x\alpha$, where $x$ is a single character and $\alpha$ a possible empty substring. For an internal node $v$ with a path label $x\alpha$, if there exists another node $s(v)$ with the path label $\alpha$, then a pointer from $v$ to $s(v)$ is a suffix link.
+\end{quote}
+
+The suffix can then be used to find sm($i$) for all $i$ in $S$. Let $S_p$ be a string of length $m$, then a matching statistics ms$i$ of $S_p$ for all $i$ in $S$, is a table of pairs ($l_p, p$), where $0 \leq j \leq m -1$ and the following holds:
+\begin{itemize}  
+\item $S_P[i \ldots j + t_p-1]$ is the longest prefex of $S_p[j \ldots m -1]$ that is a substring of $S$.
+\item $S_p[j \ldots j + j + l_p - 1]$ = $S[p_j \ldots p_j + l_j - 1]$
+\end{itemize}
+
+Supose we have $S$= cacaccc and $S_p$=caacacacca, then we would construct the suffix tree for $S$ keeping the suffix links. Then for each position $p$ in $S_p$ we would find the length of the longest common prefix starting at some position in $S$. If $S_p[0]$=caacacacca, then the longest common prefix have length of 2 and  accour in position 0 in $S$. Next one is $S_p[1]$=aacacacca, where the length of the longest commmon prefix is 1 in $S[0]$ and $S_p[2]$=cacacca with LCP length of 4 occouring in $S[1]$. Continuing this approach we get the matching statistic table in Figure \ref{fig:matchingstatistic} \cite{enchancedsuffix}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{matchingstatistic}
+    \captionsetup{width=0.8
+    \textwidth}
+    \caption{Matching statistic table for $S$= cacaccc and $S_p$=caacacacca \cite{enchancedsuffix}.}
+    \label{fig:matchingstatistic}
+\end{figure}
+
+The algorithm provided by Chang and Lawler \cite{enchancedsuffix} for computing matching statistic used suffix links and could solve the problem in O($n+m$) time. Later on Mohamed Ibrahim Abouelhoda \emph{et al.} \cite{enchancedsuffix} proved that any problem that used suffix links with a suffix tree datastructure, could be solved using suffix arrays with some extra information in same time complexity as the algorithm presented by Chang and Lawler\cite{enchancedsuffix}. Mohamed Ibrahim Abouelhoda \emph{et al.} performed an experiment where two programs computed the matching statistics on a pair of genomes, using a suffix tree and an enchanced suffix array as data structure, respecively \cite{enchancedsuffix}. The result displayed in Figure \ref{fig:matchingtest} revealed that \emph{esams} consumed 30-40\% less space in respect to \emph{streems}, although the latter were up to three times faster \cite{enchancedsuffix}.  
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{matchingtest}
+    \captionsetup{width=0.8
+    \textwidth}
+    \caption{Running time in seconds and space consumption in megabytes for matching statistics. The program \emph{streems} uses suffix tree as data structure, where the tree construction time is not included. The program \emph{esams} uses enchanced suffix array as datastructure, here a suffix array with some extra information \cite{enchancedsuffix}. }
+    \label{fig:matchingtest}
+\end{figure}
+
+
 \subsection{SAIS-FLS - Space requirement reduction for fixed length strings}
 
 Suppose that string $S$ consists of fixed length strings concatenated together, where each string $S_0,S_1,...,S_{n-1}$ is terminated with the sentinel $\$$ such that $S=S_0\$S_1\$...S_{n-1}\$ $.
@@ -503,31 +798,6 @@ SAIS-FLS(string S, array SA, int len)
 	return SA_FLS
 \end{lstlisting}
 \end{quote}
-\\
-Describe the algorithm
-\\
-Some description here
-\\
-
-Analyzing the algorithm - something with loopinvariant
-\\ 
-\textbf{Initialization}
-\\
-Some description here
-\\
-
-\textbf{Maintenance}
-\\
-Some description here
-\\
-
-\textbf{Termination}
-\\
-Some description here
-\\
-
-\textbf{Correctness}
-\\
 
 Suppose that the length of the strings in $S$, $len$, is known, then scan $SA$ once, from left to right, and find any index where $T[SA[i] + len] = \$$ and add the elements to the new array SA-FLS in $O(m)$ time, where $m$ is the length of $SA$. Constructing the new suffix array for $S$ using SAIS-FLS, all unnecessary indices in SA are removed and the new array maintain the lexicographical order.
 \\
@@ -567,43 +837,20 @@ For large fixed length strings such as SHA1, SHA256 or MD5 hashes, $SA-FLS$ conc
     \label{fig:totalmalware}
 \end{figure}
 
-\subsection{Burrows-Wheeler Transform}
 
-The BWT - Burrow-Wheeler transform, invented by Burrow and Wheeler in 1994, also known as block sorting, is a lossless data compression algorithm and produces a permutation bwt(S) of an input string $S$, such that $S$ can be reversed from bwt(S), but is easier to compress \cite{BWT}. \\
-BWT is a very powerful tool in data compression and even simple algorithms that implement BWT have good performance and achieve a good compression ratio using relative small space. Furthermore, even more powerful BWT-based compression tools, such as Bzip and Szip are still used today \cite{BWT}.
-\\ \\
-Besides data compression, BWT have a remarkable and practical property, namely that it can build a data structure which is sort of a compressed suffix array for a input string $S$ \cite{BWT}. To fully map and understand BWT, and how it succeed to create permutation bwt(S) of an input string $S$ that is easier to compress, this paper gives a precise description of the idea behind cyclic shifts and reversible lossless data compression, before venturing into property of building a data structure resembling compressed suffix array and its importance to the topic at hand. 
-\\ \\
-BWT consist of reversible transformation of input string $S$ denoted bwt(S). This reversible transformation, bwt(S), consist of exactly the same characters as in $S$ over same alphabet $\Sigma$, but is usually easier to compress. The idea is to form a conceptual matrix $M$ whose rows consist of cyclic shifts of $S$ sorted in a left to right lexicographical order \cite{BWT}.
-\\ \\
-Let $F$ denote the first column in $M$ and let $F_i$ denote the $i$-th character of column $F$. Almost equivalent, let $L$ denote the last column in $M$ and let $L_i$ denote the $i$-th character of column $L$.
-\\ \\
-Then the following properties of $M$ can be defined:
-\begin{itemize}
-  \item Every column of $M$ is a permutation of $S$.
-  \item For $i=2, \ldots , |2| + 1$, the character $L_i$ is followed by the character $F_i$ in $S$.
-  \item Any character $\alpha$, the $i$-th occurrence of $\alpha$ in $F$ correspond to $i$-th occurrence of $\alpha$ in $L$. 
-\end{itemize}
- 
 
-\subsection{SAIS-OPT - Optimization of the SA-IS Algorithm using Burrows-Wheeler Transform}
-2-3 sider
+\subsection{The importance of space usage\& compare with other SACA}
+
+We saw examples of preprocessing unstructured text into suffix trees and suffix arrays, examples of searching in $O(n)$ or O(n log m) time complexity and transformed strings that are easier to compress using Burrows-Wheelers Transform. We introduced an algorithm that could reduce space requirements for fixed length strings with a factor proportional to the length of the fixed length string in $S$. Space usage is a factor, since sizes of data sets in some applications, as molecular biology, data compression, data mining and text retrieval, to name a few, can be incredibly large. In many cases the alphabet size |E| is typically a fixed constant, such as ASCII E=256 or E= 4 for DNA sequences. In such cases suffix trees and suffix arrays are larger than the text by a multiplicative factor of $O=(log_{\|E\|}n)$ = $O(log n)$. To illustrate this, suppose that we have a DNA sequence of n symbols $(\|E\|=4)$ which we would store on a computer with 2n bits. A suffix array for that DNA sequence would use 4 bytes for each n words or 32 bits, which is 16 times larger than the text itself. 
+The question of space usage is important in both theory and practice, since data sets can be incredibly large, especially in the “Big Data” era of next generation sequencing (SAIS-OPT). Nataliya Timoshevskaya et al. presented in 2014 a characterization and optimization of the SA-IS algorithm for suffix array construction, focusing on irregular memory access, using concepts from Burrow-Wheeler Transform, which achieves a 27\% improvement in performance on tested data on the already tuned implementation of SA-IS in the Burrow Wheeler aligner used by the bioinformatics community (SAIS-OPT). Roberto Grossi et al. presented compressed suffix arrays and suffix trees that as a concrete example could compress a typical suffix array of 100 megabytes ASCII file to 30-40 megabytes or less, while the raw suffix array would require 500 megabytes (compressed suffix trees). 
+
+
 
 \section{Malware - Malicious Software}
 
-- Encryption
-- Do md5 ganrantee uniqueness?
+\section{Implementation}
 
-\subsection{Building database of known malware - MD5 encryption}
-
-\section{Malware Detection System - An exact string matching approach}
-\subsection{Building interactive systems - Windows (R) Forms}
-
-- Approach
-- Investigation and project planning
-
-\subsection{Database - RAM vs HHD}
-\subsection{Network & security}
+\section{Experimental Results}
 
 \section{Evaluation and recommendations}
 
@@ -638,8 +885,7 @@ Then the following properties of $M$ can be defined:
     \caption{$S$ is scanned from left to right, and indices for each LMS substring is appended to the end of its corresponding bucket in $SA$. The first LMS substring index is placed at the end of bucket for $i$, here at position 8 in $SA$ and forwards the bucket end one to the left, hence the bucket end for $i$ now rest at position 7 in $SA$. This process is repeated until all LMS substring indicies are placed in their buckets.}
     \label{fig:SAIS_LMS3}
 \end{figure}
-\lipsum[21]
-%I will let this talk for it self. And no, you don't need it right now, so out comment it or delete it $\ddot\smile$
+
 \newpage
 \section{SAIS Recurssive step}\label{SAIS Algorithm run}
 \begin{figure}[H]
@@ -649,7 +895,8 @@ Then the following properties of $M$ can be defined:
     \caption{Some description here}
     \label{fig:SAIS_RECURSIVEDESCRIPTION}
 \end{figure}
-
+\newpage
+\section{Reversing a compressed string using bwt($S$)}\label{BWT}
 % THIS I WILL NOT EXPLAIN RIGHT NOW - WE CAN TAKE IT WHEN IT IS MORE RELEVANT!
 \newpage
 \nocite{*}

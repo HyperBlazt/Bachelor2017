@@ -6,26 +6,24 @@
 \contentsline {section}{\numberline {5}Introduction}{3}{section.5}
 \contentsline {section}{\numberline {6}String Matching}{3}{section.6}
 \contentsline {subsection}{\numberline {6.1}Suffix trees}{6}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Operations on suffix trees}{8}{subsection.6.2}
-\contentsline {subsection}{\numberline {6.3}Suffix Arrays}{9}{subsection.6.3}
-\contentsline {subsection}{\numberline {6.4}Suffix Trees To Suffix Arrays In Linear Time}{10}{subsection.6.4}
-\contentsline {subsection}{\numberline {6.5}SAIS - Suffix Array Induced Sorting Algorithm}{10}{subsection.6.5}
-\contentsline {subsection}{\numberline {6.6}SAIS - Analysis, Correctness \& Completeness}{15}{subsection.6.6}
-\contentsline {subsection}{\numberline {6.7}SAIS - Linear Time Preprocessing}{16}{subsection.6.7}
-\contentsline {subsection}{\numberline {6.8}SAIS-FLS - Space requirement reduction for fixed length strings}{16}{subsection.6.8}
-\contentsline {subsection}{\numberline {6.9}Burrows-Wheeler Transform}{19}{subsection.6.9}
-\contentsline {subsection}{\numberline {6.10}SAIS-OPT - Optimization of the SA-IS Algorithm using Burrows-Wheeler Transform}{19}{subsection.6.10}
-\contentsline {section}{\numberline {7}Malware - Malicious Software}{19}{section.7}
-\contentsline {subsection}{\numberline {7.1}Building database of known malware - MD5 encryption}{20}{subsection.7.1}
-\contentsline {section}{\numberline {8}Malware Detection System - An exact string matching approach}{20}{section.8}
-\contentsline {subsection}{\numberline {8.1}Building interactive systems - Windows (R) Forms}{20}{subsection.8.1}
-\contentsline {subsection}{\numberline {8.2}Database - RAM vs HHD}{20}{subsection.8.2}
-\contentsline {subsection}{\numberline {8.3}Network & security}{20}{subsection.8.3}
-\contentsline {section}{\numberline {9}Evaluation and recommendations}{20}{section.9}
-\contentsline {section}{\numberline {10}Discussion}{20}{section.10}
-\contentsline {section}{\numberline {11}Future work}{20}{section.11}
-\contentsline {section}{\numberline {12}Conclussion}{20}{section.12}
-\contentsline {section}{\numberline {13}Literature list and references}{20}{section.13}
-\contentsline {section}{\numberline {14}Appendix}{20}{section.14}
-\contentsline {section}{\numberline {A}SAIS Algorithm run}{21}{appendix.A}
-\contentsline {section}{\numberline {B}SAIS Recurssive step}{23}{appendix.B}
+\contentsline {subsection}{\numberline {6.2}Suffix Trees To Suffix Arrays In Linear Time}{8}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Suffix Arrays}{8}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}SAIS - Suffix Array Induced Sorting Algorithm}{9}{subsection.6.4}
+\contentsline {subsection}{\numberline {6.5}Binary Search}{15}{subsection.6.5}
+\contentsline {subsection}{\numberline {6.6}Longest Common Prefix - {LCP}}{15}{subsection.6.6}
+\contentsline {subsection}{\numberline {6.7}Burrows-Wheeler Transform}{15}{subsection.6.7}
+\contentsline {subsection}{\numberline {6.8}Application \& Operation}{18}{subsection.6.8}
+\contentsline {subsection}{\numberline {6.9}SAIS-FLS - Space requirement reduction for fixed length strings}{26}{subsection.6.9}
+\contentsline {subsection}{\numberline {6.10}The importance of space usage\& compare with other SACA}{28}{subsection.6.10}
+\contentsline {section}{\numberline {7}Malware - Malicious Software}{29}{section.7}
+\contentsline {section}{\numberline {8}Implementation}{29}{section.8}
+\contentsline {section}{\numberline {9}Experimental Results}{29}{section.9}
+\contentsline {section}{\numberline {10}Evaluation and recommendations}{29}{section.10}
+\contentsline {section}{\numberline {11}Discussion}{29}{section.11}
+\contentsline {section}{\numberline {12}Future work}{29}{section.12}
+\contentsline {section}{\numberline {13}Conclussion}{29}{section.13}
+\contentsline {section}{\numberline {14}Literature list and references}{29}{section.14}
+\contentsline {section}{\numberline {15}Appendix}{29}{section.15}
+\contentsline {section}{\numberline {A}SAIS Algorithm run}{30}{appendix.A}
+\contentsline {section}{\numberline {B}SAIS Recurssive step}{31}{appendix.B}
+\contentsline {section}{\numberline {C}Reversing a compressed string using bwt($S$)}{32}{appendix.C}

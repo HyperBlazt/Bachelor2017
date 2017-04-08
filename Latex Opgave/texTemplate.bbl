@@ -25,23 +25,6 @@ D.-N.~L. Nguyen Le~Dang and V.~T. Le, ``A new multiple-pattern matching
 K.~Sadakane, ``Compressed suffix trees with full functionality∗,'' {\em 2007
   Springer Science + Business Media, Inc}, pp.~1--19, 2005.
 
-\bibitem{lcaWeb}
-``Fast algorithms for finding nearest common ancestors.''
-  \url{http://epubs.siam.org/doi/pdf/10.1137/0213024}.
-\newblock Accessed: 2016-12-20.
-
-\bibitem{lcaWebSch}
-``Fast algorithms for finding nearest common ancestorson finding lowest common
-  ancestors: Simplification and parallelization. siam journal on computing,
-  1988, vol. 17, no. 6 : pp. 1253-1262.''
-  \url{http://epubs.siam.org/doi/abs/10.1137/0217079}.
-\newblock Accessed: 2016-12-20.
-
-\bibitem{lca}
-M.~Farach, ``Optimal suffixx tree construction with large alphabets,'' {\em
-  Department of Computer Science, Rutgers University, Piscataway, NJ 08855,
-  USA.}, pp.~1--11, 1997.
-
 \bibitem{twoeffecient}
 S.~Z. Ge~Nong and W.~H. Chan, ``Two efficient algorithms for linear time suffix
   array construction,'' {\em IEEE Transaction on Computers}, pp.~1--20, 2011.
@@ -57,9 +40,44 @@ U.~Baier, ``Linear-time suffix sorting – a new approach for suffix array
   University}, pp.~1--10, 2016.
 
 \bibitem{BWT}
-G.~Manzini, ``A new multiple-pattern matching algorithm for the network
-  intrusion detection system,'' {\em Journal of the Association for Computing
-  Machinery}, vol.~48, no.~3, pp.~407--430, 2001.
+G.~Manzini, ``An analysis of the burrows-wheeler transform,'' {\em Journal of
+  the Association for Computing Machinery}, vol.~48, no.~3, pp.~407--430, 2001.
+
+\bibitem{bwtfmindex}
+B.~Langmead, ``Introduction to the burrows-wheeler transform and fm index,''
+  pp.~1--12, 2013.
+
+\bibitem{enchancedsuffix}
+E.~O. Mohamed Ibrahim~Abouelhoda, Stefan~Kurtz, ``Replacing suffix trees with
+  enhanced suffix arrays,'' {\em Journal of Discrete Algorithms 2}, pp.~53--86,
+  2004.
+
+\bibitem{Kasai}
+S.~A. Toru~Kasai, Hiroki~Arimura, ``Effcient substring traversal with suffx
+  arrays,'' {\em DOI Technical Report 185 (2001)}, 2001.
+
+\bibitem{LempelZiv}
+A.~L.~O. Ferreira, Artur~J. and M.~A. Figueiredo, ``On the suitability of
+  suffix arrays for lempel-ziv data compression.,'' {\em International
+  Conference on E-Business and Telecommunications. Springer Berlin Heidelberg},
+  2008.
+
+\bibitem{lca}
+M.~Farach, ``Optimal suffixx tree construction with large alphabets,'' {\em
+  Department of Computer Science, Rutgers University, Piscataway, NJ 08855,
+  USA.}, pp.~1--11, 1997.
+
+\bibitem{lcaWeb}
+``Fast algorithms for finding nearest common ancestors.''
+  \url{http://epubs.siam.org/doi/pdf/10.1137/0213024}.
+\newblock Accessed: 2016-12-20.
+
+\bibitem{lcaWebSch}
+``Fast algorithms for finding nearest common ancestorson finding lowest common
+  ancestors: Simplification and parallelization. siam journal on computing,
+  1988, vol. 17, no. 6 : pp. 1253-1262.''
+  \url{http://epubs.siam.org/doi/abs/10.1137/0217079}.
+\newblock Accessed: 2016-12-20.
 
 \bibitem{Ju1997}
 E.~Ju and C.~Wagner, ``Personal computer adventure games: Their structure,

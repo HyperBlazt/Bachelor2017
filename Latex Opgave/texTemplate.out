@@ -5,26 +5,24 @@
 \BOOKMARK [1][-]{section.5}{Introduction}{}% 5
 \BOOKMARK [1][-]{section.6}{String Matching}{}% 6
 \BOOKMARK [2][-]{subsection.6.1}{Suffix trees}{section.6}% 7
-\BOOKMARK [2][-]{subsection.6.2}{Operations on suffix trees}{section.6}% 8
+\BOOKMARK [2][-]{subsection.6.2}{Suffix Trees To Suffix Arrays In Linear Time}{section.6}% 8
 \BOOKMARK [2][-]{subsection.6.3}{Suffix Arrays}{section.6}% 9
-\BOOKMARK [2][-]{subsection.6.4}{Suffix Trees To Suffix Arrays In Linear Time}{section.6}% 10
-\BOOKMARK [2][-]{subsection.6.5}{SAIS - Suffix Array Induced Sorting Algorithm}{section.6}% 11
-\BOOKMARK [2][-]{subsection.6.6}{SAIS - Analysis, Correctness \046 Completeness}{section.6}% 12
-\BOOKMARK [2][-]{subsection.6.7}{SAIS - Linear Time Preprocessing}{section.6}% 13
-\BOOKMARK [2][-]{subsection.6.8}{SAIS-FLS - Space requirement reduction for fixed length strings}{section.6}% 14
-\BOOKMARK [2][-]{subsection.6.9}{Burrows-Wheeler Transform}{section.6}% 15
-\BOOKMARK [2][-]{subsection.6.10}{SAIS-OPT - Optimization of the SA-IS Algorithm using Burrows-Wheeler Transform}{section.6}% 16
+\BOOKMARK [2][-]{subsection.6.4}{SAIS - Suffix Array Induced Sorting Algorithm}{section.6}% 10
+\BOOKMARK [2][-]{subsection.6.5}{Binary Search}{section.6}% 11
+\BOOKMARK [2][-]{subsection.6.6}{Longest Common Prefix - LCP}{section.6}% 12
+\BOOKMARK [2][-]{subsection.6.7}{Burrows-Wheeler Transform}{section.6}% 13
+\BOOKMARK [2][-]{subsection.6.8}{Application \046 Operation}{section.6}% 14
+\BOOKMARK [2][-]{subsection.6.9}{SAIS-FLS - Space requirement reduction for fixed length strings}{section.6}% 15
+\BOOKMARK [2][-]{subsection.6.10}{The importance of space usage\046 compare with other SACA}{section.6}% 16
 \BOOKMARK [1][-]{section.7}{Malware - Malicious Software}{}% 17
-\BOOKMARK [2][-]{subsection.7.1}{Building database of known malware - MD5 encryption}{section.7}% 18
-\BOOKMARK [1][-]{section.8}{Malware Detection System - An exact string matching approach}{}% 19
-\BOOKMARK [2][-]{subsection.8.1}{Building interactive systems - Windows \(R\) Forms}{section.8}% 20
-\BOOKMARK [2][-]{subsection.8.2}{Database - RAM vs HHD}{section.8}% 21
-\BOOKMARK [2][-]{subsection.8.3}{Network \040security}{section.8}% 22
-\BOOKMARK [1][-]{section.9}{Evaluation and recommendations}{}% 23
-\BOOKMARK [1][-]{section.10}{Discussion}{}% 24
-\BOOKMARK [1][-]{section.11}{Future work}{}% 25
-\BOOKMARK [1][-]{section.12}{Conclussion}{}% 26
-\BOOKMARK [1][-]{section.13}{Literature list and references}{}% 27
-\BOOKMARK [1][-]{section.14}{Appendix}{}% 28
-\BOOKMARK [1][-]{appendix.A}{SAIS Algorithm run}{}% 29
-\BOOKMARK [1][-]{appendix.B}{SAIS Recurssive step}{}% 30
+\BOOKMARK [1][-]{section.8}{Implementation}{}% 18
+\BOOKMARK [1][-]{section.9}{Experimental Results}{}% 19
+\BOOKMARK [1][-]{section.10}{Evaluation and recommendations}{}% 20
+\BOOKMARK [1][-]{section.11}{Discussion}{}% 21
+\BOOKMARK [1][-]{section.12}{Future work}{}% 22
+\BOOKMARK [1][-]{section.13}{Conclussion}{}% 23
+\BOOKMARK [1][-]{section.14}{Literature list and references}{}% 24
+\BOOKMARK [1][-]{section.15}{Appendix}{}% 25
+\BOOKMARK [1][-]{appendix.A}{SAIS Algorithm run}{}% 26
+\BOOKMARK [1][-]{appendix.B}{SAIS Recurssive step}{}% 27
+\BOOKMARK [1][-]{appendix.C}{Reversing a compressed string using bwt\(S\)}{}% 28
