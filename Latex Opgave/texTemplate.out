@@ -15,14 +15,15 @@
 \BOOKMARK [2][-]{subsection.6.9}{SAIS-FLS - Space requirement reduction for fixed length strings}{section.6}% 15
 \BOOKMARK [2][-]{subsection.6.10}{The importance of space usage\046 compare with other SACA}{section.6}% 16
 \BOOKMARK [1][-]{section.7}{Malware - Malicious Software}{}% 17
-\BOOKMARK [1][-]{section.8}{Implementation}{}% 18
-\BOOKMARK [1][-]{section.9}{Experimental Results}{}% 19
-\BOOKMARK [1][-]{section.10}{Evaluation and recommendations}{}% 20
-\BOOKMARK [1][-]{section.11}{Discussion}{}% 21
-\BOOKMARK [1][-]{section.12}{Future work}{}% 22
-\BOOKMARK [1][-]{section.13}{Conclussion}{}% 23
-\BOOKMARK [1][-]{section.14}{Literature list and references}{}% 24
-\BOOKMARK [1][-]{section.15}{Appendix}{}% 25
-\BOOKMARK [1][-]{appendix.A}{SAIS Algorithm run}{}% 26
-\BOOKMARK [1][-]{appendix.B}{SAIS Recurssive step}{}% 27
-\BOOKMARK [1][-]{appendix.C}{Reversing a compressed string using bwt\(S\)}{}% 28
+\BOOKMARK [2][-]{subsection.7.1}{Detection techniques}{section.7}% 18
+\BOOKMARK [1][-]{section.8}{Implementation}{}% 19
+\BOOKMARK [1][-]{section.9}{Experimental Results}{}% 20
+\BOOKMARK [1][-]{section.10}{Evaluation and recommendations}{}% 21
+\BOOKMARK [1][-]{section.11}{Discussion}{}% 22
+\BOOKMARK [1][-]{section.12}{Future work}{}% 23
+\BOOKMARK [1][-]{section.13}{Conclussion}{}% 24
+\BOOKMARK [1][-]{section.14}{Literature list and references}{}% 25
+\BOOKMARK [1][-]{section.15}{Appendix}{}% 26
+\BOOKMARK [1][-]{appendix.A}{SAIS Algorithm run}{}% 27
+\BOOKMARK [1][-]{appendix.B}{SAIS Recurssive step}{}% 28
+\BOOKMARK [1][-]{appendix.C}{Reversing a compressed string using bwt\(S\)}{}% 29

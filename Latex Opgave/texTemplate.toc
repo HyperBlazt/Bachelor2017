@@ -16,14 +16,15 @@
 \contentsline {subsection}{\numberline {6.9}SAIS-FLS - Space requirement reduction for fixed length strings}{26}{subsection.6.9}
 \contentsline {subsection}{\numberline {6.10}The importance of space usage\& compare with other SACA}{28}{subsection.6.10}
 \contentsline {section}{\numberline {7}Malware - Malicious Software}{29}{section.7}
-\contentsline {section}{\numberline {8}Implementation}{29}{section.8}
-\contentsline {section}{\numberline {9}Experimental Results}{29}{section.9}
-\contentsline {section}{\numberline {10}Evaluation and recommendations}{29}{section.10}
-\contentsline {section}{\numberline {11}Discussion}{29}{section.11}
-\contentsline {section}{\numberline {12}Future work}{29}{section.12}
-\contentsline {section}{\numberline {13}Conclussion}{29}{section.13}
-\contentsline {section}{\numberline {14}Literature list and references}{29}{section.14}
-\contentsline {section}{\numberline {15}Appendix}{29}{section.15}
-\contentsline {section}{\numberline {A}SAIS Algorithm run}{30}{appendix.A}
-\contentsline {section}{\numberline {B}SAIS Recurssive step}{31}{appendix.B}
-\contentsline {section}{\numberline {C}Reversing a compressed string using bwt($S$)}{32}{appendix.C}
+\contentsline {subsection}{\numberline {7.1}Detection techniques}{30}{subsection.7.1}
+\contentsline {section}{\numberline {8}Implementation}{33}{section.8}
+\contentsline {section}{\numberline {9}Experimental Results}{33}{section.9}
+\contentsline {section}{\numberline {10}Evaluation and recommendations}{33}{section.10}
+\contentsline {section}{\numberline {11}Discussion}{33}{section.11}
+\contentsline {section}{\numberline {12}Future work}{33}{section.12}
+\contentsline {section}{\numberline {13}Conclussion}{33}{section.13}
+\contentsline {section}{\numberline {14}Literature list and references}{33}{section.14}
+\contentsline {section}{\numberline {15}Appendix}{33}{section.15}
+\contentsline {section}{\numberline {A}SAIS Algorithm run}{34}{appendix.A}
+\contentsline {section}{\numberline {B}SAIS Recurssive step}{35}{appendix.B}
+\contentsline {section}{\numberline {C}Reversing a compressed string using bwt($S$)}{36}{appendix.C}
