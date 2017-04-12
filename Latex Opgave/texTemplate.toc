@@ -1,30 +1,32 @@
 \select@language {english}
 \contentsline {section}{\numberline {1}Abstract}{3}{section.1}
-\contentsline {section}{\numberline {2}Description}{3}{section.2}
-\contentsline {section}{\numberline {3}Preface}{3}{section.3}
-\contentsline {section}{\numberline {4}Limitations}{3}{section.4}
-\contentsline {section}{\numberline {5}Introduction}{3}{section.5}
-\contentsline {section}{\numberline {6}String Matching}{3}{section.6}
-\contentsline {subsection}{\numberline {6.1}Suffix trees}{6}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Suffix Trees To Suffix Arrays In Linear Time}{8}{subsection.6.2}
-\contentsline {subsection}{\numberline {6.3}Suffix Arrays}{8}{subsection.6.3}
-\contentsline {subsection}{\numberline {6.4}SAIS - Suffix Array Induced Sorting Algorithm}{9}{subsection.6.4}
-\contentsline {subsection}{\numberline {6.5}Binary Search}{15}{subsection.6.5}
-\contentsline {subsection}{\numberline {6.6}Longest Common Prefix - {LCP}}{15}{subsection.6.6}
-\contentsline {subsection}{\numberline {6.7}Burrows-Wheeler Transform}{15}{subsection.6.7}
-\contentsline {subsection}{\numberline {6.8}Application \& Operation}{18}{subsection.6.8}
-\contentsline {subsection}{\numberline {6.9}SAIS-FLS - Space requirement reduction for fixed length strings}{26}{subsection.6.9}
-\contentsline {subsection}{\numberline {6.10}The importance of space usage\& compare with other SACA}{28}{subsection.6.10}
-\contentsline {section}{\numberline {7}Malware - Malicious Software}{29}{section.7}
-\contentsline {subsection}{\numberline {7.1}Detection techniques}{30}{subsection.7.1}
-\contentsline {section}{\numberline {8}Implementation}{33}{section.8}
-\contentsline {section}{\numberline {9}Experimental Results}{33}{section.9}
-\contentsline {section}{\numberline {10}Evaluation and recommendations}{33}{section.10}
-\contentsline {section}{\numberline {11}Discussion}{33}{section.11}
-\contentsline {section}{\numberline {12}Future work}{33}{section.12}
-\contentsline {section}{\numberline {13}Conclussion}{33}{section.13}
-\contentsline {section}{\numberline {14}Literature list and references}{33}{section.14}
-\contentsline {section}{\numberline {15}Appendix}{33}{section.15}
-\contentsline {section}{\numberline {A}SAIS Algorithm run}{34}{appendix.A}
-\contentsline {section}{\numberline {B}SAIS Recurssive step}{35}{appendix.B}
-\contentsline {section}{\numberline {C}Reversing a compressed string using bwt($S$)}{36}{appendix.C}
+\contentsline {section}{\numberline {2}Limitations}{3}{section.2}
+\contentsline {section}{\numberline {3}Introduction}{3}{section.3}
+\contentsline {section}{\numberline {4}String Matching}{3}{section.4}
+\contentsline {subsection}{\numberline {4.1}Suffix trees}{6}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Suffix Trees To Suffix Arrays In Linear Time}{8}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Suffix Arrays}{8}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}SAIS - Suffix Array Induced Sorting Algorithm}{9}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Binary Search}{14}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.6}Longest Common Prefix - {LCP}}{14}{subsection.4.6}
+\contentsline {subsection}{\numberline {4.7}Burrows-Wheeler Transform}{14}{subsection.4.7}
+\contentsline {subsection}{\numberline {4.8}Application}{18}{subsection.4.8}
+\contentsline {subsection}{\numberline {4.9}SAIS-FLS - Space requirement reduction for fixed length strings}{25}{subsection.4.9}
+\contentsline {subsection}{\numberline {4.10}Suffix Array Construction Algorithm (SACA) comparison}{27}{subsection.4.10}
+\contentsline {section}{\numberline {5}Malware - Malicious Software}{28}{section.5}
+\contentsline {subsection}{\numberline {5.1}Malware naming and classes}{29}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Current threat}{32}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Detection techniques}{33}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}Anomaly-based detection}{34}{subsection.5.4}
+\contentsline {subsection}{\numberline {5.5}Signature-based detection}{36}{subsection.5.5}
+\contentsline {section}{\numberline {6}Implementation}{39}{section.6}
+\contentsline {section}{\numberline {7}Experimental Results}{39}{section.7}
+\contentsline {section}{\numberline {8}Evaluation and recommendations}{39}{section.8}
+\contentsline {section}{\numberline {9}Discussion}{39}{section.9}
+\contentsline {section}{\numberline {10}Future work}{39}{section.10}
+\contentsline {section}{\numberline {11}Conclussion}{39}{section.11}
+\contentsline {section}{\numberline {12}Literature list and references}{39}{section.12}
+\contentsline {section}{\numberline {13}Appendix}{39}{section.13}
+\contentsline {section}{\numberline {A}SAIS Algorithm run}{40}{appendix.A}
+\contentsline {section}{\numberline {B}SAIS Recurssive step}{41}{appendix.B}
+\contentsline {section}{\numberline {C}Reversing a compressed string using bwt($S$)}{42}{appendix.C}

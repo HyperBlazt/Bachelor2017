@@ -1,29 +1,31 @@
 \BOOKMARK [1][-]{section.1}{Abstract}{}% 1
-\BOOKMARK [1][-]{section.2}{Description}{}% 2
-\BOOKMARK [1][-]{section.3}{Preface}{}% 3
-\BOOKMARK [1][-]{section.4}{Limitations}{}% 4
-\BOOKMARK [1][-]{section.5}{Introduction}{}% 5
-\BOOKMARK [1][-]{section.6}{String Matching}{}% 6
-\BOOKMARK [2][-]{subsection.6.1}{Suffix trees}{section.6}% 7
-\BOOKMARK [2][-]{subsection.6.2}{Suffix Trees To Suffix Arrays In Linear Time}{section.6}% 8
-\BOOKMARK [2][-]{subsection.6.3}{Suffix Arrays}{section.6}% 9
-\BOOKMARK [2][-]{subsection.6.4}{SAIS - Suffix Array Induced Sorting Algorithm}{section.6}% 10
-\BOOKMARK [2][-]{subsection.6.5}{Binary Search}{section.6}% 11
-\BOOKMARK [2][-]{subsection.6.6}{Longest Common Prefix - LCP}{section.6}% 12
-\BOOKMARK [2][-]{subsection.6.7}{Burrows-Wheeler Transform}{section.6}% 13
-\BOOKMARK [2][-]{subsection.6.8}{Application \046 Operation}{section.6}% 14
-\BOOKMARK [2][-]{subsection.6.9}{SAIS-FLS - Space requirement reduction for fixed length strings}{section.6}% 15
-\BOOKMARK [2][-]{subsection.6.10}{The importance of space usage\046 compare with other SACA}{section.6}% 16
-\BOOKMARK [1][-]{section.7}{Malware - Malicious Software}{}% 17
-\BOOKMARK [2][-]{subsection.7.1}{Detection techniques}{section.7}% 18
-\BOOKMARK [1][-]{section.8}{Implementation}{}% 19
-\BOOKMARK [1][-]{section.9}{Experimental Results}{}% 20
-\BOOKMARK [1][-]{section.10}{Evaluation and recommendations}{}% 21
-\BOOKMARK [1][-]{section.11}{Discussion}{}% 22
-\BOOKMARK [1][-]{section.12}{Future work}{}% 23
-\BOOKMARK [1][-]{section.13}{Conclussion}{}% 24
-\BOOKMARK [1][-]{section.14}{Literature list and references}{}% 25
-\BOOKMARK [1][-]{section.15}{Appendix}{}% 26
-\BOOKMARK [1][-]{appendix.A}{SAIS Algorithm run}{}% 27
-\BOOKMARK [1][-]{appendix.B}{SAIS Recurssive step}{}% 28
-\BOOKMARK [1][-]{appendix.C}{Reversing a compressed string using bwt\(S\)}{}% 29
+\BOOKMARK [1][-]{section.2}{Limitations}{}% 2
+\BOOKMARK [1][-]{section.3}{Introduction}{}% 3
+\BOOKMARK [1][-]{section.4}{String Matching}{}% 4
+\BOOKMARK [2][-]{subsection.4.1}{Suffix trees}{section.4}% 5
+\BOOKMARK [2][-]{subsection.4.2}{Suffix Trees To Suffix Arrays In Linear Time}{section.4}% 6
+\BOOKMARK [2][-]{subsection.4.3}{Suffix Arrays}{section.4}% 7
+\BOOKMARK [2][-]{subsection.4.4}{SAIS - Suffix Array Induced Sorting Algorithm}{section.4}% 8
+\BOOKMARK [2][-]{subsection.4.5}{Binary Search}{section.4}% 9
+\BOOKMARK [2][-]{subsection.4.6}{Longest Common Prefix - LCP}{section.4}% 10
+\BOOKMARK [2][-]{subsection.4.7}{Burrows-Wheeler Transform}{section.4}% 11
+\BOOKMARK [2][-]{subsection.4.8}{Application}{section.4}% 12
+\BOOKMARK [2][-]{subsection.4.9}{SAIS-FLS - Space requirement reduction for fixed length strings}{section.4}% 13
+\BOOKMARK [2][-]{subsection.4.10}{Suffix Array Construction Algorithm \(SACA\) comparison}{section.4}% 14
+\BOOKMARK [1][-]{section.5}{Malware - Malicious Software}{}% 15
+\BOOKMARK [2][-]{subsection.5.1}{Malware naming and classes}{section.5}% 16
+\BOOKMARK [2][-]{subsection.5.2}{Current threat}{section.5}% 17
+\BOOKMARK [2][-]{subsection.5.3}{Detection techniques}{section.5}% 18
+\BOOKMARK [2][-]{subsection.5.4}{Anomaly-based detection}{section.5}% 19
+\BOOKMARK [2][-]{subsection.5.5}{Signature-based detection}{section.5}% 20
+\BOOKMARK [1][-]{section.6}{Implementation}{}% 21
+\BOOKMARK [1][-]{section.7}{Experimental Results}{}% 22
+\BOOKMARK [1][-]{section.8}{Evaluation and recommendations}{}% 23
+\BOOKMARK [1][-]{section.9}{Discussion}{}% 24
+\BOOKMARK [1][-]{section.10}{Future work}{}% 25
+\BOOKMARK [1][-]{section.11}{Conclussion}{}% 26
+\BOOKMARK [1][-]{section.12}{Literature list and references}{}% 27
+\BOOKMARK [1][-]{section.13}{Appendix}{}% 28
+\BOOKMARK [1][-]{appendix.A}{SAIS Algorithm run}{}% 29
+\BOOKMARK [1][-]{appendix.B}{SAIS Recurssive step}{}% 30
+\BOOKMARK [1][-]{appendix.C}{Reversing a compressed string using bwt\(S\)}{}% 31
