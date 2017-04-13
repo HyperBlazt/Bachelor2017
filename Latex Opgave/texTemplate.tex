@@ -378,7 +378,6 @@ It is now the matter of determine if all LMS substrings are correctly sorted in 
     \captionsetup{width=0.8\textwidth}
     \caption{Building $S_1$ from $SA$, using the original positions of the LMS substrings in $S$.}
     \label{fig:SAIS_LMSS}
-    
 \end{figure}
 \\
 In the recursive step for $SAIS(S_1, SA_1)$, locate S-types, L-types and LMS characters/substrings and determine if $S_1$ is distinct. In this case, as demonstrated in Figure  \ref{fig:SAIS_RECURSIVE}, there is only one LMS substring in $S$ so the new string $S_1$ is trivially distinct.
@@ -404,8 +403,6 @@ Last, sort all S-types by scanning SA from right to left for each non-negative i
 \\
 This procedure is demonstrated in Figure \ref{fig:SAIS_RECURSIVEDESCRIPTION} where $SA$ is induced sorted from $S$ for the text $T$=mmiissiissiippii\$. SAIS returns the suffix array $SA$=[16; 15; 14; 10; 6; 2; 11; 7; 3; 1; 0; 13; 12; 9; 5; 8; 4] for text $T$=mmiissiissiippii\$ which is indeed sorted in lexicographical order as illustrated in Figure \ref{fig:SAIS_Sortedorder} \cite{twoeffecient}.
 \\
-It is now demonstrated how the algorithm works step by step. We now proceed to analyze the SAIS algorithm, here to insure that the algorithm actually returns a suffix array sorted in lexicographical order, for all legal inputs. Furthermore, the core mechanics of LMS-substring sorting is analyzed, giving a precise understanding of induce sorting LMSs, L-types and S-types. We will then prove correctness and completeness.
-
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{SAIS_Sortedorder}
@@ -413,8 +410,69 @@ It is now demonstrated how the algorithm works step by step. We now proceed to a
     \caption{The suffix array for the text $T$=mmiissiissiippii\$.}
     \label{fig:SAIS_Sortedorder}  
 \end{figure}
+\\ \\
+\textbf{Correctness, completeness and performance}
+\\ \\
+We shown a thorough run-through of the SA-IS algorithm, now we tend to correctness, completeness and the performance. We claimed that SAIS is a linear time suffix array construction algorithm using divide-and-conquer and recursion techniques. Furthermore we claimed that the consequential constructed suffix array contains indices of all suffixes of a legal input $S$ according to their lexicographical order. Ge Nong et al. \cite{twoeffecient} already proved these attributes of SA-IS, we merely elaborate with examples. Recall that $S$ must be terminated with the sentinel and of such, is not a legal input, if $S$ is not terminated by the sentinel. Furthermore, the sentinel must be the unique smallest character in $S$, and exist nowhere else in $S$.  
+\\ \\
+\textit{Induced Sorting LMS-Substrings}
+\\ \\
+The sorting of the variable-size LMS-substrings is the most challenging problem. Ge Nong et al. \cite{twoeffecient} solves the problem by induced sorting. We have earlier shown this procedure with an example for $S$=mmiissiissiippii\$ and will continue down this road to elaborate the proof presented by Ge Nong et al. \cite{twoeffecient}.
+\begin{quote}
+\textbf{Theorem 4.4} Induced sorting LMS substrings will correctly sort all LMS prefixes of $S$ into $SA$. \cite{twoeffecient}.
+\end{quote}
+First, let LMS prefix $pre(S, i)$ of $suf(S, i)$ to be either the sentinel itself when $i = n-1$ or prefix $S[i..k]$ in $suf(S, i)$ where $i \neq n-1$, $k > i$ and $S[k]$ is the first LMS character after $S[i]$. LMS prefix $pre(S,i)$ is defined as L-type of S-type if $suf(S, i)$ is L-type or S-type \cite{twoeffecient}.
+\\ \\
+Then suf(S,5) is L-type, hence pre(S, 5) is L-type and pre(S, 5)=$S[i \ldots k] = S[5 \ldots 6]$ = si, since $S[k=6]=i$ is the first LMS character after $S[i]$. 
+\\ \\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{lmsprefix}
+    \captionsetup{width=0.8\textwidth}
+    \caption{Suffixes with corresponding LMS prefixes $T$=mmiissiissiippii\$.}
+    \label{fig:lmsprefix}  
+\end{figure}
+In Figure \ref{fig:SAIS_LMS} we illustrate the insertion of LMS suffixes into their equivalent buckets in $SA$ for $S$=miissiissiippii\$. In first step using $S$ as an example, all LMS-prefixes are sorted correctly. When inserting L-type pre(S,i) of suf(S,i) in $SA$, we must ensure that each L-type $pre(S,i)$ for $suf(S,i)$ is sorted correctly for all S-type $pre(S,i)$ of $suf(S,i)$ in $SA$ \cite{twoeffecient}. Figure \ref{fig:lmsprefix} illustrate suffixes and LMS-prefixes for $S$. Suppose that $k$ number of L-type LMS-prefixes are correctly sorted into SA and suppose that we append the ($k$+1)th L-type LMS-prefix $pre(S,i)$ to the head of its corresponding bucket and there is already a greater $pre(S,j)$ in front of $pre(S,i)$, e.g. to the left of $pre(S,i)$. This consequently signify that character $S[i]=S[j]$ since they are in the same bucket, $pre(S, j+1) > pre(S, i+1)$ and $pre(S, j+1)$ is in front of $pre(S, i+1)$. If this is the case, we must have scanned SA from the left to the right, and discovered LMS-prefixes that are not sorted correctly. This is a contradiction and imply that all L-type LMS-prefixes are sorted in correct order in $SA$. \\
+For each non-negative item in $SA$, scanning from left to right, we check if suf(S, i-1) is lexicographical greater than suf(S,i), hence of L-type. As we move the bucket end one to the right every time we place an L-type LMS prefix index in its corresponding bucket, we ensure that each LMS prefix  to its immediate left, is lexicographical smaller (equal) within that bucket. In Figure \ref{fig:lmssortedl} L-type LMS prefixes are appended to $SA$. Notice that for each item $i$ in SA, pre(S,i) is lexicographical greater or equal to its immediate left neighbor pre(S, i-1). Index 6 and 13 in $SA$ do not have an immediate left neighbor, as their neighbor is initialized as -1, as illustrated in Figure \ref{fig:lmssortedl}   
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{lmssortedl}
+    \captionsetup{width=0.8\textwidth}
+    \caption{Sorted L-type LMS-prefixes of  $T$=mmiissiissiippii\$.}
+    \label{fig:lmssortedl}  
+\end{figure}
+In the last step we append S-type LMS-prefixes and consequently sort all LMS-prefixes in $SA$. We scan $SA$ from right to left, and for each non-negative index $i$, if suf(S,i-1) is of S-type, append it to the bucket end of its corresponding bucket, and forward the bucket end one to the left. \\
+In similar manner to the prove of L-type, by contradiction, suppose that $k$ S-type LMS-prefixes are appended to their corresponding bucket ends and sorted correctly. Suppose that when we append the $k+1$th LMS-prefix pre(S, i) to its corresponding bucket end there is already a smaller S-type LMS-prefix pre(S, j) behind pre(S, i), e.g. to its right. This must entail that S[i] = S[j], since they are in the same bucket, pre(S, j+1) < pre(S, i+1), and pre(S, j+1) is behind pre(S, i+1) in $S$. This implies that when $SA$ where scanned from right to left, before adding pre(S, i) to its bucket, we must have stumbled by LMS-prefixes in $SA$ that were not sorted correctly \cite{twoeffecient}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{lmssorteds}
+    \captionsetup{width=0.8\textwidth}
+    \caption{Sorted S-type LMS-prefixes of  $T$=mmiissiissiippii\$.}
+    \label{fig:lmssorteds}  
+\end{figure}
 
-OBS! BEVISER SKAL FLETTES IND HER!!! 
+When appending S-type LMS-prefixes to their equivalent buckets, we may overwrite already filled S-type LMS-prefixes. Figure \ref{fig:lmssorteds} show the appended S-type LMS-prefixes and as proven, all LMS-prefixes are now sorted in $SA$ applying the same logic as with L-type LMS-prefixes \cite{twoeffecient}. We observe that every LMS-substring is a LMS-prefix, hence from the above proofs we can derive the following  properties. All LMS-substrings are as well LMS-prefixes, therefore sorting LMS-prefixes will thus  correctly sort all LMS-substrings. Furthermore, every substring in $S$ is a prefix of a LMS-prefix, hence sorting all LMS-prefixes will consequently sort every substring in $S$.
+\\ \\
+\textbf{Inducing $SA$ from $S_1$}
+\\ \\
+We enlightened the proof of induced sorting LMS-Substrings presented by Ge Nong et al. \cite{twoeffecient} with an example. We will follow this procedure for proving the inducing $SA$ from $S_1$ step, for $S$=mmiissiissiippii\$.
+In Figure \ref{fig:SAIS_LMSS} $S_1$ is extracted from $SA$ using the original LMS substring positions in $S$, such that $S_1$=2210. Seeing that $S_1$ just hold one LMS-substring we can trivially assume that $S_1$ is distinct, thus we can induce SA from $S_1$. The first step is to scan $SA_1$ from right to left, and put $P_1[SA_1[i])]$ in the bucket end for $suf(S, P_1[SA_1[i])] )$ in $SA$, and forward the bucket’s end one item to the left. In our example, there is only one LMS-substring, thus it is trivially sorted. 
+The first step is almost equivalent with step one in the induced sorting LMS-substrings section. Instead of scanning $S$ from right to left and place LMS-substrings in $SA$, we scan $S_1$ from right to left and place $P_1[SA_1[i])]$  in $SA$ . We have already proven the next two steps, hence sorting the L-type LMS-prefixes and S-type LMS-prefixes in induced sorting LMS-substrings. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{proofS1}
+    \captionsetup{width=0.8\textwidth}
+    \caption{Detailed table for induced sorting LMS substrings for $S_1$=2210.}
+    \label{fig:proofS1}  
+\end{figure}
+\\ \\
+\textbf{Divide-and-conquer}
+\\ \\
+max 10 linjer
+\\ \\
+\textbf{Space and time complexity}
+\\ \\
+1 side
 
 \subsection{Binary Search} \label{Binary Search Section}
 

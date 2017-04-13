@@ -62,11 +62,6 @@ A.~L.~O. Ferreira, Artur~J. and M.~A. Figueiredo, ``On the suitability of
   Conference on E-Business and Telecommunications. Springer Berlin Heidelberg},
   2008.
 
-\bibitem{lca}
-M.~Farach, ``Optimal suffixx tree construction with large alphabets,'' {\em
-  Department of Computer Science, Rutgers University, Piscataway, NJ 08855,
-  USA.}, pp.~1--11, 1997.
-
 \bibitem{lcaWeb}
 ``Fast algorithms for finding nearest common ancestors.''
   \url{http://epubs.siam.org/doi/pdf/10.1137/0213024}.
@@ -78,6 +73,11 @@ M.~Farach, ``Optimal suffixx tree construction with large alphabets,'' {\em
   1988, vol. 17, no. 6 : pp. 1253-1262.''
   \url{http://epubs.siam.org/doi/abs/10.1137/0217079}.
 \newblock Accessed: 2016-12-20.
+
+\bibitem{lca}
+M.~Farach, ``Optimal suffixx tree construction with large alphabets,'' {\em
+  Department of Computer Science, Rutgers University, Piscataway, NJ 08855,
+  USA.}, pp.~1--11, 1997.
 
 \bibitem{Ju1997}
 E.~Ju and C.~Wagner, ``Personal computer adventure games: Their structure,
