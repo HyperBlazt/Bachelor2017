@@ -3,6 +3,7 @@
 \bibitem{mit}
 ``Strings - advanced data structures.''
   https://www.youtube.com/watch?v=F3nbY3hIDLQl.
+\newblock Accessed: 2016-12-15 08:15.
 
 \bibitem{gusfield}
 D.~Gusfield, {\em Algorithms on strings, trees, and sequences : computer
@@ -79,95 +80,89 @@ M.~Farach, ``Optimal suffixx tree construction with large alphabets,'' {\em
   Department of Computer Science, Rutgers University, Piscataway, NJ 08855,
   USA.}, pp.~1--11, 1997.
 
-\bibitem{Ju1997}
-E.~Ju and C.~Wagner, ``Personal computer adventure games: Their structure,
-  principles, and applicability for training,'' {\em ACM SIGMIS Database},
-  vol.~28, no.~2, pp.~78--92, 1997.
+\bibitem{Asurveyonmalware}
+A.~S. Saeed, Imtithal~A. and A.~M. Abuagoub, ``A survey on malware and malware
+  detection systems,'' {\em International Journal of Computer Applications},
+  no.~67.16, 2013.
 
-\bibitem{Baltra1990}
-A.~Baltra, ``Language learning through computer adventure games,'' {\em
-  Simulation and Gaming}, vol.~21, pp.~455--452, December 1990.
+\bibitem{idika2007survey}
+N.~Idika and A.~P. Mathur, ``A survey of malware detection techniques,'' {\em
+  Purdue University}, vol.~48, 2007.
 
-\bibitem{fysik}
+\bibitem{kosmidis2017machine}
+K.~Kosmidis, ``Machine learning and images for malware detection and
+  classification,'' 2017.
 
+\bibitem{kurose2010computer}
+J.~F. Kurose and K.~W. Ross, {\em Computer networking: a top-down approach},
+  vol.~5.
+\newblock Addison-Wesley Reading, 2010.
 
-\bibitem{graphite}
-D.~M., ``How to use scratch for digital storytelling.''
-  https://www.graphite.org/blog/how-to-use-scratch-for-digital-storytelling.
+\bibitem{nakamoto2008bitcoin}
+S.~Nakamoto, ``Bitcoin: A peer-to-peer electronic cash system,'' 2008.
 
-\bibitem{khan}
-https://www.khanacademy.org/computer-programming/new/pjs.
+\bibitem{avtest}
+``Av-test.'' https://www.av-test.org/en/statistics/malware/.
+\newblock Accessed: 2017-02-01 17:15.
 
-\bibitem{processing}
-B.~Fry and C.~Reas. http://processingjs.org/.
+\bibitem{Heuristicmethods}
+r.~D. Taillard, ``Heuristic methods for large centroid clustering problems.,''
+  {\em Journal of heuristics}, vol.~9.1, pp.~51--73, 2003.
 
-\bibitem{scratch}
-L.~K.~G. at~MIT Media~Lab, ``Scratch.'' https://scratch.mit.edu/.
+\bibitem{mclachlan1999mahalanobis}
+G.~J. McLachlan, ``Mahalanobis distance,'' {\em Resonance}, vol.~4, no.~6,
+  pp.~20--26, 1999.
 
-\bibitem{efficacy}
-J.~E. Ormrod, {\em Educational Psychology: Developing Learners}.
-\newblock Upper Saddle River, N.J.: Pearson/Merrill Prentice Hall, 5th~ed.,
+\bibitem{deri2000practical}
+L.~Deri and S.~Suin, ``Practical network security: experiences with ntop,''
+  {\em Computer Networks}, vol.~34, no.~6, pp.~873--880, 2000.
+
+\bibitem{ahmed2009using}
+F.~Ahmed, H.~Hameed, M.~Z. Shafiq, and M.~Farooq, ``Using spatio-temporal
+  information in api calls with machine learning algorithms for malware
+  detection,'' in {\em Proceedings of the 2nd ACM Workshop on Security and
+  Artificial Intelligence}, pp.~55--62, ACM, 2009.
+
+\bibitem{ye2007imds}
+Y.~Ye, D.~Wang, T.~Li, and D.~Ye, ``Imds: Intelligent malware detection
+  system,'' in {\em Proceedings of the 13th ACM SIGKDD international conference
+  on Knowledge discovery and data mining}, pp.~1043--1047, ACM, 2007.
+
+\bibitem{kruegel2003using}
+C.~Kruegel and T.~Toth, ``Using decision trees to improve signature-based
+  intrusion detection,'' in {\em International Workshop on Recent Advances in
+  Intrusion Detection}, pp.~173--191, Springer, 2003.
+
+\bibitem{deza2009encyclopedia}
+M.~M. Deza and E.~Deza, ``Encyclopedia of distances,'' in {\em Encyclopedia of
+  Distances}, pp.~1--583, Springer, 2009.
+
+\bibitem{clusteranalysis}
+``Cluster analysis.'' http://www.statsoft.com/Textbook/Cluster-Analysis.
+\newblock Accessed: 2017-01-20 22:21.
+
+\bibitem{baecher2006nepenthes}
+P.~Baecher, M.~Koetter, T.~Holz, M.~Dornseif, and F.~Freiling, ``The nepenthes
+  platform: An efficient approach to collect malware,'' in {\em International
+  Workshop on Recent Advances in Intrusion Detection}, pp.~165--184, Springer,
   2006.
 
-\bibitem{Kurser}
-``Programming and problem solving (pop).''
-  http://kurser.ku.dk/course/ndab15009u/2015-2016, 2015/2016.
+\bibitem{turner2011updated}
+S.~Turner and L.~Chen, ``Updated security considerations for the md5
+  message-digest and the hmac-md5 algorithms,'' 2011.
 
-\bibitem{Cormen}
-T.~H. Cormen, C.~E. Leiserson, R.~L. Rivest, and C.~Stein, {\em Introduction to
-  Algorithms}.
-\newblock The MIT Press, third~ed., 2009.
+\bibitem{wang2005break}
+X.~Wang and H.~Yu, ``How to break md5 and other hash functions,'' in {\em
+  Annual International Conference on the Theory and Applications of
+  Cryptographic Techniques}, pp.~19--35, Springer, 2005.
 
-\bibitem{habit2012}
-S.~Denmark, ``Cultural habits survey 2012.''
-  http://www.dst.dk/en/Statistik/dokumentation/declarations/cultural-habits-survey.
+\bibitem{thompson2005md5}
+E.~Thompson, ``Md5 collisions and the impact on computer forensics,'' {\em
+  Digital investigation}, vol.~2, no.~1, pp.~36--40, 2005.
 
-\bibitem{Talk2008}
-J.~M. Wing, ``Computational thinking and thinking about computing.''
-  https://www.cs.cmu.edu/afs/cs/usr/wing/www/talks/ct-and-tc-long.pdf, 2008.
-
-\bibitem{iskriv}
-E.~Alinea, ``iskriv.'' http://iskriv.dk/, 2012.
-
-\bibitem{dst}
-D.~Statistik, ``Kvub1204: Children who play computer games by frequency and
-  background.'' http://www.statistikbanken.dk/KVUB1204, 2015.
-
-\bibitem{May2013}
-T.~May and B.~K. Walther, {\em Computerspillets Fort{\ae}llinger}, vol.~1.
-\newblock Gyldendal, 2013.
-
-\bibitem{Blum2007}
-L.~Blum and T.~J. Cortina, ``{CS4HS: An Outreach Program for High School CS
-  Teachers},'' {\em Sigcse '07}, pp.~19--23, 2007.
-
-\bibitem{Gray2007}
-S.~Gray, C.~S. Clair, R.~James, and J.~Mead, ``{Suggestions for graduated
-  exposure to programming concepts using fading worked examples},'' {\em ICER},
-  pp.~99--110, 2007.
-
-\bibitem{Kafai2006}
-Y.~B. Kafai, ``{Playing and Making Games for Learning: Instructionist and
-  Constructionist Perspectives for Game Studies},'' {\em Games and Culture},
-  vol.~1, no.~1, pp.~36--40, 2006.
-
-\bibitem{Nousiainen2009}
-T.~Nousiainen, {\em Children's Involvement in the Design of Game-Based Learning
-  Environments}, pp.~49--66.
-\newblock Springer Science, 2009.
-
-\bibitem{Rey2015}
-J.~Moreno-Le{\'o}n and G.~Robles, ``{Computer programming as an educational
-  tool in the English classroom},'' in {\em 2015 IEEE Global Engineering
-  Education Conference}, pp.~961--966, 2015.
-
-\bibitem{Wing2008}
-J.~M. Wing, ``{Computational thinking and thinking about computing.},'' {\em
-  Philosophical transactions. Series A, Mathematical, physical, and engineering
-  sciences}, vol.~366, no.~1881, pp.~3717--3725, 2008.
-
-\bibitem{Wing2006}
-J.~M. Wing, ``{Computational thinking},'' {\em Communications of the ACM},
-  vol.~49, no.~3, pp.~33--35, 2006.
+\bibitem{avtestreport}
+``Av-test\_security\_report\_2015-2016.''
+  https://www.av-test.org/fileadmin/pdf/security\_report/AV-TEST\_Security\_Report\_2015-2016.pdf.
+\newblock Accessed: 2016-04-13 08:15.
 
 \end{thebibliography}

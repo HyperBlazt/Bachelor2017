@@ -18,14 +18,17 @@
 \BOOKMARK [2][-]{subsection.5.3}{Detection techniques}{section.5}% 18
 \BOOKMARK [2][-]{subsection.5.4}{Anomaly-based detection}{section.5}% 19
 \BOOKMARK [2][-]{subsection.5.5}{Signature-based detection}{section.5}% 20
-\BOOKMARK [1][-]{section.6}{Implementation}{}% 21
-\BOOKMARK [1][-]{section.7}{Experimental Results}{}% 22
-\BOOKMARK [1][-]{section.8}{Evaluation and recommendations}{}% 23
-\BOOKMARK [1][-]{section.9}{Discussion}{}% 24
-\BOOKMARK [1][-]{section.10}{Future work}{}% 25
-\BOOKMARK [1][-]{section.11}{Conclussion}{}% 26
-\BOOKMARK [1][-]{section.12}{Literature list and references}{}% 27
-\BOOKMARK [1][-]{section.13}{Appendix}{}% 28
-\BOOKMARK [1][-]{appendix.A}{SAIS Algorithm run}{}% 29
-\BOOKMARK [1][-]{appendix.B}{SAIS Recurssive step}{}% 30
-\BOOKMARK [1][-]{appendix.C}{Reversing a compressed string using bwt\(S\)}{}% 31
+\BOOKMARK [1][-]{section.6}{Implementation - Intrusion Detection}{}% 21
+\BOOKMARK [2][-]{subsection.6.1}{Datastructure - Fixed Length Distinct Strings}{section.6}% 22
+\BOOKMARK [2][-]{subsection.6.2}{Malware Detecting Scanner}{section.6}% 23
+\BOOKMARK [2][-]{subsection.6.3}{Malware Detection Service}{section.6}% 24
+\BOOKMARK [2][-]{subsection.6.4}{Platform and implementation language}{section.6}% 25
+\BOOKMARK [1][-]{section.7}{Experimental Results}{}% 26
+\BOOKMARK [1][-]{section.8}{Discussion}{}% 27
+\BOOKMARK [1][-]{section.9}{Future work}{}% 28
+\BOOKMARK [1][-]{section.10}{Conclussion}{}% 29
+\BOOKMARK [1][-]{section.11}{Literature list and references}{}% 30
+\BOOKMARK [1][-]{section.12}{Appendix}{}% 31
+\BOOKMARK [1][-]{appendix.A}{SAIS Algorithm run}{}% 32
+\BOOKMARK [1][-]{appendix.B}{SAIS Recurssive step}{}% 33
+\BOOKMARK [1][-]{appendix.C}{Reversing a compressed string using bwt\(S\)}{}% 34
