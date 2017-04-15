@@ -2,34 +2,33 @@
 \contentsline {section}{\numberline {1}Abstract}{3}{section.1}
 \contentsline {section}{\numberline {2}Limitations}{3}{section.2}
 \contentsline {section}{\numberline {3}Introduction}{3}{section.3}
-\contentsline {section}{\numberline {4}String Matching}{3}{section.4}
-\contentsline {subsection}{\numberline {4.1}Suffix trees}{6}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Suffix Trees To Suffix Arrays In Linear Time}{8}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Suffix Arrays}{8}{subsection.4.3}
-\contentsline {subsection}{\numberline {4.4}SAIS - Suffix Array Induced Sorting Algorithm}{9}{subsection.4.4}
-\contentsline {subsection}{\numberline {4.5}Binary Search}{17}{subsection.4.5}
-\contentsline {subsection}{\numberline {4.6}Longest Common Prefix - {LCP}}{17}{subsection.4.6}
-\contentsline {subsection}{\numberline {4.7}Burrows-Wheeler Transform}{17}{subsection.4.7}
-\contentsline {subsection}{\numberline {4.8}Application}{21}{subsection.4.8}
-\contentsline {subsection}{\numberline {4.9}SAIS-FLS - Space requirement reduction for fixed length strings}{28}{subsection.4.9}
-\contentsline {subsection}{\numberline {4.10}Suffix Array Construction Algorithm (SACA) comparison}{30}{subsection.4.10}
-\contentsline {section}{\numberline {5}Malware - Malicious Software}{31}{section.5}
-\contentsline {subsection}{\numberline {5.1}Malware naming and classes}{32}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Current threat}{35}{subsection.5.2}
-\contentsline {subsection}{\numberline {5.3}Detection techniques}{36}{subsection.5.3}
-\contentsline {subsection}{\numberline {5.4}Anomaly-based detection}{37}{subsection.5.4}
-\contentsline {subsection}{\numberline {5.5}Signature-based detection}{39}{subsection.5.5}
-\contentsline {section}{\numberline {6}Implementation - Intrusion Detection}{41}{section.6}
-\contentsline {subsection}{\numberline {6.1}Datastructure - Fixed Length Distinct Strings}{41}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Malware Detecting Scanner}{42}{subsection.6.2}
-\contentsline {subsection}{\numberline {6.3}Malware Detection Service}{42}{subsection.6.3}
-\contentsline {subsection}{\numberline {6.4}Platform and implementation language}{42}{subsection.6.4}
-\contentsline {section}{\numberline {7}Experimental Results}{42}{section.7}
-\contentsline {section}{\numberline {8}Discussion}{42}{section.8}
-\contentsline {section}{\numberline {9}Future work}{42}{section.9}
-\contentsline {section}{\numberline {10}Conclussion}{42}{section.10}
-\contentsline {section}{\numberline {11}Literature list and references}{42}{section.11}
-\contentsline {section}{\numberline {12}Appendix}{42}{section.12}
-\contentsline {section}{\numberline {A}SAIS Algorithm run}{43}{appendix.A}
-\contentsline {section}{\numberline {B}SAIS Recurssive step}{44}{appendix.B}
-\contentsline {section}{\numberline {C}Reversing a compressed string using bwt($S$)}{45}{appendix.C}
+\contentsline {section}{\numberline {4}String Matching}{4}{section.4}
+\contentsline {subsection}{\numberline {4.1}Suffix trees}{7}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Suffix Trees To Suffix Arrays In Linear Time}{9}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Suffix Arrays}{9}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}SAIS - Suffix Array Induced Sorting Algorithm}{10}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Binary Search}{19}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.6}Longest Common Prefix - {LCP}}{19}{subsection.4.6}
+\contentsline {subsection}{\numberline {4.7}Burrows-Wheeler Transform}{19}{subsection.4.7}
+\contentsline {subsection}{\numberline {4.8}Application}{23}{subsection.4.8}
+\contentsline {subsection}{\numberline {4.9}SAIS-FLS - Space requirement reduction for fixed length strings}{30}{subsection.4.9}
+\contentsline {subsection}{\numberline {4.10}Suffix Array Construction Algorithm (SACA) comparison}{32}{subsection.4.10}
+\contentsline {section}{\numberline {5}Malware - Malicious Software}{33}{section.5}
+\contentsline {subsection}{\numberline {5.1}Malware naming and classes}{34}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Current threat}{37}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Detection techniques}{38}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}Anomaly-based detection}{39}{subsection.5.4}
+\contentsline {subsection}{\numberline {5.5}Signature-based detection}{41}{subsection.5.5}
+\contentsline {section}{\numberline {6}Implementation - Intrusion Detection}{43}{section.6}
+\contentsline {subsection}{\numberline {6.1}Data structure - Fixed Length Distinct Strings}{44}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Malware Detecting Scanner}{44}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Malware Detection Service}{44}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}Platform and implementation language}{45}{subsection.6.4}
+\contentsline {section}{\numberline {7}Experimental Results}{45}{section.7}
+\contentsline {section}{\numberline {8}Discussion}{45}{section.8}
+\contentsline {section}{\numberline {9}Future work}{45}{section.9}
+\contentsline {section}{\numberline {10}Conclusion}{45}{section.10}
+\contentsline {section}{\numberline {11}Appendix}{45}{section.11}
+\contentsline {section}{\numberline {A}SAIS Algorithm run}{46}{appendix.A}
+\contentsline {section}{\numberline {B}SAIS Recurssive step}{47}{appendix.B}
+\contentsline {section}{\numberline {C}Reversing a compressed string using bwt($S$)}{48}{appendix.C}

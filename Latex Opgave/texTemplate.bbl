@@ -1,9 +1,15 @@
 \begin{thebibliography}{10}
 
-\bibitem{mit}
-``Strings - advanced data structures.''
-  https://www.youtube.com/watch?v=F3nbY3hIDLQl.
-\newblock Accessed: 2016-12-15 08:15.
+\bibitem{apostolico201640}
+A.~Apostolico, M.~Crochemore, M.~Farach-Colton, Z.~Galil, and S.~Muthukrishnan,
+  ``40 years of suffix trees,'' {\em Communications of the ACM}, vol.~59,
+  no.~4, pp.~66--73, 2016.
+
+\bibitem{detection}
+D.-N.~L. Nguyen Le~Dang and V.~T. Le, ``A new multiple-pattern matching
+  algorithm for the network intrusion detection system,'' {\em IACSIT
+  International Journal of Engineering and Technology}, vol.~8, no.~2,
+  pp.~1--7, 2016.
 
 \bibitem{gusfield}
 D.~Gusfield, {\em Algorithms on strings, trees, and sequences : computer
@@ -16,29 +22,46 @@ R.~L. R. . C.~S. Thomas H.~Cormen, Charles E.~Leiserson, {\em Introduction To
 \newblock The MIT Pres, Cambridge, Massachusetts, London, England, 3th~ed.,
   2009.
 
-\bibitem{detection}
-D.-N.~L. Nguyen Le~Dang and V.~T. Le, ``A new multiple-pattern matching
-  algorithm for the network intrusion detection system,'' {\em IACSIT
-  International Journal of Engineering and Technology}, vol.~8, no.~2,
-  pp.~1--7, 2016.
-
-\bibitem{Kunihiko}
-K.~Sadakane, ``Compressed suffix trees with full functionality∗,'' {\em 2007
-  Springer Science + Business Media, Inc}, pp.~1--19, 2005.
-
-\bibitem{twoeffecient}
-S.~Z. Ge~Nong and W.~H. Chan, ``Two efficient algorithms for linear time suffix
-  array construction,'' {\em IEEE Transaction on Computers}, pp.~1--20, 2011.
-
-\bibitem{performancesuffix}
-W.~F.~S. Simon J.~Puglisi and A.~Turpin, ``The performance of linear time
-  suffix sorting algorithms,'' {\em Proceedings of the 2005 Data Compression
-  Conference (DCC’05)}, pp.~1--10, 2005.
+\bibitem{enchancedsuffix}
+E.~O. Mohamed Ibrahim~Abouelhoda, Stefan~Kurtz, ``Replacing suffix trees with
+  enhanced suffix arrays,'' {\em Journal of Discrete Algorithms 2}, pp.~53--86,
+  2004.
 
 \bibitem{newapproach}
 U.~Baier, ``Linear-time suffix sorting – a new approach for suffix array
   construction,'' {\em Institute of Theoretical Computer Science, Ulm
   University}, pp.~1--10, 2016.
+
+\bibitem{twoeffecient}
+S.~Z. Ge~Nong and W.~H. Chan, ``Two efficient algorithms for linear time suffix
+  array construction,'' {\em IEEE Transaction on Computers}, pp.~1--20, 2011.
+
+\bibitem{kruegel2003using}
+C.~Kruegel and T.~Toth, ``Using decision trees to improve signature-based
+  intrusion detection,'' in {\em International Workshop on Recent Advances in
+  Intrusion Detection}, pp.~173--191, Springer, 2003.
+
+\bibitem{virusshare}
+``Virusshare.'' https://virusshare.com/.
+\newblock Lastest Access: 2017-4-15 15:20, Repository download 2016-1-5 20:20.
+
+\bibitem{autoruns}
+``Autoruns.'' https://technet.microsoft.com/en-us/sysinternals/bb963902.aspx.
+\newblock Accessed: 2017-4-15 16:03.
+
+\bibitem{mit}
+``Strings - advanced data structures.''
+  https://www.youtube.com/watch?v=F3nbY3hIDLQl.
+\newblock Accessed: 2016-12-15 08:15.
+
+\bibitem{Kunihiko}
+K.~Sadakane, ``Compressed suffix trees with full functionality∗,'' {\em 2007
+  Springer Science + Business Media, Inc}, pp.~1--19, 2005.
+
+\bibitem{performancesuffix}
+W.~F.~S. Simon J.~Puglisi and A.~Turpin, ``The performance of linear time
+  suffix sorting algorithms,'' {\em Proceedings of the 2005 Data Compression
+  Conference (DCC’05)}, pp.~1--10, 2005.
 
 \bibitem{BWT}
 G.~Manzini, ``An analysis of the burrows-wheeler transform,'' {\em Journal of
@@ -47,11 +70,6 @@ G.~Manzini, ``An analysis of the burrows-wheeler transform,'' {\em Journal of
 \bibitem{bwtfmindex}
 B.~Langmead, ``Introduction to the burrows-wheeler transform and fm index,''
   pp.~1--12, 2013.
-
-\bibitem{enchancedsuffix}
-E.~O. Mohamed Ibrahim~Abouelhoda, Stefan~Kurtz, ``Replacing suffix trees with
-  enhanced suffix arrays,'' {\em Journal of Discrete Algorithms 2}, pp.~53--86,
-  2004.
 
 \bibitem{Kasai}
 S.~A. Toru~Kasai, Hiroki~Arimura, ``Effcient substring traversal with suffx
@@ -128,11 +146,6 @@ Y.~Ye, D.~Wang, T.~Li, and D.~Ye, ``Imds: Intelligent malware detection
   system,'' in {\em Proceedings of the 13th ACM SIGKDD international conference
   on Knowledge discovery and data mining}, pp.~1043--1047, ACM, 2007.
 
-\bibitem{kruegel2003using}
-C.~Kruegel and T.~Toth, ``Using decision trees to improve signature-based
-  intrusion detection,'' in {\em International Workshop on Recent Advances in
-  Intrusion Detection}, pp.~173--191, Springer, 2003.
-
 \bibitem{deza2009encyclopedia}
 M.~M. Deza and E.~Deza, ``Encyclopedia of distances,'' in {\em Encyclopedia of
   Distances}, pp.~1--583, Springer, 2009.
@@ -147,6 +160,11 @@ P.~Baecher, M.~Koetter, T.~Holz, M.~Dornseif, and F.~Freiling, ``The nepenthes
   Workshop on Recent Advances in Intrusion Detection}, pp.~165--184, Springer,
   2006.
 
+\bibitem{avtestreport}
+``Av-test\_security\_report\_2015-2016.''
+  https://www.av-test.org/fileadmin/pdf/security\_report/AV-TEST\_Security\_Report\_2015-2016.pdf.
+\newblock Accessed: 2016-04-13 08:15.
+
 \bibitem{turner2011updated}
 S.~Turner and L.~Chen, ``Updated security considerations for the md5
   message-digest and the hmac-md5 algorithms,'' 2011.
@@ -159,10 +177,5 @@ X.~Wang and H.~Yu, ``How to break md5 and other hash functions,'' in {\em
 \bibitem{thompson2005md5}
 E.~Thompson, ``Md5 collisions and the impact on computer forensics,'' {\em
   Digital investigation}, vol.~2, no.~1, pp.~36--40, 2005.
-
-\bibitem{avtestreport}
-``Av-test\_security\_report\_2015-2016.''
-  https://www.av-test.org/fileadmin/pdf/security\_report/AV-TEST\_Security\_Report\_2015-2016.pdf.
-\newblock Accessed: 2016-04-13 08:15.
 
 \end{thebibliography}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.13)  13 APR 2017 22:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.13)  15 APR 2017 16:05
 entering extended mode
 **./texTemplate.tex
 (texTemplate.tex
@@ -1272,7 +1272,7 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
 (lastpage)             ! on input line 76.
- <forside.pdf, id=142, 597.50829pt x 845.0471pt>
+ <forside.pdf, id=138, 597.50829pt x 845.0471pt>
 File: forside.pdf Graphic file (type pdf)
  <use forside.pdf>
 Package pdftex.def Info: forside.pdf used on input line 78.
@@ -1282,7 +1282,7 @@ File: forside.pdf Graphic file (type pdf)
 <use forside.pdf>
 Package pdftex.def Info: forside.pdf used on input line 78.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
- <forside.pdf, id=145, page=1, 597.50829pt x 845.0471pt>
+ <forside.pdf, id=141, page=1, 597.50829pt x 845.0471pt>
 File: forside.pdf Graphic file (type pdf)
 
 <use forside.pdf, page 1>
@@ -1333,28 +1333,37 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [2]
+Underfull \hbox (badness 10000) in paragraph at lines 116--122
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 117.
-
-
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 117.
+ []
 
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 121.
+Underfull \hbox (badness 10000) in paragraph at lines 116--122
 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 116--122
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[3]
 ! Extra }, or forgotten $.
-l.121 ...ned large text $T = \{t_1, t_2, …, t_m}
+l.125 ... large text $T = \{t_1, t_2, \ldots, t_m}
                                                   \}$, and query some smalle...
 
 ? 
 
-LaTeX Warning: Reference `sec:One' on page 1 undefined on input line 122.
-
-
-Overfull \hbox (6.42331pt too wide) in paragraph at lines 121--126
-\T1/cmr/m/n/12 static data struc-ture con-sist of pre-pro-cess-ing some pre-de-
-fined large text $\OML/cmm/m/it/12 T \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 f\OML/c
-mm/m/it/12 t[]; t[]; :::; t[]\OMS/cmsy/m/n/12 g$\T1/cmr/m/n/12 ,
+Overfull \hbox (29.39133pt too wide) in paragraph at lines 125--129
+\T1/cmr/m/n/12 The static data struc-ture con-sist of pre-pro-cess-ing some pre
+-de-fined large text $\OML/cmm/m/it/12 T \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 f\O
+ML/cmm/m/it/12 t[]; t[]; [] ; t[]\OMS/cmsy/m/n/12 g$\T1/cmr/m/n/12 ,
  []
 
 
@@ -1364,25 +1373,28 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.129 \newline
+l.132 \newline
               
 ? 
-<1.png, id=240, 370.38374pt x 171.64125pt>
+<1.png, id=263, 370.38374pt x 171.64125pt>
 File: 1.png Graphic file (type png)
  <use 1.png>
-Package pdftex.def Info: 1.png used on input line 133.
+Package pdftex.def Info: 1.png used on input line 136.
 (pdftex.def)             Requested size: 182.09486pt x 84.38516pt.
 
-<comparisonbased1.png, id=245, 347.04657pt x 465.99094pt>
+<comparisonbased1.png, id=268, 347.04657pt x 465.99094pt>
 File: comparisonbased1.png Graphic file (type png)
 
 <use comparisonbased1.png>
-Package pdftex.def Info: comparisonbased1.png used on input line 149.
+Package pdftex.def Info: comparisonbased1.png used on input line 152.
 (pdftex.def)             Requested size: 182.09486pt x 244.5138pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--153
+Underfull \hbox (badness 10000) in paragraph at lines 133--156
 
  []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1390,14 +1402,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[3 <./1.png>] <comparisonbased2.png, id=269, 341.77687pt x 292.09125pt>
+[4] <comparisonbased2.png, id=286, 341.77687pt x 292.09125pt>
 File: comparisonbased2.png Graphic file (type png)
 
 <use comparisonbased2.png>
-Package pdftex.def Info: comparisonbased2.png used on input line 161.
+Package pdftex.def Info: comparisonbased2.png used on input line 164.
 (pdftex.def)             Requested size: 182.09486pt x 155.62323pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--165
+Underfull \hbox (badness 10000) in paragraph at lines 158--168
 
  []
 
@@ -1407,7 +1419,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[4 <./comparisonbased1.png>]
+[5 <./1.png> <./comparisonbased1.png>]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -1415,17 +1427,17 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.166 \newline
+l.169 \newline
               
 ? 
-<comparisonbased3.png, id=278, 341.77687pt x 292.09125pt>
+<comparisonbased3.png, id=296, 341.77687pt x 292.09125pt>
 File: comparisonbased3.png Graphic file (type png)
 
 <use comparisonbased3.png>
-Package pdftex.def Info: comparisonbased3.png used on input line 173.
+Package pdftex.def Info: comparisonbased3.png used on input line 176.
 (pdftex.def)             Requested size: 182.09486pt x 155.62323pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--177
+Underfull \hbox (badness 10000) in paragraph at lines 170--180
 
  []
 
@@ -1435,53 +1447,60 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[5 <./comparisonbased2.png> <./comparisonbased3.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 186--192
+[6 <./comparisonbased2.png> <./comparisonbased3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 189--195
 
  []
 
-<trie.png, id=303, 569.12625pt x 249.93375pt>
+<trie.png, id=321, 569.12625pt x 249.93375pt>
 File: trie.png Graphic file (type png)
  <use trie.png>
-Package pdftex.def Info: trie.png used on input line 197.
+Package pdftex.def Info: trie.png used on input line 200.
 (pdftex.def)             Requested size: 273.14923pt x 119.9592pt.
 
 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
 ! LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.202 \newline
+l.205 \newline
               
 ? 
 
-Underfull \hbox (badness 10000) in paragraph at lines 203--207
+Underfull \hbox (badness 10000) in paragraph at lines 206--210
 
  []
 
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[6 <./trie.png>] <compressingtrie.png, id=317, 357.13425pt x 157.18726pt>
+<compressingtrie.png, id=325, 357.13425pt x 157.18726pt>
 File: compressingtrie.png Graphic file (type png)
 
 <use compressingtrie.png>
-Package pdftex.def Info: compressingtrie.png used on input line 210.
+Package pdftex.def Info: compressingtrie.png used on input line 213.
 (pdftex.def)             Requested size: 273.14923pt x 120.22386pt.
 
-<suffixtree(banana).png, id=319, 233.07076pt x 190.311pt>
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[7] <suffixtree(banana).png, id=337, 233.07076pt x 190.311pt>
 File: suffixtree(banana).png Graphic file (type png)
 
 <use suffixtree(banana).png>
-Package pdftex.def Info: suffixtree(banana).png used on input line 220.
+Package pdftex.def Info: suffixtree(banana).png used on input line 223.
 (pdftex.def)             Requested size: 182.09486pt x 148.6917pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 232--235
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 235--238
 
  []
 
@@ -1491,7 +1510,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[7 <./compressingtrie.png> <./suffixtree(banana).png>]
+[8 <./trie.png> <./compressingtrie.png>]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -1499,7 +1518,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.239 A
+l.242 A
        s no two edges out of $v$ have labels beginning with the same charact...
 
 ? 
@@ -1509,8 +1528,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[8]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 271.
+[9 <./suffixtree(banana).png>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 274.
 
 
 ("C:\Users\Mark Roland\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.
@@ -1518,38 +1537,38 @@ fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 271.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 274.
 
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 298.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 301.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 296--309
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 296--309
+Underfull \hbox (badness 10000) in paragraph at lines 299--312
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 296--309
+Underfull \hbox (badness 10000) in paragraph at lines 299--312
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 296--309
+Underfull \hbox (badness 10000) in paragraph at lines 299--312
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 296--309
+Underfull \hbox (badness 10000) in paragraph at lines 299--312
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 296--309
+Underfull \hbox (badness 10000) in paragraph at lines 299--312
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 299--312
 
  []
 
@@ -1559,48 +1578,39 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[9]
+[10]
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 310.
- <SAISmmii1.png, id=397, 417.05812pt x 95.6072pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 313.
+ <SAISmmii1.png, id=414, 417.05812pt x 95.6072pt>
 File: SAISmmii1.png Graphic file (type png)
  <use SAISmmii1.png>
-Package pdftex.def Info: SAISmmii1.png used on input line 318.
+Package pdftex.def Info: SAISmmii1.png used on input line 321.
 (pdftex.def)             Requested size: 273.14923pt x 62.62097pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--330
+Underfull \hbox (badness 10000) in paragraph at lines 327--333
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--330
+Underfull \hbox (badness 10000) in paragraph at lines 327--333
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--330
+Underfull \hbox (badness 10000) in paragraph at lines 327--333
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--330
+Underfull \hbox (badness 10000) in paragraph at lines 327--333
 
  []
 
-<SAISmmii2.png, id=402, 406.51875pt x 170.88844pt>
+<SAISmmii2.png, id=419, 406.51875pt x 170.88844pt>
 File: SAISmmii2.png Graphic file (type png)
  <use SAISmmii2.png>
-Package pdftex.def Info: SAISmmii2.png used on input line 333.
+Package pdftex.def Info: SAISmmii2.png used on input line 336.
 (pdftex.def)             Requested size: 273.14923pt x 114.82841pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 339--342
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 339--342
-
- []
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1608,21 +1618,38 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[10 <./SAISmmii1.png> <./SAISmmii2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 348--352
+[11 <./SAISmmii1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 342--345
 
  []
 
-<SAIS_LMS.png, id=417, 421.575pt x 405.01312pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 342--345
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 351--355
+
+ []
+
+<SAIS_LMS.png, id=432, 421.575pt x 405.01312pt>
 File: SAIS_LMS.png Graphic file (type png)
  <use SAIS_LMS.png>
-Package pdftex.def Info: SAIS_LMS.png used on input line 355.
+Package pdftex.def Info: SAIS_LMS.png used on input line 358.
 (pdftex.def)             Requested size: 227.62206pt x 218.68527pt.
 
-<SAIS_LMSfinal.png, id=419, 396.7322pt x 80.55093pt>
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[12 <./SAISmmii2.png>] <SAIS_LMSfinal.png, id=442, 396.7322pt x 80.55093pt>
 File: SAIS_LMSfinal.png Graphic file (type png)
- <use SAIS_LMSfinal.png>
-Package pdftex.def Info: SAIS_LMSfinal.png used on input line 364.
+
+<use SAIS_LMSfinal.png>
+Package pdftex.def Info: SAIS_LMSfinal.png used on input line 367.
 (pdftex.def)             Requested size: 227.62206pt x 46.21686pt.
 
 
@@ -1632,22 +1659,22 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.371 R
+l.374 R
        oughly equivalent, when all L-types are placed, scan $SA$ from right ...
 
 ? 
-<SAIS_LMSS.png, id=427, 411.03563pt x 307.90031pt>
+<SAIS_LMSS.png, id=450, 411.03563pt x 307.90031pt>
 File: SAIS_LMSS.png Graphic file (type png)
  <use SAIS_LMSS.png>
-Package pdftex.def Info: SAIS_LMSS.png used on input line 377.
+Package pdftex.def Info: SAIS_LMSS.png used on input line 380.
 (pdftex.def)             Requested size: 227.62206pt x 170.50613pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 371--381
+Underfull \hbox (badness 10000) in paragraph at lines 374--384
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 371--381
+Underfull \hbox (badness 10000) in paragraph at lines 374--384
 
  []
 
@@ -1657,7 +1684,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[11 <./SAIS_LMS.png> <./SAIS_LMSfinal.png>]
+[13 <./SAIS_LMS.png> <./SAIS_LMSfinal.png>]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -1665,62 +1692,62 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.383 I
+l.386 I
        n the recursive step for $SAIS(S_1, SA_1)$, locate S-types, L-types a...
 
 ? 
-<SAIS_RECURSIVE.png, id=442, 938.75719pt x 392.21532pt>
+<SAIS_RECURSIVE.png, id=466, 938.75719pt x 392.21532pt>
 File: SAIS_RECURSIVE.png Graphic file (type png)
 
 <use SAIS_RECURSIVE.png>
-Package pdftex.def Info: SAIS_RECURSIVE.png used on input line 397.
+Package pdftex.def Info: SAIS_RECURSIVE.png used on input line 400.
 (pdftex.def)             Requested size: 455.24411pt x 190.20026pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 383--402
+Underfull \hbox (badness 10000) in paragraph at lines 386--405
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 383--402
+Underfull \hbox (badness 10000) in paragraph at lines 386--405
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 383--402
+Underfull \hbox (badness 10000) in paragraph at lines 386--405
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 383--402
+Underfull \hbox (badness 10000) in paragraph at lines 386--405
 
  []
 
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.407 T
+       his procedure is demonstrated in Figure \ref{fig:SAIS_RECURSIVEDESCRI...
+
+? 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[12 <./SAIS_LMSS.png>]
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.404 T
-       his procedure is demonstrated in Figure \ref{fig:SAIS_RECURSIVEDESCRI...
-
-? 
-<SAIS_Sortedorder.png, id=454, 583.42969pt x 290.58563pt>
+[14 <./SAIS_LMSS.png>]
+<SAIS_Sortedorder.png, id=477, 583.42969pt x 290.58563pt>
 File: SAIS_Sortedorder.png Graphic file (type png)
 
 <use SAIS_Sortedorder.png>
-Package pdftex.def Info: SAIS_Sortedorder.png used on input line 408.
+Package pdftex.def Info: SAIS_Sortedorder.png used on input line 411.
 (pdftex.def)             Requested size: 273.14923pt x 136.0476pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 404--412
+Underfull \hbox (badness 10000) in paragraph at lines 407--415
 
  []
 
@@ -1731,7 +1758,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.413 \\ \\
+l.416 \\ \\
            
 ? 
 
@@ -1741,21 +1768,21 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.414 \textbf
+l.417 \textbf
              {Correctness, completeness and performance}
 ? 
 
-Underfull \hbox (badness 10000) in paragraph at lines 414--422
+Underfull \hbox (badness 10000) in paragraph at lines 417--425
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 414--422
+Underfull \hbox (badness 10000) in paragraph at lines 417--425
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 414--422
+Underfull \hbox (badness 10000) in paragraph at lines 417--425
 
  []
 
@@ -1765,37 +1792,37 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[13 <./SAIS_RECURSIVE.png> <./SAIS_Sortedorder.png>]
-<lmsprefix.png, id=470, 621.07031pt x 310.91156pt>
+[15 <./SAIS_RECURSIVE.png> <./SAIS_Sortedorder.png>]
+<lmsprefix.png, id=492, 621.07031pt x 310.91156pt>
 File: lmsprefix.png Graphic file (type png)
  <use lmsprefix.png>
-Package pdftex.def Info: lmsprefix.png used on input line 431.
+Package pdftex.def Info: lmsprefix.png used on input line 434.
 (pdftex.def)             Requested size: 364.19667pt x 182.3166pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 433--433
+Underfull \hbox (badness 10000) in paragraph at lines 436--436
 []\T1/cmr/m/n/12 Figure 15: |Suf-fixes with cor-re-spond-ing LMS pre-fixes
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 425--435
+Underfull \hbox (badness 10000) in paragraph at lines 428--438
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 425--435
+Underfull \hbox (badness 10000) in paragraph at lines 428--438
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 425--435
+Underfull \hbox (badness 10000) in paragraph at lines 428--438
 
  []
 
-<ltypedescription.png, id=473, 234.8775pt x 191.21437pt>
+<ltypedescription.png, id=495, 234.8775pt x 191.21437pt>
 File: ltypedescription.png Graphic file (type png)
 
 <use ltypedescription.png>
-Package pdftex.def Info: ltypedescription.png used on input line 439.
+Package pdftex.def Info: ltypedescription.png used on input line 442.
 (pdftex.def)             Requested size: 182.09486pt x 148.24503pt.
 
 
@@ -1804,11 +1831,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[14 <./lmsprefix.png>] <lmssorteds.png, id=485, 311.66437pt x 305.64188pt>
+[16 <./lmsprefix.png>] <lmssorteds.png, id=508, 311.66437pt x 305.64188pt>
 File: lmssorteds.png Graphic file (type png)
 
 <use lmssorteds.png>
-Package pdftex.def Info: lmssorteds.png used on input line 450.
+Package pdftex.def Info: lmssorteds.png used on input line 453.
 (pdftex.def)             Requested size: 227.62206pt x 223.22862pt.
 
 
@@ -1817,38 +1844,38 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[15 <./ltypedescription.png>]
+[17 <./ltypedescription.png>]
 
-LaTeX Warning: Reference `introduction' on page 16 undefined on input line 460.
-
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 456--471
-
- []
+LaTeX Warning: Reference `introduction' on page 18 undefined on input line 463.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 456--471
+
+Underfull \hbox (badness 10000) in paragraph at lines 459--474
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 456--471
+Underfull \hbox (badness 10000) in paragraph at lines 459--474
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 456--471
+Underfull \hbox (badness 10000) in paragraph at lines 459--474
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 456--471
+Underfull \hbox (badness 10000) in paragraph at lines 459--474
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 456--471
+Underfull \hbox (badness 10000) in paragraph at lines 459--474
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 459--474
 
  []
 
@@ -1858,48 +1885,48 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[16 <./lmssorteds.png>]
+[18 <./lmssorteds.png>]
 ! Undefined control sequence.
 <argument> Longest Common Prefix - \empth 
                                           {LCP}
-l.474 ...tion{Longest Common Prefix - \empth{LCP}}
+l.477 ...tion{Longest Common Prefix - \empth{LCP}}
                                                    \label{LCPsection}
 ? 
 ! Undefined control sequence.
 <argument> ... \fi Longest Common Prefix - \empth 
                                                   {LCP}}
-l.474 ...tion{Longest Common Prefix - \empth{LCP}}
+l.477 ...tion{Longest Common Prefix - \empth{LCP}}
                                                    \label{LCPsection}
 ? 
 ! Undefined control sequence.
 <argument> ...}\fi Longest Common Prefix - \empth 
                                                   {LCP}
-l.474 ...tion{Longest Common Prefix - \empth{LCP}}
+l.477 ...tion{Longest Common Prefix - \empth{LCP}}
                                                    \label{LCPsection}
 ? 
 ! Undefined control sequence.
 <argument> ...}\fi Longest Common Prefix - \empth 
                                                   {LCP}}{\thepage }{\@curren...
-l.474 ...tion{Longest Common Prefix - \empth{LCP}}
+l.477 ...tion{Longest Common Prefix - \empth{LCP}}
                                                    \label{LCPsection}
 ? 
 
-Underfull \hbox (badness 10000) in paragraph at lines 482--492
+Underfull \hbox (badness 10000) in paragraph at lines 485--495
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 482--492
+Underfull \hbox (badness 10000) in paragraph at lines 485--495
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 482--492
+Underfull \hbox (badness 10000) in paragraph at lines 485--495
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 482--492
+Underfull \hbox (badness 10000) in paragraph at lines 485--495
 
  []
 
@@ -1909,27 +1936,27 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[17]
+[19]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[18]
+[20]
 ! Extra }, or forgotten $.
-l.551  F & L }
+l.554  F & L }
                 \\
 ? 
 
-Overfull \hbox (6.20555pt too wide) in paragraph at lines 570--571
+Overfull \hbox (6.20555pt too wide) in paragraph at lines 573--574
 \T1/cmr/m/n/12 and place these in a coloum $\OML/cmm/m/it/12 F$ \T1/cmr/m/n/12 
 in ma-trix $\OML/cmm/m/it/12 M$\T1/cmr/m/n/12 , in lex-i-co-graph-i-cal or-der.
  Put bwt(aab$baaaaba)
  []
 
 ! Extra }, or forgotten $.
-l.575  F & L }
+l.578  F & L }
                 \\
 ? 
 
@@ -1938,14 +1965,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[19] <bwt0.png, id=545, 340.27126pt x 253.69781pt>
+[21] <bwt0.png, id=568, 340.27126pt x 253.69781pt>
 File: bwt0.png Graphic file (type png)
  <use bwt0.png>
-Package pdftex.def Info: bwt0.png used on input line 597.
+Package pdftex.def Info: bwt0.png used on input line 600.
 (pdftex.def)             Requested size: 227.62206pt x 169.70953pt.
 
 ! Undefined control sequence.
-l.604 ...d a FM-index, as illustrated in Figure \?
+l.607 ...d a FM-index, as illustrated in Figure \?
                                                   .  We search $P$ from righ...
 
 ? 
@@ -1955,26 +1982,19 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[20 <./bwt0.png>] <traversalenchanced.png, id=561, 505.89pt x 255.95625pt>
+[22 <./bwt0.png>] <traversalenchanced.png, id=583, 505.89pt x 255.95625pt>
 File: traversalenchanced.png Graphic file (type png)
 
 <use traversalenchanced.png>
-Package pdftex.def Info: traversalenchanced.png used on input line 624.
+Package pdftex.def Info: traversalenchanced.png used on input line 627.
 (pdftex.def)             Requested size: 227.62206pt x 115.16753pt.
 
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[21]
-Underfull \hbox (badness 10000) in paragraph at lines 630--637
+Underfull \hbox (badness 10000) in paragraph at lines 633--640
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 630--637
+Underfull \hbox (badness 10000) in paragraph at lines 633--640
 
  []
 
@@ -1984,17 +2004,24 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[22 <./traversalenchanced.png>]
-<LempelWrong.png, id=601, 332.74312pt x 245.41687pt>
+[23 <./traversalenchanced.png>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[24] <LempelWrong.png, id=622, 332.74312pt x 245.41687pt>
 File: LempelWrong.png Graphic file (type png)
- <use LempelWrong.png>
-Package pdftex.def Info: LempelWrong.png used on input line 662.
-(pdftex.def)             Requested size: 182.09486pt x 134.30563pt.
 
-<Lempeltrue.png, id=604, 332.74312pt x 88.83188pt>
+<use LempelWrong.png>
+Package pdftex.def Info: LempelWrong.png used on input line 665.
+(pdftex.def)             Requested size: 182.09486pt x 134.30563pt.
+ <Lempeltrue.png, id=625, 332.74312pt x 88.83188pt>
 File: Lempeltrue.png Graphic file (type png)
- <use Lempeltrue.png>
-Package pdftex.def Info: Lempeltrue.png used on input line 673.
+
+<use Lempeltrue.png>
+Package pdftex.def Info: Lempeltrue.png used on input line 676.
 (pdftex.def)             Requested size: 182.09486pt x 48.6137pt.
 
 
@@ -2003,25 +2030,25 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[23 <./LempelWrong.png> <./Lempeltrue.png>]
-<travesal.png, id=626, 337.26pt x 239.39438pt>
+[25 <./LempelWrong.png> <./Lempeltrue.png>]
+<travesal.png, id=650, 337.26pt x 239.39438pt>
 File: travesal.png Graphic file (type png)
  <use travesal.png>
-Package pdftex.def Info: travesal.png used on input line 695.
+Package pdftex.def Info: travesal.png used on input line 698.
 (pdftex.def)             Requested size: 227.62206pt x 161.57326pt.
 
-Underfull \hbox (badness 7344) in paragraph at lines 697--697
+Underfull \hbox (badness 7344) in paragraph at lines 700--700
 []\T1/cmr/m/n/12 Figure 26: |Rooted tree - deept-first trav-esal with $\OML/cmm
 /m/it/12 L \OT1/cmr/m/n/12 =$
  []
 
 
-LaTeX Warning: Reference `FILES' on page 24 undefined on input line 701.
+LaTeX Warning: Reference `FILES' on page 26 undefined on input line 704.
 
-<ButtomUp.png, id=631, 652.68843pt x 398.23781pt>
+<ButtomUp.png, id=655, 652.68843pt x 398.23781pt>
 File: ButtomUp.png Graphic file (type png)
  <use ButtomUp.png>
-Package pdftex.def Info: ButtomUp.png used on input line 705.
+Package pdftex.def Info: ButtomUp.png used on input line 708.
 (pdftex.def)             Requested size: 318.66948pt x 194.43942pt.
 
 
@@ -2031,7 +2058,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.710 \\ \\
+l.713 \\ \\
            
 ? 
 
@@ -2041,7 +2068,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.711 T
+l.714 T
        op-down traversals
 ? 
 
@@ -2050,15 +2077,15 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[24 <./travesal.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 711--715
+[26 <./travesal.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 714--718
 
  []
 
-<ExactMatching.png, id=648, 174.6525pt x 186.6975pt>
+<ExactMatching.png, id=670, 174.6525pt x 186.6975pt>
 File: ExactMatching.png Graphic file (type png)
  <use ExactMatching.png>
-Package pdftex.def Info: ExactMatching.png used on input line 718.
+Package pdftex.def Info: ExactMatching.png used on input line 721.
 (pdftex.def)             Requested size: 91.04742pt x 97.32825pt.
 
 
@@ -2067,16 +2094,16 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[25 <./ButtomUp.png> <./ExactMatching.png>]
+[27 <./ButtomUp.png> <./ExactMatching.png>]
 ! Undefined control sequence.
-l.737 ... $S$ starting at character $p$. The \empg
+l.740 ... $S$ starting at character $p$. The \empg
                                                   {dictionary problem} is on...
 
 ? 
-<KeywordTree.png, id=665, 478.03593pt x 341.02406pt>
+<KeywordTree.png, id=686, 478.03593pt x 341.02406pt>
 File: KeywordTree.png Graphic file (type png)
  <use KeywordTree.png>
-Package pdftex.def Info: KeywordTree.png used on input line 740.
+Package pdftex.def Info: KeywordTree.png used on input line 743.
 (pdftex.def)             Requested size: 227.62206pt x 162.37837pt.
 
 
@@ -2086,7 +2113,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.749 \item E
+l.752 \item E
              . coli : The complete genome of \emph{Escherichia} bactirium (D...
 
 ? 
@@ -2097,7 +2124,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.749 \item E
+l.752 \item E
              . coli : The complete genome of \emph{Escherichia} bactirium (D...
 
 ? 
@@ -2108,7 +2135,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.749 \item E
+l.752 \item E
              . coli : The complete genome of \emph{Escherichia} bactirium (D...
 
 ? 
@@ -2119,7 +2146,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.750 \item Y
+l.753 \item Y
              east : The complete genome of \emph{Saccharomyces cerevisiae} (...
 
 ? 
@@ -2130,7 +2157,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.750 \item Y
+l.753 \item Y
              east : The complete genome of \emph{Saccharomyces cerevisiae} (...
 
 ? 
@@ -2141,7 +2168,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.750 \item Y
+l.753 \item Y
              east : The complete genome of \emph{Saccharomyces cerevisiae} (...
 
 ? 
@@ -2152,7 +2179,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.751 \item H
+l.754 \item H
              s21 : A complete collection of protein sequences - $\Sigma$=4, ...
 
 ? 
@@ -2163,7 +2190,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.751 \item H
+l.754 \item H
              s21 : A complete collection of protein sequences - $\Sigma$=4, ...
 
 ? 
@@ -2174,7 +2201,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.751 \item H
+l.754 \item H
              s21 : A complete collection of protein sequences - $\Sigma$=4, ...
 
 ? 
@@ -2185,7 +2212,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.752 \item S
+l.755 \item S
              wissprot : Complete collection of protein sequences - $\Sigma$=...
 
 ? 
@@ -2196,7 +2223,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.752 \item S
+l.755 \item S
              wissprot : Complete collection of protein sequences - $\Sigma$=...
 
 ? 
@@ -2207,7 +2234,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.752 \item S
+l.755 \item S
              wissprot : Complete collection of protein sequences - $\Sigma$=...
 
 ? 
@@ -2218,7 +2245,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.753 \item S
+l.756 \item S
              haks : A collection of the complete work of William Shakespear ...
 
 ? 
@@ -2229,7 +2256,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.753 \item S
+l.756 \item S
              haks : A collection of the complete work of William Shakespear ...
 
 ? 
@@ -2240,7 +2267,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.753 \item S
+l.756 \item S
              haks : A collection of the complete work of William Shakespear ...
 
 ? 
@@ -2251,7 +2278,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.754 \end{itemize}
+l.757 \end{itemize}
                    
 ? 
 
@@ -2260,41 +2287,41 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[26 <./KeywordTree.png>] <TopDown.png, id=674, 651.93562pt x 298.11375pt>
+[28 <./KeywordTree.png>] <TopDown.png, id=695, 651.93562pt x 298.11375pt>
 File: TopDown.png Graphic file (type png)
 
 <use TopDown.png>
-Package pdftex.def Info: TopDown.png used on input line 760.
+Package pdftex.def Info: TopDown.png used on input line 763.
 (pdftex.def)             Requested size: 364.19667pt x 166.54225pt.
 
 ! Undefined control sequence.
 <argument> ...l (\emph {minpl}) and maximal (\emp 
                                                   {maxpl}) are the minimal a...
-l.763 ...ns, respetively \cite{enchancedsuffix}.)}
+l.766 ...ns, respetively \cite{enchancedsuffix}.)}
                                                   
 ? 
 ! Undefined control sequence.
 <argument> ...l (\emph {minpl}) and maximal (\emp 
                                                   {maxpl}) are the minimal a...
-l.763 ...ns, respetively \cite{enchancedsuffix}.)}
+l.766 ...ns, respetively \cite{enchancedsuffix}.)}
                                                   
 ? 
 ! Undefined control sequence.
 <argument> ...l (\emph {minpl}) and maximal (\emp 
                                                   {maxpl}) are the minimal a...
-l.763 ...ns, respetively \cite{enchancedsuffix}.)}
+l.766 ...ns, respetively \cite{enchancedsuffix}.)}
                                                   
 ? 
 
-Underfull \hbox (badness 10000) in paragraph at lines 767--770
+Underfull \hbox (badness 10000) in paragraph at lines 770--773
 
  []
 
-<matchingstatistic.png, id=680, 464.4853pt x 66.2475pt>
+<matchingstatistic.png, id=701, 464.4853pt x 66.2475pt>
 File: matchingstatistic.png Graphic file (type png)
 
 <use matchingstatistic.png>
-Package pdftex.def Info: matchingstatistic.png used on input line 791.
+Package pdftex.def Info: matchingstatistic.png used on input line 794.
 (pdftex.def)             Requested size: 273.14923pt x 38.95932pt.
 
 
@@ -2303,43 +2330,43 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[27 <./TopDown.png>] <matchingtest.png, id=695, 650.43pt x 133.24782pt>
+[29 <./TopDown.png>] <matchingtest.png, id=716, 650.43pt x 133.24782pt>
 File: matchingtest.png Graphic file (type png)
 
 <use matchingtest.png>
-Package pdftex.def Info: matchingtest.png used on input line 802.
+Package pdftex.def Info: matchingtest.png used on input line 805.
 (pdftex.def)             Requested size: 364.19667pt x 74.61215pt.
 
-Underfull \hbox (badness 1048) in paragraph at lines 805--805
+Underfull \hbox (badness 1048) in paragraph at lines 808--808
 []\T1/cmr/m/n/12 Figure 32: |Run-ning time in sec-onds and space con-sump-tion 
 in
  []
 
 
-Overfull \hbox (13.99513pt too wide) in paragraph at lines 809--809
+Overfull \hbox (13.99513pt too wide) in paragraph at lines 812--812
 []\T1/cmr/bx/n/14.4 SAIS-FLS - Space re-quire-ment re-duc-tion for fixed length
  strings 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 811--818
+Underfull \hbox (badness 10000) in paragraph at lines 814--821
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 811--818
+Underfull \hbox (badness 10000) in paragraph at lines 814--821
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 811--818
+Underfull \hbox (badness 10000) in paragraph at lines 814--821
 
  []
 
-<jazz.png, id=699, 147.55125pt x 261.97874pt>
+<jazz.png, id=720, 147.55125pt x 261.97874pt>
 File: jazz.png Graphic file (type png)
  <use jazz.png>
-Package pdftex.def Info: jazz.png used on input line 821.
+Package pdftex.def Info: jazz.png used on input line 824.
 (pdftex.def)             Requested size: 91.04742pt x 161.65762pt.
 
 
@@ -2348,13 +2375,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[28 <./matchingstatistic.png> <./matchingtest.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 828--830
+[30 <./matchingstatistic.png> <./matchingtest.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 831--833
 
  []
 
 
-Overfull \hbox (13.92336pt too wide) in paragraph at lines 831--832
+Overfull \hbox (13.92336pt too wide) in paragraph at lines 834--835
 []\T1/cmr/m/n/12 Let $\OML/cmm/m/it/12 N[]S$ \T1/cmr/m/n/12 de-note the num-ber
  of fixed length dis-tinct strings in $\OML/cmm/m/it/12 S \OT1/cmr/m/n/12 = \OM
 L/cmm/m/it/12 S[]\OT1/cmr/m/n/12 $\OML/cmm/m/it/12 S[]\OT1/cmr/m/n/12 $\OML/cmm
@@ -2368,7 +2395,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.833 \\ \\
+l.836 \\ \\
            
 ? 
 
@@ -2378,12 +2405,12 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.834 T
+l.837 T
        his paper introduce an algorithm that reduce suffix array size for fi...
 
 ? 
 
-Underfull \hbox (badness 10000) in paragraph at lines 848--850
+Underfull \hbox (badness 10000) in paragraph at lines 851--853
 
  []
 
@@ -2394,7 +2421,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.853 \\ \\
+l.856 \\ \\
            
 ? 
 
@@ -2404,26 +2431,26 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.854 \textbf
+l.857 \textbf
              {Proof By Contradiction}
 ? 
 
-Underfull \hbox (badness 10000) in paragraph at lines 854--863
+Underfull \hbox (badness 10000) in paragraph at lines 857--866
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 854--863
+Underfull \hbox (badness 10000) in paragraph at lines 857--866
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 854--863
+Underfull \hbox (badness 10000) in paragraph at lines 857--866
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 854--863
+Underfull \hbox (badness 10000) in paragraph at lines 857--866
 
  []
 
@@ -2433,11 +2460,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[29 <./jazz.png>]
+[31 <./jazz.png>]
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.864 ...ere $S[SA-FLS[i] + len] =\$$, $len = $|S_
+l.867 ...ere $S[SA-FLS[i] + len] =\$$, $len = $|S_
                                                   0|$ = $|S_1|$=…=$|S_{n-1...
 
 ? 
@@ -2448,7 +2475,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.866 \\ \\
+l.869 \\ \\
            
 ? 
 
@@ -2458,39 +2485,39 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.867 \textbf
+l.870 \textbf
              {Proof By Contradiction}
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.869 ... < |SA|$ and $len = S_0$ in $S=S_0$$, $S_
+l.872 ... < |SA|$ and $len = S_0$ in $S=S_0$$, $S_
                                                   0$ =\$, where $S[SA[i] + l...
 
 ? 
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 871.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 874.
 
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 871.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 874.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 867--877
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 867--877
+Underfull \hbox (badness 10000) in paragraph at lines 870--880
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 867--877
+Underfull \hbox (badness 10000) in paragraph at lines 870--880
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 867--877
+Underfull \hbox (badness 10000) in paragraph at lines 870--880
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 870--880
 
  []
 
@@ -2500,47 +2527,47 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[30]
+[32]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[31] <malwarenaming.png, id=758, 448.67625pt x 152.06813pt>
+[33] <malwarenaming.png, id=779, 448.67625pt x 152.06813pt>
 File: malwarenaming.png Graphic file (type png)
 
 <use malwarenaming.png>
-Package pdftex.def Info: malwarenaming.png used on input line 903.
+Package pdftex.def Info: malwarenaming.png used on input line 906.
 (pdftex.def)             Requested size: 273.14923pt x 92.58043pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 894--907
+Underfull \hbox (badness 10000) in paragraph at lines 897--910
 
  []
 
 
-Overfull \hbox (4.26425pt too wide) in paragraph at lines 894--907
+Overfull \hbox (4.26425pt too wide) in paragraph at lines 897--910
 \T1/cmr/m/n/12 <malware type>://<platform>/<family name>.<group name>.<infectiv
 e length>.<sub
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 894--907
+Underfull \hbox (badness 10000) in paragraph at lines 897--910
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 894--907
+Underfull \hbox (badness 10000) in paragraph at lines 897--910
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 894--907
+Underfull \hbox (badness 10000) in paragraph at lines 897--910
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 894--907
+Underfull \hbox (badness 10000) in paragraph at lines 897--910
 
  []
 
@@ -2550,10 +2577,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[32] <family.png, id=771, 625.58719pt x 312.41719pt>
+[34] <family.png, id=792, 625.58719pt x 312.41719pt>
 File: family.png Graphic file (type png)
  <use family.png>
-Package pdftex.def Info: family.png used on input line 913.
+Package pdftex.def Info: family.png used on input line 916.
 (pdftex.def)             Requested size: 364.19667pt x 181.88377pt.
 
 
@@ -2563,7 +2590,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.919 \\ \\
+l.922 \\ \\
            
 ? 
 
@@ -2573,31 +2600,31 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.920 \textbf
+l.923 \textbf
              {\emph{Network-based malware}}
 ? 
 
-Underfull \hbox (badness 10000) in paragraph at lines 920--924
+Underfull \hbox (badness 10000) in paragraph at lines 923--927
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 920--924
+Underfull \hbox (badness 10000) in paragraph at lines 923--927
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 920--924
+Underfull \hbox (badness 10000) in paragraph at lines 923--927
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 925--927
+Underfull \hbox (badness 10000) in paragraph at lines 928--930
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 925--927
+Underfull \hbox (badness 10000) in paragraph at lines 928--930
 
  []
 
@@ -2607,17 +2634,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[33 <./malwarenaming.png> <./family.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 928--930
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 928--930
-
- []
-
-
+[35 <./malwarenaming.png> <./family.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 931--933
 
  []
@@ -2658,17 +2675,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 940--942
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 943--951
+Underfull \hbox (badness 10000) in paragraph at lines 943--945
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 943--951
+Underfull \hbox (badness 10000) in paragraph at lines 943--945
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 943--951
+Underfull \hbox (badness 10000) in paragraph at lines 946--954
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 946--954
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 946--954
 
  []
 
@@ -2678,7 +2705,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[34]
+[36]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -2686,72 +2713,17 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.953 E
+l.956 E
        veryday services are accessible, as web-banking, e-shopping, social m...
 
 ? 
-<totalmalware.png, id=803, 603.75563pt x 544.28343pt>
+<totalmalware.png, id=824, 603.75563pt x 544.28343pt>
 File: totalmalware.png Graphic file (type png)
  <use totalmalware.png>
-Package pdftex.def Info: totalmalware.png used on input line 958.
+Package pdftex.def Info: totalmalware.png used on input line 961.
 (pdftex.def)             Requested size: 364.19667pt x 328.31665pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 953--962
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[35]
-Underfull \hbox (badness 10000) in paragraph at lines 964--966
-
- []
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.968 M
-       alware detection techniques can roughly be categorized as either anom...
-
-? 
-
-Underfull \hbox (badness 10000) in paragraph at lines 968--971
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[36 <./totalmalware.png>]
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.973 T
-       wo phases usually occur when exploiting anomaly-based detection, a tr...
-
-? 
-
-Underfull \hbox (badness 10000) in paragraph at lines 973--979
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 973--979
+Underfull \hbox (badness 10000) in paragraph at lines 956--965
 
  []
 
@@ -2762,7 +2734,23 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [37]
-Underfull \hbox (badness 10000) in paragraph at lines 980--982
+Underfull \hbox (badness 10000) in paragraph at lines 967--969
+
+ []
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.971 M
+       alware detection techniques can roughly be categorized as either anom...
+
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 971--974
 
  []
 
@@ -2772,7 +2760,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[38]
+[38 <./totalmalware.png>]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -2780,22 +2768,17 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.984 M
-       alware signatures are strings of bytes that are unique for that parti...
+l.976 T
+       wo phases usually occur when exploiting anomaly-based detection, a tr...
 
 ? 
 
-Underfull \hbox (badness 10000) in paragraph at lines 984--992
+Underfull \hbox (badness 10000) in paragraph at lines 976--982
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 984--992
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 984--992
+Underfull \hbox (badness 10000) in paragraph at lines 976--982
 
  []
 
@@ -2806,6 +2789,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [39]
+Underfull \hbox (badness 10000) in paragraph at lines 983--985
+
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2814,27 +2801,31 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [40]
 
-Package natbib Warning: Citation `turner2011updated ' on page 41 undefined on i
-nput line 998.
+! LaTeX Error: There's no line here to end.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.998 ...ossary/define.jsp?letter=m&word=md5-hash}
-                                                  , which all checked out.
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.987 M
+       alware signatures are strings of bytes that are unique for that parti...
+
 ? 
-! Misplaced alignment tab character &.
-<argument> ...sponse/glossary/define.jsp?letter=m&
-                                                  word=md5-hash
-l.998 ...ossary/define.jsp?letter=m&word=md5-hash}
-                                                  , which all checked out.
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.998 ...ossary/define.jsp?letter=m&word=md5-hash}
-                                                  , which all checked out.
-? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 987--995
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 987--995
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 987--995
+
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2842,8 +2833,58 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [41]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[42]
+! You can't use `macro parameter character #' in horizontal mode.
+l.1010 ...ion. We decided to create our MIDS in C#
+                                                   using Windows forms and W...
+
+? 
+
+Package natbib Warning: Citation `turner2011updated ' on page 43 undefined on i
+nput line 1016.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1016 ...ssary/define.jsp?letter=m&word=md5-hash}
+                                                  , which all checked out. \\
+? 
+! Misplaced alignment tab character &.
+<argument> ...sponse/glossary/define.jsp?letter=m&
+                                                  word=md5-hash
+l.1016 ...ssary/define.jsp?letter=m&word=md5-hash}
+                                                  , which all checked out. \\
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1016 ...ssary/define.jsp?letter=m&word=md5-hash}
+                                                  , which all checked out. \\
+? 
 ! Undefined control sequence.
-l.1010 ...lware in 2015, was detected in Windows\�
+l.1019 ... where each string $S_0, S_1, S_2, \ldot
+                                                  , S_{n-1}$ is terminated w...
+
+? 
+! Undefined control sequence.
+l.1019 ...$, such that $S_0\$, S_1\$, S_2\$, \ldot
+                                                  , S_{n-1}\$$.
+? 
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[43]
+! Undefined control sequence.
+l.1029 ...lware in 2015, was detected in Windows\�
                                                   � \cite{avtestreport }, of...
 
 ? 
@@ -2855,16 +2896,16 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1010 ...ware in 2015, was detected in Windows\®
+l.1029 ...ware in 2015, was detected in Windows\®
                                                    \cite{avtestreport }, of ...
 
 ? 
 
-Package natbib Warning: Citation `avtestreport ' on page 42 undefined on input 
-line 1010.
+Package natbib Warning: Citation `avtestreport ' on page 44 undefined on input 
+line 1029.
 
 ! Undefined control sequence.
-l.1010 ... MIDS on Microsoft’s newest Windows \�
+l.1029 ... MIDS on Microsoft’s newest Windows \�
                                                   � operating system, hence ...
 
 ? 
@@ -2876,12 +2917,12 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1010 ...MIDS on Microsoft’s newest Windows \®
+l.1029 ...MIDS on Microsoft’s newest Windows \®
                                                    operating system, hence W...
 
 ? 
 ! Undefined control sequence.
-l.1010 ...ws \® operating system, hence Windows\�
+l.1029 ...ws \® operating system, hence Windows\�
                                                   � 10.
 ? 
 
@@ -2892,7 +2933,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1010 ...s \® operating system, hence Windows\®
+l.1029 ...s \® operating system, hence Windows\®
                                                    10.
 ? 
 
@@ -2901,16 +2942,23 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[42] <SAIS_LMS2.png, id=950, 421.575pt x 405.01312pt>
+[44]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[45] <SAIS_LMS2.png, id=982, 421.575pt x 405.01312pt>
 File: SAIS_LMS2.png Graphic file (type png)
  <use SAIS_LMS2.png>
-Package pdftex.def Info: SAIS_LMS2.png used on input line 1033.
+Package pdftex.def Info: SAIS_LMS2.png used on input line 1052.
 (pdftex.def)             Requested size: 227.62206pt x 218.68527pt.
 
-<SAIS_LMS3.png, id=951, 421.575pt x 405.01312pt>
+<SAIS_LMS3.png, id=983, 421.575pt x 405.01312pt>
 File: SAIS_LMS3.png Graphic file (type png)
  <use SAIS_LMS3.png>
-Package pdftex.def Info: SAIS_LMS3.png used on input line 1040.
+Package pdftex.def Info: SAIS_LMS3.png used on input line 1059.
 (pdftex.def)             Requested size: 227.62206pt x 218.68527pt.
 
 
@@ -2919,16 +2967,16 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[43 <./SAIS_LMS2.png> <./SAIS_LMS3.png>]
-<SAIS_RECURSIVEDESCRIPTION.png, id=962, 1069.74657pt x 624.83438pt>
+[46 <./SAIS_LMS2.png> <./SAIS_LMS3.png>]
+<SAIS_RECURSIVEDESCRIPTION.png, id=993, 1069.74657pt x 624.83438pt>
 File: SAIS_RECURSIVEDESCRIPTION.png Graphic file (type png)
 
 <use SAIS_RECURSIVEDESCRIPTION.png>
-Package pdftex.def Info: SAIS_RECURSIVEDESCRIPTION.png used on input line 1050.
+Package pdftex.def Info: SAIS_RECURSIVEDESCRIPTION.png used on input line 1069.
 
 (pdftex.def)             Requested size: 500.77129pt x 292.4995pt.
 
-Overfull \hbox (45.52718pt too wide) in paragraph at lines 1050--1052
+Overfull \hbox (45.52718pt too wide) in paragraph at lines 1069--1071
  [][] 
  []
 
@@ -2938,14 +2986,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[44 <./SAIS_RECURSIVEDESCRIPTION.png>]
+[47 <./SAIS_RECURSIVEDESCRIPTION.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1056.
+(hyperref)                removing `math shift' on input line 1075.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1056.
+(hyperref)                removing `math shift' on input line 1075.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2953,8 +3001,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[45] (texTemplate.bbl
-Overfull \hbox (31.36732pt too wide) in paragraph at lines 4--7
+[48] (texTemplate.bbl
+Overfull \hbox (31.36732pt too wide) in paragraph at lines 53--56
 []\T1/cmr/m/n/12 ``Strings - ad-vanced data struc-tures.'' https://www.youtube.
 com/watch?v=F3nbY3hIDLQl.
  []
@@ -2967,10 +3015,17 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.26 ...ed suffix trees with full functionality∗
+l.58 ...ed suffix trees with full functionality∗
                                                   ,'' {\em 2007
 ? 
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 68.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[49]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 86.
 
 ("C:\Users\Mark Roland\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1cmtt.
 fd"
@@ -2982,14 +3037,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[46]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[47]
+[50]
 Underfull \hbox (badness 10000) in paragraph at lines 164--167
 []\T1/cmr/m/n/12 ``Av-test_security_report_2015-2016.'' https://www.av-
  []
@@ -3012,15 +3060,15 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[48]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1064.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1064.
+[51]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1083.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1083.
  (texTemplate.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1064.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1064.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1083.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1083.
 
 Package rerunfilecheck Info: File `texTemplate.out' has not changed.
-(rerunfilecheck)             Checksum: B978440364AD30F3CD8300E72D4FC7D2;2351.
+(rerunfilecheck)             Checksum: EFD54D4EDB6EF4DDA8FF1B4835F0DAB6;2283.
 
 
 LaTeX Warning: There were undefined references.
@@ -3028,45 +3076,42 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1064.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1083.
  ) 
 Here is how much of TeX's memory you used:
- 25193 strings out of 493634
- 457496 string characters out of 3146585
- 671911 words of memory out of 3000000
- 27908 multiletter control sequences out of 15000+200000
- 22467 words of font info for 61 fonts, out of 3000000 for 9000
+ 25197 strings out of 493634
+ 457625 string characters out of 3146585
+ 673911 words of memory out of 3000000
+ 27911 multiletter control sequences out of 15000+200000
+ 19514 words of font info for 55 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 62i,18n,92p,2265b,1399s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,18n,92p,2265b,1400s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Mark Roland\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\d
 pi600\ectt1200.pk> <C:\Users\Mark Roland\AppData\Local\MiKTeX\2.9\fonts\pk\ljfo
-ur\jknappen\ec\dpi600\ecbi1200.pk> <C:\Users\Mark Roland\AppData\Local\MiKTeX\2
-.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk> <C:\Users\Mark Roland\AppDat
-a\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx0800.pk> <C:\Users\Ma
-rk Roland\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.
+ur\jknappen\ec\dpi600\ecrm0600.pk> <C:\Users\Mark Roland\AppData\Local\MiKTeX\2
+.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbi1200.pk> <C:\Users\Mark Roland\AppDat
+a\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk> <C:\Users\Ma
+rk Roland\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx0800.
 pk> <C:\Users\Mark Roland\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\
-dpi600\ecbx1000.pk> <C:\Users\Mark Roland\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
-our\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\Mark Roland\AppData\Local\MiKTeX\
-2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0700.pk> <C:\Users\Mark Roland\AppDa
-ta\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk> <C:\Users\M
-ark Roland\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200
-.pk> <C:\Users\Mark Roland\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec
-\dpi600\ecbx1728.pk> <C:\Users\Mark Roland\AppData\Local\MiKTeX\2.9\fonts\pk\lj
-four\jknappen\ec\dpi600\ecrm1200.pk><C:/Users/Mark Roland/AppData/Local/Program
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Mark Roland/Ap
-pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Us
-ers/Mark Roland/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmr12.pfb><C:/Users/Mark Roland/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmr8.pfb><C:/Users/Mark Roland/AppData/Local/Programs/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Mark Roland/AppData/L
-ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Mar
-k Roland/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><
-C:/Users/Mark Roland/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/palatino
-/uplb8a.pfb><C:/Users/Mark Roland/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
-/urw/palatino/uplr8a.pfb>
-Output written on texTemplate.pdf (48 pages, 1046489 bytes).
+dpi600\ecrm0800.pk> <C:\Users\Mark Roland\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
+our\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\Mark Roland\AppData\Local\MiKTeX\
+2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Mark Roland\AppDa
+ta\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\M
+ark Roland\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200
+.pk><C:/Users/Mark Roland/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmmi12.pfb><C:/Users/Mark Roland/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Mark Roland/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Mark Rolan
+d/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:
+/Users/Mark Roland/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmsy10.pfb><C:/Users/Mark Roland/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Mark Roland/AppData/Local/Programs/
+MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/Mark Roland/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/Mark Rolan
+d/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb>
+Output written on texTemplate.pdf (51 pages, 1023665 bytes).
 PDF statistics:
- 1532 PDF objects out of 1728 (max. 8388607)
- 192 named destinations out of 1000 (max. 500000)
- 480 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1537 PDF objects out of 1728 (max. 8388607)
+ 196 named destinations out of 1000 (max. 500000)
+ 472 words of extra memory for PDF output out of 10000 (max. 10000000)
 
