@@ -106,7 +106,7 @@ linjer
 \end{abstract}
 
 \section{Limitations}
-Limits: Network intrusion detection, SACA comparison \\◘
+Limits: Network intrusion detection, SACA comparison \\
 max \\
 6 \\ 
 linjer \\
@@ -154,7 +154,7 @@ Since most discussions of the exact string matching paradigm begin with a naive 
 \newline
 The method aligns the left end of $P$ with the left end of $T$ and the scan from left to right, comparing characters of $P$ in $T$, until either there is a mismatch or $P$ is exhausted, in which case an occurrence of $P$ in $T$ is reported. $P$ is then shifted one place to the right, and the character comparison is restarted from the left end of $P$ which repeats until $P$ shifts past right end of $T$ \cite{gusfield}.
 \newline
-Let $n$ denote the length of $P$ and let $m$ denote the length of $T$, then the worst-case time complexity of the naive method is $\Theta$(nm). This is particularly clear if $P$ and $T$ consists of the same repeated characters, such that the is an occurrence of $P$ in $T$ for each of the first $m - n - 1$ positions.
+Let $n$ denote the length of $P$ and let $m$ denote the length of $T$, then the worst-case time complexity of the naive method is $\Theta$(nm). This is particularly clear if $P$ and $T$ consists of the same repeated characters, such that the is an occurrence of $P$ in $T$ for each of the first $m - n - 1$ positions \cite{gusfield}.
 \newline
 Since most discussions of the exact string matching problem begin with the naive method. This paper adopts this tradition, as it forms a basic insight to the more complex exact string matching algorithms presented later on \cite{gusfield}.
 \begin{figure}[H]
@@ -168,7 +168,7 @@ Since most discussions of the exact string matching problem begin with the naive
 Let pattern $P$=  abxyabxz and let text $T$= xabxyabxyabxz.
 \\ \\
 Then the naive method aligns the left end of $P$  with left end of $T$ and scan from left to right, comparing the characters of $P$ with $T$ until either two disparate characters are located or $P$ is exhausted, in which case an occurrence of $P$ in $T$ is reported. If a character mismatch happens, $P$ is shifted one place to the right, until $P$ exceeds $T$, as illustrated in Figure \ref{fig:comparisonbased1} \cite{gusfield}.
-The worst-case bound of the naïve method is $\Omega$(nm), which can be reduced to $\Omega$(n + m) with the basic idea of shifting $P$ more than one character at a time. This means that the number of character comparisons is reduced, due to $P$ moving through $T$ more rapidly. Some methods even exploit skipping over parts of the pattern after $P$ have shifted, further reducing character comparisons \cite{gusfield}. 
+The worst-case bound of the naive method is $\Omega$(nm), which can be reduced to $\Omega$(n + m) with the basic idea of shifting $P$ more than one character at a time. This means that the number of character comparisons is reduced, due to $P$ moving through $T$ more rapidly. Some methods even exploit skipping over parts of the pattern after $P$ have shifted, further reducing character comparisons \cite{gusfield}. 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.4\textwidth]{comparisonbased2}
@@ -260,7 +260,7 @@ Suppose that we have no data structure constructed for our new application, but 
 
 Suffix arrays are space efficient alternatives to suffix trees \cite{gusfield,twoeffecient}. Before Manber and Meyers in 1990 introduced the first direct suffix array construction algorithm – SACA, suffix arrays were constructed using lexicographical order traversal of suffix trees  \cite{gusfield,twoeffecient, performancesuffix, newapproach}. Manber and Meyers made suffix trees obsolete in respect to constructing suffix arrays, and their approach is known as a doubling algorithm, where with each sorting pass, doubles the depth to which each suffix are sorted. This means that suffixes are sorted in logarithmic number of passes, providing a worst-case bound of $O(n log n)$ and $O(n)$ expected, assuming linear sort, reminiscent of Radix Sort \cite{performancesuffix} and queries can be answered in $O(P + log n)$ with use of Binary Search \cite{gusfield}.
 \\
-With the discovery of four different SACAs requiring only $O-(n)$ time worst case in 2003, the situation drastically changed. SACAs have since been the focus of intense research \cite{performancesuffix,newapproach}. In 2005 Joong Chae Na introduced more linear time SACAs, where two stood out, the Ko-Aluru (KA) algorithm for supplying good performance in practice and the Kärkkäinen-Sanders algorithm for its elegance \cite{newapproach}. 
+With the discovery of four different SACAs requiring only $O(n)$ time worst case in 2003, the situation drastically changed. SACAs have since been the focus of intense research \cite{performancesuffix,newapproach}. In 2005 Joong Chae Na introduced more linear time SACAs, where two stood out, the Ko-Aluru (KA) algorithm for supplying good performance in practice and the Kärkkäinen-Sanders algorithm for its elegance \cite{newapproach}. 
 \\
 According to a survey paper, SACAs have to fulfill three important requirements: 
 \begin{quote}
@@ -385,7 +385,7 @@ When the LMS substrings are placed, then scan $SA$ from left to right and for ea
 \\
 Roughly equivalent, when all L-types are placed, scan $SA$ from right to the left for each nonnegative value S[i], if $S[i]-1$ is S-type, then place $SA[i]-1$ in the corresponding bucket for $suf(S, SA[i]-1)$, and forward the bucket end one to the left. The above operations are demonstrated in Appendix \ref{SAIS Algorithm run} and the final result is displayed in Figure \ref{fig:SAIS_LMSfinal} \cite{twoeffecient}.
 \\ \\
-It is now the matter of determine if all LMS substrings are correctly sorted in SA, hence the uniqueness step in the SAIS algorithm. This is done by scanning $SA$ from left to right, and obtaining each LMS substring, and comparing the lexicographical values and types, and place them in buckets named accordingly to the lexicographical order they appear, starting from 0. So scanning from left to right in $SA$ given in Figure \ref{fig:SAIS_LMSfinal} gives the following bucket $B = \{\{0; \$\}, \{1; iippii\$\}, \{2; iissi, iissi\}\}$. The bucket keys are then placed in $S_1$ in the order as they appear in the original string $S$, hence $S_1 = \{2,2,0,1\}$ as illustrated in Figure \ref{fig:SAIS_LMSS}. If each character in $S_1$ is unique, hence does not exists any where else in $S$, then $SA_1$ can be computed directly from $S_1$, else fire the recursive step $SAIS(S_1, SA_1)$. $S_1$ for $S$ in Figure \ref{fig:SAIS_LMSS} is not distinct, since $2$ exists twice in $S_1$, hence $2$ is not unique, consequently a recursive step, $SA(S_1, SA_1)$,  is needed. Before venturing into the recursive step, save the original positions of the LMS substrings as they appear in $S_1$ into $P_1$, where $S_{1}[0] = 2$ points at position 2 in $S$,  $S_{1}[1] = 2$ points at position 6 in $S$, $S_{1}[2] = 1$ points at position 10 in $S$ and finally $S_{1}[3] = 0$ points at position 16 in $S$, such that $P_1=[2; 6; 10; 16]$ \cite{twoeffecient}.
+It is now the matter of determine if all LMS substrings are correctly sorted in SA, hence the uniqueness step in the SAIS algorithm. This is done by scanning $SA$ from left to right, and obtaining each LMS substring, and comparing the lexicographical values and types, and place them in buckets named accordingly to the lexicographical order they appear, starting from 0. So scanning from left to right in $SA$ given in Figure \ref{fig:SAIS_LMSfinal} gives the following bucket $B = \{\{0; \$\}, \{1; iippii\$\}, \{2; iissi, iissi\}\}$. The bucket keys are then placed in $S_1$ in the order as they appear in the original string $S$, hence $S_1 = \{2,2,0,1\}$ as illustrated in Figure \ref{fig:SAIS_LMSS}. If each character in $S_1$ is unique, hence does not exists any where else in $S$, then $SA_1$ can be computed directly from $S_1$, else fire the recursive step $SAIS(S_1, SA_1)$. $S_1$ for $S$ in Figure \ref{fig:SAIS_LMSS} is not distinct, since $2$ exists twice in $S_1$. Before venturing into the recursive step, save the original positions of the LMS substrings as they appear in $S_1$ into $P_1$, where $S_{1}[0] = 2$ points at position 2 in $S$,  $S_{1}[1] = 2$ points at position 6 in $S$, $S_{1}[2] = 1$ points at position 10 in $S$ and finally $S_{1}[3] = 0$ points at position 16 in $S$, such that $P_1=[2; 6; 10; 16]$ \cite{twoeffecient}.
 \\
 \begin{figure}[H]
     \centering
@@ -432,7 +432,7 @@ We have shown a thorough run-through of the SA-IS algorithm, now we tend to corr
 \\ \\
 \textit{Induced Sorting LMS-Substrings \& Inducing $SA$ from $S_1$ }
 \\ \\
-Step two and three in both induced sorting LMS-substring and inducing $SA$ from $S_1$ are equivalent. In induced sorting LMS-substrings we scan S from right to left and append LMS indices in their corresponding buckets in $SA$ and in inducing $SA$ from $S_1$, $S_1$ is scanned from right to left and we append $P_1[SA_1[i]]$ into their corresponding bucket's in $SA$.
+Step two and three in both induced sorting LMS-substring and inducing $SA$ from $S_1$ are equivalent. In induced sorting LMS-substrings we scan S from right to left and append LMS indices in their corresponding buckets in $SA$ and in inducing $SA$ from $S_1$, $S_1$ is scanned from right to left and we append $P_1[SA_1[i]]$ into their corresponding buckets in $SA$.
 The sorting of the variable-size LMS-substrings is the most challenging problem. Ge Nong et al. \cite{twoeffecient} solves the problem by induced sorting. We have earlier shown this procedure with an example for $S$=mmiissiissiippii\$ and will continue down this road to elaborate the proof presented by Ge Nong et al. \cite{twoeffecient}.
 \begin{quote}
 \textbf{Theorem 4.4} Induced sorting LMS substrings will correctly sort all LMS prefixes of $S$ into $SA$. \cite{twoeffecient}.
@@ -472,7 +472,7 @@ When appending S-type LMS-prefixes to their equivalent buckets, we may overwrite
 \\ \\
 \textbf{Divide-and-conquer \& recursion}
 \\ \\
-As LMS-substrings are treated as basic blocks of the string in $S$, sorting all LMS-substrings will consequently sort all substrings in $S$, as proven. Whenever two (or more) LMS-substrings is contained in the same bucket, we have a case where we have equal LMS-substrings. We then use the order index of each LMS-substring and replace LMS-substrings in $S$ with their names, as illustrated in \ref{fig:SAIS_LMSS}. $S$ can then be represented by a shorter string $S_1$, consequently solving the problem in a divide-and-conquer manner using recursion \cite{twoeffecient}. So we divide the problem into subproblems that are smaller instances of the original problem. Solve the subproblems recursively and combine the solutions of the subproblems into a solution for the original problem \ref{introduction}.
+As LMS-substrings are treated as basic blocks of the string in $S$, sorting all LMS-substrings will consequently sort all substrings in $S$, as proven. Whenever two (or more) LMS-substrings is contained in the same bucket, we have a case where we have equal LMS-substrings. We then use the order index of each LMS-substring and replace LMS-substrings in $S$ with their names, as illustrated in \ref{fig:SAIS_LMSS}. $S$ can then be represented by a shorter string $S_1$, consequently solving the problem in a divide-and-conquer manner using recursion \cite{twoeffecient}. So we divide the problem into subproblems that are smaller instances of the original problem. Solve the subproblems recursively and combine the solutions of the subproblems into a solution for the original problem \cite{introduction}.
 Ge Nong et al. \cite{twoeffecient} proves that $||S_1||$ is at most $||S||$ eg. $n_1 \leq \lfloor n/2 \rfloor$, thus cutting the problem in half with each recursion, by sorting the LMS-substrings. In Figure \ref{fig:SAIS_RECURSIVE}, $S$=mmiissiissiippii\$ generated a shorter string $S$=3210. Here $||S_1||$ is at most half of $||S||$.
 \\ \\
 \textbf{Space and time complexity}
@@ -497,7 +497,7 @@ Let $S_0$=abekat\$ and $S_1$=abe, then the longest common word is $abe$, hence l
 The BWT - Burrow-Wheeler transform, invented by Burrow and Wheeler in 1994, also known as block sorting, is a lossless data compression algorithm and produces a permutation bwt(S) of an input string $S$, such that $S$ can be reversed from bwt(S), but is easier to compress \cite{BWT}. \\
 BWT is a very powerful tool in data compression and even simple algorithms that implement BWT have good performance and achieve a good compression ratio using relative small space. Furthermore, a even more powerful BWT-based compression tools, such as Bzip and Szip are still used today \cite{BWT}.
 \\ \\
-Besides data compression, BWT has a remarkable and practical property, namely that it can build a data structure which is sort of a compressed suffix array for an input string $S$ \cite{BWT}. To fully map and understand BWT, and how it succeed to create permutation bwt(S) of an input string $S$ that is easier to compress, this paper gives a precise description of the idea behind cyclic shifts and reversible lossless data compression, before venturing into property of building a data structure resembling compressed suffix array and its importance to the topic at hand. 
+Besides data compression, BWT has a remarkable and practical property, namely that it can build a data structure which is sort of a compressed suffix array for an input string $S$ \cite{BWT}. To fully map and understand BWT, and how it succeed to create permutation bwt(S) of an input string $S$ that is easier to compress, this paper gives a precise description of the idea behind cyclic shifts and reversible lossless data compression.
 \\ \\
 BWT consist of a reversible transformation of input string $S$ denoted bwt(S). This reversible transformation, bwt(S), consist of exactly the same characters as in $S$ over the same alphabet $\Sigma$, but is usually easier to compress. The idea is to form a conceptual matrix $M$ whose rows consist of cyclic shifts of $S$ sorted in a left to right lexicographical order \cite{BWT}.
 \\ \\
@@ -558,7 +558,7 @@ Then bwt(aaabbaabaa\$) = aab\$baaaaba, hence the string from $L$ in $M_{sorted}$
 \label{fig:Matrix1}
 \end{figure}
 
-Recall that bwt(aaabbaabaa$) = aab$baaaaba and let's introduce $LF$-mapping, which provides a subscript (rank) for each character in $S$, hence each character in $S$ is given a number, equal to the number of times that character occurred previously in $S$.This procedure is called S-ranking since we rank accordingly to $S$. Ranks are already provided in Figure  \ref{fig:Matrix1}. Notice that the first column $F$ and last column $L$ have characters that occur in the same order, which is represented by color in Figure \ref{fig:Matrix2}. This is actually not a surprising feature since occurrences of character $c$ in $S$ are sorted by its right context in both $F$ and $L$ \cite{bwtfmindex}.
+Recall that bwt(aaabbaabaa$) = aab$baaaaba and let's introduce $LF$-mapping, which provides a subscript (rank) for each character in $S$, hence each character in $S$ is given a number, equal to the number of times that character occurred previously in $S$. This procedure is called S-ranking since we rank accordingly to $S$. Ranks are already provided in Figure  \ref{fig:Matrix1}. Notice that the first column $F$ and last column $L$ have characters that occur in the same order, which is represented by color in Figure \ref{fig:Matrix2}. This is actually not a surprising feature since occurrences of character $c$ in $S$ are sorted by its right context in both $F$ and $L$ \cite{bwtfmindex}.
 
 \begin{figure}[H]
 \[
@@ -616,13 +616,12 @@ We can now reverse bwt(aab\$baaaaba) using matrix $M$. Start at the first row of
 \end{figure}
 
 The FM-Index provide an opportunity for searching in compressed $bwt$ files without full decompressing, which is important for the “Big Data” era of sequencing. 
-We can search in a compressed $bwt(S)$ file using FM-index. Suppose that we want to find an occurrence of pattern $P$=aab in $bwt(S)$=bc\$ababaaa, so we build an FM-index, as illustrated in Figure \?.  We search $P$ from right to left and find all occurrences of $b$ in $F$. Luckily these are grouped together as part of the design and can be found in index 6 through 8 in $F$. Next we look at index 6 through 8 in $L$, and find any characters $c=a$, since $b$ is preceded by $a$ in $P$. Index 7 and 8 in $T$ both have $a$’s, so we look at the ranks of these, and locate the same characters in $F$ with these ranks, which is in index 3 and 4.  Then we find occurrences of $a$ at index 3 and 4 in $L$, since $a$ is preceded by $a$ in $P$. $P$ is now exhausted, and we can, therefore, confirm that there is an occurrence of $P$=aab in $bwt(S)$=bc\$ababaaa.  This searching approach finds the number of all occurrences of $P$ in $bwt(S)$, but it does not tell us where in the text these occur. 
-FM-index using bwt is a sort of a suffix array but is easier to compress. 
-
+Suppose that we want to find an occurrence of pattern $P$=aab in $bwt(S)$=bc\$ababaaa, so we build an FM-index, as illustrated in Figure \?.  We search $P$ from right to left and find all occurrences of $b$ in $F$. Luckily these are grouped together as part of the design and can be found in index 6 through 8 in $F$. Next we look at index 6 through 8 in $L$, and find any characters $c=a$, since $b$ is preceded by $a$ in $P$. Index 7 and 8 in $T$ both have $a$’s, so we look at the ranks of these, and locate the same characters in $F$ with these ranks, which is in index 3 and 4.  Then we find occurrences of $a$ at index 3 and 4 in $L$, since $a$ is preceded by $a$ in $P$. $P$ is now exhausted, and we can, therefore, confirm that there is an occurrence of $P$=aab in $bwt(S)$=bc\$ababaaa.  This searching approach finds the number of all occurrences of $P$ in $bwt(S)$, but it does not tell us where in the text these occur. 
+FM-index using bwt is a sort of a suffix array but is easier to compress \cite{bwtfmindex}. 
 
 \subsection{Application}
 
-We have seen two static data structures, here the suffix tree and space efficient suffix array, both which can be constructed in linear time complexity and searched in $O$(n) and $O$(n log m), respectively. Now we tend to the question regarding applications and operation, here if suffix trees and suffix arrays can be used in the same applications and support equal operations. 
+We have seen two static data structures, here the suffix tree and the space efficient suffix array, both which can be constructed in linear time complexity and searched in $O$(n) and $O$(n log m), respectively. We now tend to the question regarding applications, here if suffix trees and suffix arrays can be used in the same applications.
 
 The suffix tree is undoubtedly one of the most important data structures in string processing and comparative genomics and once constructed, can efficiently solve a myriad of string processing problems, as demonstrated by Gusfield with almost 70 pages devoted to applications on suffix tress \cite{gusfield, enchancedsuffix}. The application demonstrated by Gusfield can be classified into three kinds of traversals \cite{enchancedsuffix}:
 \begin{itemize}  
@@ -630,7 +629,7 @@ The suffix tree is undoubtedly one of the most important data structures in stri
 \item a top-down traversal of a subtree of the suffix tree 
 \item a traversal of the suffix tree using suffix links 
 \end{itemize}
-Figure \ref{fig:traversalenchanced} shows some of the application discussed in Gusfield, with their traversal kind. Although suffix trees are asymptotically linear and play a huge role in data structure algorithmics, they are not as widespread in today's software application as expected. There are a few reasons for that. Space consumption of suffix tree are large and act as a bottleneck in large-scale applications since they require 20 bytes per input character. Moreover, it suffers from a poor locality of memory references, which causes significant efficiency loss on cached processor architectures and makes it difficult to store in secondary memory \cite{enchancedsuffix}. In several genome analysis and genome comparison applications, the above problems have been identified for suffix trees. But as seen, a more space-efficient data structure exist, hence the suffix array which only consumes 4$n$ bytes per input character\cite{enchancedsuffix}.   
+Figure \ref{fig:traversalenchanced} shows some of the application discussed in Gusfield, with their traversal kind. Although suffix trees are asymptotically linear and play a huge role in data structure algorithmics, they are not as widespread in today's software application as expected. There are a few reasons for that. Space consumption of suffix tree are large and act as a bottleneck in large-scale applications since they require 20 bytes per input character. Moreover, it suffers from a poor locality of memory references, which causes significant efficiency loss on cached processor architectures and makes it difficult to store in secondary memory \cite{enchancedsuffix}. In several genome analysis and genome comparison applications, the above problems have been identified for suffix trees. But as seen, a more space-efficient data structure exist as a suffix array only consume 4$n$ bytes per input character\cite{enchancedsuffix}.   
  
 Mohamed Ibrahim Abouelhoda \emph{et al.} \cite{enchancedsuffix} show that \emph{every} algorithm that uses suffix trees as the data structure, can systematically be replaced with an enhanced version of a suffix array (enhanced suffix arrays) and furthermore, solve the same problems in same time complexity. Enhanced suffix array is a data structure consisting of the suffix array, and some other information or additional tables. Furthermore, enhanced suffix arrays are fast and easy to implement \cite{enchancedsuffix}.
 
@@ -713,7 +712,7 @@ Let’s suppose for simplification that an application is allowed preprocessing 
     \label{fig:travesal}
 \end{figure}
 
-Ibrahim Abouelhoda \emph{et al.} did an experiment with two different programs computing maximal repeated pairs, using different files (listed here \ref{FILES})\cite{enchancedsuffix}. \emph{REPuter} is based on suffix tree and \emph{esarep} is based on enhanced suffix arrays \cite{enchancedsuffix}. The result is displayed in Figure \ref{fig:ButtomUp}.
+Ibrahim Abouelhoda \emph{et al.} did an experiment with two different programs computing maximal repeated pairs, using different files \cite{enchancedsuffix}. \emph{REPuter} is based on suffix tree and \emph{esarep} is based on enhanced suffix arrays \cite{enchancedsuffix}. The result is displayed in Figure \ref{fig:ButtomUp}.
 The program \emph{esarep} used almost half of the space required for \emph{REPuter} and in this case 2-3 times faster and in 4-5 times faster. This comparison emphasizes the advantages of enhanced suffix arrays over suffix trees \cite{enchancedsuffix}.
 \begin{figure}[H]
     \centering
@@ -881,7 +880,7 @@ Suppose that $S[SA-FLS[j+1]]$ is lexicographical smaller than $S[SA-IS-FLS[j]]$,
 \\ \\
 \textbf{Proof By Contradiction} 
 \\ \\
-Suppose that there exist some $i$ and $j$, $i < j$, in SA, $0 < i < j < |SA|$ and $len = S_0$ in $S=S_0$$, $S_0$ =\$, where $S[SA[i] + len] = \$$ and $S[SA[j] + len] = \$$. Suppose that SA-FLS contain one item, that would suggest that $i=j$ which is a contradiction.
+Suppose that there exist some $i$ and $j$, $i < j$, in SA, $0 < i < j < |SA|$ and $len = S_0$ in $S=S_0$$, $S_0$ =\$, where $S[SA[i] + len] = \$$ and $S[SA[j] + len] = \$$. Suppose that SAIS-FLS contain one item, that would suggest that $i=j$ which is a contradiction.
 \\ \\
 Suppose that $SA$ is sorted in lexicographically order for all suffixes in $S=S_0\$S_1\$...S_{n-1}\$$ where $S_0, S_1,…,S_{n-1}$ does not contain the termination symbol \$ and $len =|S_0|=|S_1|=…=|S_{n-1}|$.
 \\ \\
@@ -1004,41 +1003,125 @@ A diverse approach proposed by Kreibich and Crowcroft \cite{idika2007survey} is 
 Dynamic signature-based detection is characterized by using information gathered during program execution to determine maliciousness. Here behavior patterns reveal maliciousness of the program under investigation \cite{idika2007survey}. \\
 An example of dynamic signature –based detection proposed by Ellis et al. \cite{idika2007survey}, is worm detection using identified malevolent behavior. Four behavioral signatures are identified by means of data flow monitoring, coming in and out from a solitary node. A signature could be when a server changes into a client, here whenever a worm propagates itself. This occurs when a worm compromises a server and acts as a client to infect and spread to other systems (hosts) \cite{idika2007survey}. Alpha-in and alpha-out are other base signature, which maps how worms typically send similar information across nodes and consequently have same data flow links. Though for some servers, it is not unusually to transmit similar information, here file servers as an example \cite{idika2007survey}. Ellis et al. \cite{idika2007survey} analyzed the server-client signature and the alpha-in/alpha-out signature, and found that the server-client signature perfectly detected the worm changes, whereas the alpha-in/alpha-out would be unsupportive with an alpha value of one, with a high false-positive rate \cite{idika2007survey}. \\ \\
 Last but not least, hybrid signature-based detection use both static and dynamic properties to determine maliciousness of a program \cite{idika2007survey}. Polymorph and self-encrypting viruses are designed to obscure themselves and thus prevaricate pattern patching techniques. A self-encrypting virus encrypts itself, consequently obscuring malicious patterns which would normally be detected by pattern matching detection techniques. Mori et al. \cite{idika2007survey} propose a method that decrypts a mobile polymorph and self-encrypting virus in an emulator and performs a static analysis of the system calls made by the virus payload \cite{idika2007survey}. Malicious behaviors are represented by state machines and detection policies are modeled by state machines, which is user-specified. A mobile application is considered malicious whenever a match occur. This technique effectively detected 600 virus/worm samples \cite{idika2007survey}.
-\section{Implementation - Intrusion Detection}
+\section{Implementation}
 
 The initial step in the process of implementing our intrusion detection system was to conduct a requirement analysis, to establish key attributes and limitations to our malware intrusion detection system (MIDS). Given that most commercial antimalware systems exploit the signature-based techniques as part of their implementation \cite{kruegel2003using}, we adopt the same approach in the implementation of our MIDS. We primarily focus our attention on the static signature-based technique, hence a static data structure of unique malware signatures. First and foremost as it is easier to implement and configure \cite{kruegel2003using}.  
-We found inspiration from a commercial anti-malware program, namely Kaspersky Internet Security (version 16.0.1.445(g)). We limited our MIDS to handle internal threats, hence malware which already roams a within a system. With that limitation, we can ignore outside threats. Since our main focus is building a MIDS that employ suffix arrays as its main data structure, we defined three primary properties and two secondary properties for our MIDS. 
-Primary
-1.    Scan a file for maliciousness against our malware signature repository using three different methods:
-1.    Direct search by means of database queries. The data structure is saved to hard disk as a database file (Microsoft SQL Server Database File.) and loaded when needed.
-2.    Binary search on a suffix array data structure. Suffix array (including the text) is loaded directly into the memory (RAM). 
-3.    Binary search with LCP values on a suffix array data structure. Suffix array (including the text) is loaded directly into the memory (RAM). 
-2.    Scan a folder for malicious files against our malware signature repository 
-3.    Scan startup files for maliciousness against our malware signature repository
-Secondary
-1.    Live background scanning of processes against our malware signature repository.
-2.    Automatic startup scanner, that scan startup items when a system boots up.  
+We found inspiration from a commercial anti-malware program, namely Kaspersky Internet Security (version 16.0.1.445(g)). We limited our MIDS to handle internal threats, hence malicious software which already infects a system. 
 Primaries should give us the means to compare advantages and disadvantages of using a suffix array data structure. Our main goal with the primary attributes is to compare search times for suffix arrays loaded into memory (including the text) for binary search with and without LCP values and a data structure which was saved as a file, and loaded when needed. The first secondary property evaluates and examines the impact of constant scanning a system, whereas the latter examine the impact on system boot time. Our goal is to let the live scanner and automatic start-up scanner have as little impact on the system as possible. 
 According to a security report from 2015-2016 by AV-TEST, 85.39\% of all identified malware in 2015, was detected in Windows \textsuperscript{\textregistered} \cite{avtestreport}, of such we have chosen to implement our MIDS on Microsoft’s newest Windows\textsuperscript{\textregistered} operating system, hence Windows® 10. The programming language came naturally as we needed a language that supported Windows Service application, SQL database and a graphical user interface (GUI). Windows Service applications are executed as the normal lifecycle when Windows boots up and before any program in the startup item list executes, which is ideal for our solution. We decided to create our MIDS in C# using Windows forms and Windows service, using Microsoft Visual Studio 2015, as this platform supports all of our needs.
 
+\subsection{Malware Intrusion Detecting System (MIDS)}
 
-\subsection{Data structure - Fixed Length Distinct Strings}
+The initial step in the process of implementing our intrusion detection system was to conduct a requirement analysis, to establish key attributes and limitations to our malware intrusion detection system (MIDS). Given that most commercial antimalware systems exploit the signature-based techniques as part of their implementation \cite{kruegel2003using}, we adopt the same approach in the implementation of our MIDS. We primarily focus our attention on the static signature-based technique, hence a static data structure of unique malware signatures. First and foremost as it is easier to implement and configure \cite{kruegel2003using}. We limited our MIDS to handle internal threats, hence malicious software which already infects a system.\\ 
+According to a security report from 2015-2016 by AV-TEST, 85.39\% of all identified malware in 2015, was detected in Windows \textsuperscript{\textregistered} \cite{avtestreport}, of such we have chosen to implement our MIDS on Microsoft’s newest Windows\textsuperscript{\textregistered} operating system, hence Windows® 10. The programming language came naturally as we needed a language that supported Windows Service application, SQL database and a graphical user interface (GUI). Windows Service applications are executed as the normal lifecycle when Windows boots up and before any program in the startup item list executes, which is ideal for our solution. We decided to create our MIDS in C# using Windows forms and Windows service, using Microsoft Visual Studio 2015, as this platform supports all of our needs.
+The malware detection intrusion system consist of two part. First part is a passive user-driven tool to build varieties of data structures and to perform active scanning of files, folders and startup items, as we will denote Anti-malware Program. Second part is an automatic service that scan startup items at system boot and processes in the background with no user interaction,which we denote Anti-malware Service. As the Anti-Malware Program and the Anti-malware Service share core functionalities, we will explain the implementation ideas and strategies behind the Anti-malware Program, and point of similarities and dissimilarities in the section describing the Anti-malware Service implementation.\\ 
+The Anti-malware Program have two primary functions, building and maintaining the data structure and the core function of scanning files for maliciousness. From these primary functions, we defined six primary and two secondary properties for our Anti-malware program. 
+\\ \\
+\textbf{Primaries} 
+\begin{itemize}
+  \item Supports a suffix array data structure, SQL, and cache
+  \item The scanner should be able to distinguish between malicious software \emph{malware} and non-malicious clean software \emph{cleanware}.
+  \item Malicious signatures should be unique fingerprints for malicious software.
+  \item Detect file maliciousness against our malware signature repository using three different methods:
+  	\begin{itemize}
+  	\item Direct search by means of database queries. The data structure is saved to hard disk as a database file (Microsoft SQL Server Database File) and loaded when needed.
+  	\item Binary search on a suffix array data structure. Suffix array (including the text) is loaded directly into the memory (RAM). 
+  	\item Binary search with LCP values on a suffix array data structure. Suffix array (including the text) is loaded directly into the memory (RAM). 
+	\end{itemize} 
+  \item Scan a folder for malicious files against our malware signature repository 
+  \item Scan startup files for maliciousness against our malware signature repository
+\end{itemize}
+\textbf{Secondaries} 
+\begin{itemize}
+  \item Support for direct suffix array and text retrieval from the hard disk for low RAM systems.
+  \item Support of a suffix tree data structure and searching
+\end{itemize}
 
-Given that most commercial anti-malware systems exploit the signature-based techniques as part of their implementation \cite{kruegel2003using}, we adopt the same approach in the implementation of our MIDS. We primarily focus our attention on the static signature-based technique, hence a static data structure of unique malware signatures. First and foremost as it is easier to implement and configure \cite{kruegel2003using}.  \\
-We were given access to VirusShare.com  [virusshare] which is a repository of malware samples.  VirusShare.com contains live malware for security researchers, incident responders, and forensic analysts, but auxiliary interesting for us, VirusShare.com contains a database of over 27.000.000 MD5 hashes of feasible (not confirmed) malware. MD5 is a message digit algorithm, that takes an input and produce a “fingerprint” of that input \cite{turner2011updated}. MD5 hashes are weak in the sense of computer security, as it's not recommended for digital signatures \cite{turner2011updated } and are breakable  \cite{turner2011updated, wang2005break}. Nevertheless, we can undamaged use it as unique fingerprints of malicious software, given that the chance of randomly finding two different files that produce the same MD5 hash value should be infeasible \cite{thompson2005md5}. Equipped with this knowledge, we are safe in assuming that we should be able to calculate the MD5 value for any file in a system,  and if the calculated MD5 hash value for the given file is represented in the signature repository, we can with (almost) certainty conclude it is malicious. But we cannot guarantee that a given signature roaming the signature repository represents a malicious software, given that we do not know how, or by whom, the malware was acquired. One way of solving this ambiguity would be to authenticate every MD5 hash from our repository against a commercial repository, say Symantec. Nevertheless, we gave the accumulated repository from VirusShare.com  the benefit of the doubt and only checked a handful of random MD5 hashes against the Symantec repository at \href{https://www.symantec.com/security_response/glossary/define.jsp?letter=m&word=md5-hash}{https://www.symantec.com/security_response/glossary/define.jsp?letter=m&word=md5-hash}, which all checked out. \\
-We decided to build three different data structures for our MIDS: a suffix tree, suffix array, and a SQL database structure. The main goal of this approach is to compare construction time, space requirement and maintainability. The suffix tree implementation employed was found at \href{https://github.com/atillabyte/SuffixTree/tree/master/src/SuffixTree}\\
-{https://github.com/atillabyte/SuffixTree/tree/master/src/SuffixTree}. For the suffix array, we used an implementation of the SAIS algorithm based in Ge Nong et al \cite{twoeffecient} from \href{https://github.com/JoshKeegan/SAIS-CSharp}{https://github.com/JoshKeegan/SAIS-CSharp}. For our SQL database structure, we used Microsoft SQL Server Database File. \\
-We noticed that we are not dealing with one single text, but a concatenation of numerous distinct strings. To overcome this problem, we adopt the approach by Gusfield \cite{twoeffecient} to build a generalized suffix tree and suffix array for our set of distinct MD5 values. Then the complete string $S$ consists of fixed length strings concatenated together, where each string $S_0, S_1, S_2, \ldot, S_{n-1}$ is terminated with the sentinel (termination) \$, such that $S_0\$, S_1\$, S_2\$, \ldot, S_{n-1}\$$.
+The core functions and properties are now defined and we attended to building and managing the Anti-malware Program's data structure. 
+\\ \\
+\textbf{\emph{Data structure}} 
+\\ \\
+We were given access to VirusShare.com \cite{virusshare} which is a repository of malware samples. VirusShare.com contains live malware for security researchers, incident responders, and forensic analysts, but auxiliary interesting for us, VirusShare.com contains a database of over 27.000.000 MD5 hashes of feasible (not confirmed) malware. MD5 is a message digit algorithm, that takes an input and produce a “fingerprint” of that input \cite{turner2011updated}. MD5 hashes are weak in the sense of computer security, as it's not recommended for digital signatures \cite{turner2011updated} and are breakable  \cite{turner2011updated, wang2005break}. Nevertheless, we can undamaged use it as unique fingerprints of malicious software, given that the chance of randomly finding two different files that produce the same MD5 hash value should be infeasible \cite{thompson2005md5}. Equipped with this knowledge, we are safe to assume that we should be able to calculate the MD5 value for any file in a system,  and if the calculated MD5 hash value for the given file is represented in the signature repository, we can with (almost) certainty conclude it is malicious. Almost, given that we do not know how the malware was acquired, or by whom. A feasible solution to this ambiguity would be to authenticate every MD5 hash from our repository against a commercial repository, say Symantec. Nevertheless, we gave the accumulated repository from VirusShare.com  the benefit of the doubt and only checked a handful of random MD5 hashes against the Symantec repository at \href{https://www.symantec.com/security_response/glossary/define.jsp?letter=m&word=md5-hash}{https://www.symantec.com/security\_response/glossary}, which all checked out. Furthermore, the MIDS will be deployed on a testing environment, where it can do no harm.  \\
+We decided to build three different data structures for our MIDS: a suffix tree, suffix array, and a SQL database structure. The main goal of this approach is to compare construction time, space requirement and maintainability. We choose not to write the suffix tree and suffix array implementation ourself but found these elsewhere. Although it an exciting task, the implementation itself is not the goal of the paper, but an overall understanding of the predicament of incorporating a suffix array data structure in a malware intrusion system. \\ \\
+\textbf{Source code for the suffix tree and the suffix array implementation} 
+\begin{itemize}
+  \item Suffix tree source code:
+  \begin{sloppypar}
+ \href{https://github.com/atillabyte/SuffixTree/tree/master/src/SuffixTree}{https://github.com/atillabyte/SuffixTree/tree/master/src/SuffixTree}
+\end{sloppypar}
+  \item Suffix array source code: 
+    \begin{sloppypar}
+\href{https://github.com/JoshKeegan/SAIS-CSharp}{https://github.com/JoshKeegan/SAIS-CSharp}
+\end{sloppypar}
+\end{itemize}
+The suffix array is based on  Ge Nong et al \cite{twoeffecient} implementation of the SAIS algorithm. For our SQL database structure, we used Microsoft SQL Server Database File. \\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{databasecreation}
+    \captionsetup{width=0.8\textwidth}
+    \caption{The database downloaded from VirusShare.com \cite{virusshare} was transformed into to several .csv file. The .csv files was then transformed into 15 text files, where all MD5 values was bucket sorted depending of their first character value.}
+    \label{fig:databasecreation}
+\end{figure}
 
 
-\subsection{Malware Detecting Scanner}
 
 
-\subsection{Malware Detection Service}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{malwaresscanner}
+    \captionsetup{width=0.8\textwidth}
+    \caption{The scanner exploit different variety of scanning possibilities and data structures. The scanner supports SQL, a suffix array data structure, and an option to  load suffix array, lcp array and texts from the hard disk for low RAM systems. Cache store already scanned MD5 values \emph{cleanware}, which are assessed clean by the scanner. Suffix arrays can be used in corporation with LCP-values to speed up search. Furthermore, suffix arrays and lcp arrays (with texts) can be loaded directly into memory, to speed up searching for non-cached MD5 values.}
+    \label{fig:totalmalware}
+\end{figure}
+
+
+\subsection{Malware Intrusion Detecting System Service}
 Access to startup items when windows boots up - .exe is executed with the startup, and hnce it too late to detect malware
+\begin{itemize}
+  \item Live background scanning of processes against our malware signature repository.
+  \item Automatic startup scanner, that scan startup items when a system boots up.
+\end{itemize}
+files that propagates, repl
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{windowsservice}
+    \captionsetup{width=0.8\textwidth}
+    \caption{Whenever a new process starts, it is grabbed by the service to determine maliciousness. If the unique MD5 fingerprint of the process is found in the signature repository, is considered malicious and should be terminated. If the malicious process is locked by some other process/processes we terminate it/them which enables us to terminate the malicious process.}
+    \label{fig:totalmalware}
+\end{figure}
 
 \subsection{Platform and implementation language}
-According to a security report from 2015-2016 by AV-TEST, 85.39\% of all identified malware in 2015, was detected in Windows\® \cite{avtestreport }, of such we have chosen to implement our MIDS on Microsoft’s newest Windows \® operating system, hence Windows\® 10.  
+According to a security report from 2015-2016 by AV-TEST, 85.39\% of all identified malware in 2015, was detected in Windows\textsuperscript{\textregistered} \cite{avtestreport }, of such we have chosen to implement our MIDS on Microsoft’s newest Windows\textsuperscript{\textregistered} operating system, hence Windows \textsuperscript{\textregistered} 10.  
 
 \section{Experimental Results}
 
@@ -1084,9 +1167,8 @@ According to a security report from 2015-2016 by AV-TEST, 85.39\% of all identif
     \label{fig:SAIS_RECURSIVEDESCRIPTION}
 \end{figure}
 \newpage
-\section{Reversing a compressed string using bwt($S$)}\label{BWT}
-% THIS I WILL NOT EXPLAIN RIGHT NOW - WE CAN TAKE IT WHEN IT IS MORE RELEVANT!
-\newpage
+\section{Print of a startup scan}
+\includepdf[pages={1-2}]{StartupScan.pdf}
 \nocite{*}
 \bibliographystyle{ieeetr}
 \bibliographystyle{unsrt}
