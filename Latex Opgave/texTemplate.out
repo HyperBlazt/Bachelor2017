@@ -19,14 +19,11 @@
 \BOOKMARK [2][-]{subsection.5.4}{Anomaly-based detection}{section.5}% 19
 \BOOKMARK [2][-]{subsection.5.5}{Signature-based detection}{section.5}% 20
 \BOOKMARK [1][-]{section.6}{Implementation}{}% 21
-\BOOKMARK [2][-]{subsection.6.1}{Malware Intrusion Detecting System \(MIDS\)}{section.6}% 22
-\BOOKMARK [2][-]{subsection.6.2}{Malware Intrusion Detecting System Service}{section.6}% 23
-\BOOKMARK [2][-]{subsection.6.3}{Platform and implementation language}{section.6}% 24
-\BOOKMARK [1][-]{section.7}{Experimental Results}{}% 25
-\BOOKMARK [1][-]{section.8}{Discussion}{}% 26
-\BOOKMARK [1][-]{section.9}{Future work}{}% 27
-\BOOKMARK [1][-]{section.10}{Conclusion}{}% 28
-\BOOKMARK [1][-]{section.11}{Appendix}{}% 29
-\BOOKMARK [1][-]{appendix.A}{SAIS Algorithm run}{}% 30
-\BOOKMARK [1][-]{appendix.B}{SAIS Recurssive step}{}% 31
-\BOOKMARK [1][-]{appendix.C}{Print of a startup scan}{}% 32
+\BOOKMARK [2][-]{subsection.6.1}{Anti-malware Service}{section.6}% 22
+\BOOKMARK [1][-]{section.7}{Experimental Results}{}% 23
+\BOOKMARK [1][-]{section.8}{Future work}{}% 24
+\BOOKMARK [1][-]{section.9}{Conclusion}{}% 25
+\BOOKMARK [1][-]{section.10}{Appendix}{}% 26
+\BOOKMARK [1][-]{appendix.A}{SAIS Algorithm run}{}% 27
+\BOOKMARK [1][-]{appendix.B}{SAIS Recurssive step}{}% 28
+\BOOKMARK [1][-]{appendix.C}{Print of a startup scan}{}% 29

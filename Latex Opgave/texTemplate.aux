@@ -306,6 +306,8 @@
 \newlabel{fig:matchingtest}{{32}{30}{Running time in seconds and space consumption in megabytes for matching statistics. The program \emph {streems} uses suffix tree as data structure, where the tree construction time is not included. The program \emph {esams} uses enhanced suffix array as data structure, here a suffix array with some extra information \cite {enchancedsuffix}. \relax }{figure.caption.33}{}}
 \newlabel{fig:matchingtest@cref}{{[figure][32][]32}{30}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.9}SAIS-FLS - Space requirement reduction for fixed length strings}{30}{subsection.4.9}}
+\newlabel{SAIS-FLS}{{4.9}{30}{SAIS-FLS - Space requirement reduction for fixed length strings}{subsection.4.9}{}}
+\newlabel{SAIS-FLS@cref}{{[subsection][9][4]4.9}{30}}
 \@writefile{lof}{\contentsline {figure}{\numberline {33}{\ignorespaces Suffix array and suffixes for S=jazz$\$$fuzz$\$$quiz$\$$\relax }}{31}{figure.caption.34}}
 \newlabel{fig:jazz}{{33}{31}{Suffix array and suffixes for S=jazz$\$$fuzz$\$$quiz$\$$\relax }{figure.caption.34}{}}
 \newlabel{fig:jazz@cref}{{[figure][33][]33}{31}}
@@ -446,54 +448,62 @@
 \citation{kruegel2003using}
 \citation{kruegel2003using}
 \citation{avtestreport}
-\citation{kruegel2003using}
-\citation{kruegel2003using}
-\citation{avtestreport}
 \@writefile{toc}{\contentsline {section}{\numberline {6}Implementation}{43}{section.6}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Malware Intrusion Detecting System (MIDS)}{43}{subsection.6.1}}
 \citation{virusshare}
-\citation{turner2011updated}
 \citation{turner2011updated}
 \citation{turner2011updated,wang2005break}
 \citation{thompson2005md5}
 \citation{twoeffecient}
 \citation{virusshare}
 \citation{virusshare}
-\@writefile{lof}{\contentsline {figure}{\numberline {37}{\ignorespaces The database downloaded from VirusShare.com \cite  {virusshare} was transformed into to several .csv file. The .csv files was then transformed into 15 text files, where all MD5 values was bucket sorted depending of their first character value.\relax }}{46}{figure.caption.38}}
-\newlabel{fig:databasecreation}{{37}{46}{The database downloaded from VirusShare.com \cite {virusshare} was transformed into to several .csv file. The .csv files was then transformed into 15 text files, where all MD5 values was bucket sorted depending of their first character value.\relax }{figure.caption.38}{}}
-\newlabel{fig:databasecreation@cref}{{[figure][37][]37}{46}}
-\@writefile{lof}{\contentsline {figure}{\numberline {38}{\ignorespaces The scanner exploit different variety of scanning possibilities and data structures. The scanner supports SQL, a suffix array data structure, and an option to load suffix array, lcp array and texts from the hard disk for low RAM systems. Cache store already scanned MD5 values \emph  {cleanware}, which are assessed clean by the scanner. Suffix arrays can be used in corporation with LCP-values to speed up search. Furthermore, suffix arrays and lcp arrays (with texts) can be loaded directly into memory, to speed up searching for non-cached MD5 values.\relax }}{46}{figure.caption.39}}
-\newlabel{fig:totalmalware}{{38}{46}{The scanner exploit different variety of scanning possibilities and data structures. The scanner supports SQL, a suffix array data structure, and an option to load suffix array, lcp array and texts from the hard disk for low RAM systems. Cache store already scanned MD5 values \emph {cleanware}, which are assessed clean by the scanner. Suffix arrays can be used in corporation with LCP-values to speed up search. Furthermore, suffix arrays and lcp arrays (with texts) can be loaded directly into memory, to speed up searching for non-cached MD5 values.\relax }{figure.caption.39}{}}
-\newlabel{fig:totalmalware@cref}{{[figure][38][]38}{46}}
-\citation{avtestreport }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Malware Intrusion Detecting System Service}{47}{subsection.6.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {39}{\ignorespaces Whenever a new process starts, it is grabbed by the service to determine maliciousness. If the unique MD5 fingerprint of the process is found in the signature repository, is considered malicious and should be terminated. If the malicious process is locked by some other process/processes we terminate it/them which enables us to terminate the malicious process.\relax }}{47}{figure.caption.40}}
-\newlabel{fig:totalmalware}{{39}{47}{Whenever a new process starts, it is grabbed by the service to determine maliciousness. If the unique MD5 fingerprint of the process is found in the signature repository, is considered malicious and should be terminated. If the malicious process is locked by some other process/processes we terminate it/them which enables us to terminate the malicious process.\relax }{figure.caption.40}{}}
-\newlabel{fig:totalmalware@cref}{{[figure][39][]39}{47}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Platform and implementation language}{47}{subsection.6.3}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Experimental Results}{47}{section.7}}
-\@writefile{toc}{\contentsline {section}{\numberline {8}Discussion}{47}{section.8}}
-\@writefile{toc}{\contentsline {section}{\numberline {9}Future work}{47}{section.9}}
-\@writefile{toc}{\contentsline {section}{\numberline {10}Conclusion}{47}{section.10}}
-\@writefile{toc}{\contentsline {section}{\numberline {11}Appendix}{47}{section.11}}
-\newlabel{appendix}{{11}{48}{Appendix}{section.11}{}}
-\newlabel{appendix@cref}{{[section][11][]11}{48}}
-\@writefile{toc}{\contentsline {section}{\numberline {A}SAIS Algorithm run}{48}{appendix.A}}
-\newlabel{SAIS Algorithm run}{{A}{48}{SAIS Algorithm run}{appendix.A}{}}
-\newlabel{SAIS Algorithm run@cref}{{[appendix][1][2147483647]A}{48}}
-\@writefile{lof}{\contentsline {figure}{\numberline {40}{\ignorespaces $S$ is scanned from left to right, and indices for each LMS substring is appended to the end of its corresponding bucket in $SA$. The first LMS substring index is placed at the end of bucket for $i$, here at position 8 in $SA$ and forwards the bucket end one to the left, hence the bucket end for $i$ now rest at position 7 in $SA$. This process is repeated until all LMS substring indicies are placed in their buckets.\relax }}{48}{figure.caption.41}}
-\newlabel{fig:SAIS_LMS2}{{40}{48}{$S$ is scanned from left to right, and indices for each LMS substring is appended to the end of its corresponding bucket in $SA$. The first LMS substring index is placed at the end of bucket for $i$, here at position 8 in $SA$ and forwards the bucket end one to the left, hence the bucket end for $i$ now rest at position 7 in $SA$. This process is repeated until all LMS substring indicies are placed in their buckets.\relax }{figure.caption.41}{}}
-\newlabel{fig:SAIS_LMS2@cref}{{[figure][40][2147483647]40}{48}}
-\@writefile{lof}{\contentsline {figure}{\numberline {41}{\ignorespaces $S$ is scanned from left to right, and indices for each LMS substring is appended to the end of its corresponding bucket in $SA$. The first LMS substring index is placed at the end of bucket for $i$, here at position 8 in $SA$ and forwards the bucket end one to the left, hence the bucket end for $i$ now rest at position 7 in $SA$. This process is repeated until all LMS substring indicies are placed in their buckets.\relax }}{48}{figure.caption.42}}
-\newlabel{fig:SAIS_LMS3}{{41}{48}{$S$ is scanned from left to right, and indices for each LMS substring is appended to the end of its corresponding bucket in $SA$. The first LMS substring index is placed at the end of bucket for $i$, here at position 8 in $SA$ and forwards the bucket end one to the left, hence the bucket end for $i$ now rest at position 7 in $SA$. This process is repeated until all LMS substring indicies are placed in their buckets.\relax }{figure.caption.42}{}}
-\newlabel{fig:SAIS_LMS3@cref}{{[figure][41][2147483647]41}{48}}
-\@writefile{toc}{\contentsline {section}{\numberline {B}SAIS Recurssive step}{49}{appendix.B}}
-\newlabel{SAIS Algorithm run}{{B}{49}{SAIS Recurssive step}{appendix.B}{}}
-\newlabel{SAIS Algorithm run@cref}{{[appendix][2][2147483647]B}{49}}
-\@writefile{lof}{\contentsline {figure}{\numberline {42}{\ignorespaces Some description here\relax }}{49}{figure.caption.43}}
-\newlabel{fig:SAIS_RECURSIVEDESCRIPTION}{{42}{49}{Some description here\relax }{figure.caption.43}{}}
-\newlabel{fig:SAIS_RECURSIVEDESCRIPTION@cref}{{[figure][42][2147483647]42}{49}}
-\@writefile{toc}{\contentsline {section}{\numberline {C}Print of a startup scan}{50}{appendix.C}}
+\@writefile{lof}{\contentsline {figure}{\numberline {37}{\ignorespaces The database downloaded from VirusShare.com \cite  {virusshare} was transformed into to several .csv file. The .csv files was then transformed into 15 text files, where all MD5 values was bucket sorted depending of their first character value. Each MD5 value was concatenated with the sentinel \$, and each bucket's values was merged together to form a single continuous text file. Each of these 15 single text file of concatenated MD5 values was transformed into a suffix array data structure and saved to the hard disk and appended to a SQL database.\relax }}{45}{figure.caption.38}}
+\newlabel{fig:databasecreation}{{37}{45}{The database downloaded from VirusShare.com \cite {virusshare} was transformed into to several .csv file. The .csv files was then transformed into 15 text files, where all MD5 values was bucket sorted depending of their first character value. Each MD5 value was concatenated with the sentinel \$, and each bucket's values was merged together to form a single continuous text file. Each of these 15 single text file of concatenated MD5 values was transformed into a suffix array data structure and saved to the hard disk and appended to a SQL database.\relax }{figure.caption.38}{}}
+\newlabel{fig:databasecreation@cref}{{[figure][37][]37}{45}}
+\@writefile{lof}{\contentsline {figure}{\numberline {38}{\ignorespaces Searching for a pattern beginning with the character $b$ in text $S$ using a large suffix array and chunked suffix arrays.\relax }}{46}{figure.caption.39}}
+\newlabel{fig:chunks}{{38}{46}{Searching for a pattern beginning with the character $b$ in text $S$ using a large suffix array and chunked suffix arrays.\relax }{figure.caption.39}{}}
+\newlabel{fig:chunks@cref}{{[figure][38][]38}{46}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Anti-malware Service}{47}{subsection.6.1}}
+\citation{twoeffecient}
+\@writefile{lof}{\contentsline {figure}{\numberline {39}{\ignorespaces Whenever a new process starts, it is grabbed by the service to determine maliciousness. If the unique MD5 fingerprint of the process is found in the signature repository, is considered malicious and should be terminated. If the malicious process is locked by some other process/processes we terminate it/them which enables us to terminate the malicious process.\relax }}{48}{figure.caption.40}}
+\newlabel{fig:totalmalware}{{39}{48}{Whenever a new process starts, it is grabbed by the service to determine maliciousness. If the unique MD5 fingerprint of the process is found in the signature repository, is considered malicious and should be terminated. If the malicious process is locked by some other process/processes we terminate it/them which enables us to terminate the malicious process.\relax }{figure.caption.40}{}}
+\newlabel{fig:totalmalware@cref}{{[figure][39][]39}{48}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Experimental Results}{48}{section.7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {40}{\ignorespaces Table of space consumption in bytes for a suffix tree, SAIS based suffix array, SAIS-FLS based suffix array data structure and a SQL database server file (without backup files).\relax }}{48}{figure.caption.41}}
+\newlabel{fig:resultsuffixtree}{{40}{48}{Table of space consumption in bytes for a suffix tree, SAIS based suffix array, SAIS-FLS based suffix array data structure and a SQL database server file (without backup files).\relax }{figure.caption.41}{}}
+\newlabel{fig:resultsuffixtree@cref}{{[figure][40][]40}{48}}
+\@writefile{lof}{\contentsline {figure}{\numberline {41}{\ignorespaces Size matters\relax }}{49}{figure.caption.42}}
+\newlabel{fig:sizematters}{{41}{49}{Size matters\relax }{figure.caption.42}{}}
+\newlabel{fig:sizematters@cref}{{[figure][41][]41}{49}}
+\@writefile{lof}{\contentsline {figure}{\numberline {42}{\ignorespaces Live scanner removed an infected file\relax }}{49}{figure.caption.43}}
+\newlabel{fig:quarantine}{{42}{49}{Live scanner removed an infected file\relax }{figure.caption.43}{}}
+\newlabel{fig:quarantine@cref}{{[figure][42][]42}{49}}
+\@writefile{lof}{\contentsline {figure}{\numberline {43}{\ignorespaces install service\relax }}{50}{figure.caption.44}}
+\newlabel{fig:importantcommands}{{43}{50}{install service\relax }{figure.caption.44}{}}
+\newlabel{fig:importantcommands@cref}{{[figure][43][]43}{50}}
+\@writefile{lof}{\contentsline {figure}{\numberline {44}{\ignorespaces Size matters\relax }}{50}{figure.caption.45}}
+\newlabel{fig:sizematters}{{44}{50}{Size matters\relax }{figure.caption.45}{}}
+\newlabel{fig:sizematters@cref}{{[figure][44][]44}{50}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Future work}{50}{section.8}}
+\@writefile{toc}{\contentsline {section}{\numberline {9}Conclusion}{50}{section.9}}
+\@writefile{toc}{\contentsline {section}{\numberline {10}Appendix}{50}{section.10}}
+\newlabel{appendix}{{10}{51}{Appendix}{section.10}{}}
+\newlabel{appendix@cref}{{[section][10][]10}{51}}
+\@writefile{toc}{\contentsline {section}{\numberline {A}SAIS Algorithm run}{51}{appendix.A}}
+\newlabel{SAIS Algorithm run}{{A}{51}{SAIS Algorithm run}{appendix.A}{}}
+\newlabel{SAIS Algorithm run@cref}{{[appendix][1][2147483647]A}{51}}
+\@writefile{lof}{\contentsline {figure}{\numberline {45}{\ignorespaces $S$ is scanned from left to right, and indices for each LMS substring is appended to the end of its corresponding bucket in $SA$. The first LMS substring index is placed at the end of bucket for $i$, here at position 8 in $SA$ and forwards the bucket end one to the left, hence the bucket end for $i$ now rest at position 7 in $SA$. This process is repeated until all LMS substring indicies are placed in their buckets.\relax }}{51}{figure.caption.46}}
+\newlabel{fig:SAIS_LMS2}{{45}{51}{$S$ is scanned from left to right, and indices for each LMS substring is appended to the end of its corresponding bucket in $SA$. The first LMS substring index is placed at the end of bucket for $i$, here at position 8 in $SA$ and forwards the bucket end one to the left, hence the bucket end for $i$ now rest at position 7 in $SA$. This process is repeated until all LMS substring indicies are placed in their buckets.\relax }{figure.caption.46}{}}
+\newlabel{fig:SAIS_LMS2@cref}{{[figure][45][2147483647]45}{51}}
+\@writefile{lof}{\contentsline {figure}{\numberline {46}{\ignorespaces $S$ is scanned from left to right, and indices for each LMS substring is appended to the end of its corresponding bucket in $SA$. The first LMS substring index is placed at the end of bucket for $i$, here at position 8 in $SA$ and forwards the bucket end one to the left, hence the bucket end for $i$ now rest at position 7 in $SA$. This process is repeated until all LMS substring indicies are placed in their buckets.\relax }}{51}{figure.caption.47}}
+\newlabel{fig:SAIS_LMS3}{{46}{51}{$S$ is scanned from left to right, and indices for each LMS substring is appended to the end of its corresponding bucket in $SA$. The first LMS substring index is placed at the end of bucket for $i$, here at position 8 in $SA$ and forwards the bucket end one to the left, hence the bucket end for $i$ now rest at position 7 in $SA$. This process is repeated until all LMS substring indicies are placed in their buckets.\relax }{figure.caption.47}{}}
+\newlabel{fig:SAIS_LMS3@cref}{{[figure][46][2147483647]46}{51}}
+\@writefile{toc}{\contentsline {section}{\numberline {B}SAIS Recurssive step}{52}{appendix.B}}
+\newlabel{SAIS Algorithm run}{{B}{52}{SAIS Recurssive step}{appendix.B}{}}
+\newlabel{SAIS Algorithm run@cref}{{[appendix][2][2147483647]B}{52}}
+\@writefile{lof}{\contentsline {figure}{\numberline {47}{\ignorespaces Some description here\relax }}{52}{figure.caption.48}}
+\newlabel{fig:SAIS_RECURSIVEDESCRIPTION}{{47}{52}{Some description here\relax }{figure.caption.48}{}}
+\newlabel{fig:SAIS_RECURSIVEDESCRIPTION@cref}{{[figure][47][2147483647]47}{52}}
+\@writefile{toc}{\contentsline {section}{\numberline {C}Print of a startup scan}{53}{appendix.C}}
 \citation{*}
 \bibstyle{ieeetr}
 \bibstyle{unsrt}
@@ -537,6 +547,6 @@
 \bibcite{wang2005break}{{37}{}{{}}{{}}}
 \bibcite{thompson2005md5}{{38}{}{{}}{{}}}
 \providecommand\NAT@force@numbers{}\NAT@force@numbers
-\newlabel{LastPage}{{}{55}{}{page.55}{}}
-\xdef\lastpage@lastpage{55}
-\xdef\lastpage@lastpageHy{55}
+\newlabel{LastPage}{{}{58}{}{page.58}{}}
+\xdef\lastpage@lastpage{58}
+\xdef\lastpage@lastpageHy{58}

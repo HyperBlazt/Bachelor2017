@@ -20,14 +20,11 @@
 \contentsline {subsection}{\numberline {5.4}Anomaly-based detection}{39}{subsection.5.4}
 \contentsline {subsection}{\numberline {5.5}Signature-based detection}{41}{subsection.5.5}
 \contentsline {section}{\numberline {6}Implementation}{43}{section.6}
-\contentsline {subsection}{\numberline {6.1}Malware Intrusion Detecting System (MIDS)}{43}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Malware Intrusion Detecting System Service}{47}{subsection.6.2}
-\contentsline {subsection}{\numberline {6.3}Platform and implementation language}{47}{subsection.6.3}
-\contentsline {section}{\numberline {7}Experimental Results}{47}{section.7}
-\contentsline {section}{\numberline {8}Discussion}{47}{section.8}
-\contentsline {section}{\numberline {9}Future work}{47}{section.9}
-\contentsline {section}{\numberline {10}Conclusion}{47}{section.10}
-\contentsline {section}{\numberline {11}Appendix}{47}{section.11}
-\contentsline {section}{\numberline {A}SAIS Algorithm run}{48}{appendix.A}
-\contentsline {section}{\numberline {B}SAIS Recurssive step}{49}{appendix.B}
-\contentsline {section}{\numberline {C}Print of a startup scan}{50}{appendix.C}
+\contentsline {subsection}{\numberline {6.1}Anti-malware Service}{47}{subsection.6.1}
+\contentsline {section}{\numberline {7}Experimental Results}{48}{section.7}
+\contentsline {section}{\numberline {8}Future work}{50}{section.8}
+\contentsline {section}{\numberline {9}Conclusion}{50}{section.9}
+\contentsline {section}{\numberline {10}Appendix}{50}{section.10}
+\contentsline {section}{\numberline {A}SAIS Algorithm run}{51}{appendix.A}
+\contentsline {section}{\numberline {B}SAIS Recurssive step}{52}{appendix.B}
+\contentsline {section}{\numberline {C}Print of a startup scan}{53}{appendix.C}

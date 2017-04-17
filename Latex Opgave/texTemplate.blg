@@ -1,14 +1,10 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: texTemplate.aux
-White space in argument---line 449 of file texTemplate.aux
- : \citation{turner2011updated
- :                             }
-I'm skipping whatever remains of this command
-White space in argument---line 455 of file texTemplate.aux
+White space in argument---line 468 of file texTemplate.aux
  : \citation{avtestreport
  :                        }
 I'm skipping whatever remains of this command
 The style file: ieeetr.bst
-Illegal, another \bibstyle command---line 487 of file texTemplate.aux
+Illegal, another \bibstyle command---line 499 of file texTemplate.aux
  : \bibstyle
  :          {unsrt}
 I'm skipping whatever remains of this command
@@ -27,4 +23,4 @@ while executing---line 963 of file ieeetr.bst
 Warning--empty journal in kosmidis2017machine
 Warning--empty journal in nakamoto2008bitcoin
 Warning--empty journal in turner2011updated
-(There were 8 error messages)
+(There were 7 error messages)

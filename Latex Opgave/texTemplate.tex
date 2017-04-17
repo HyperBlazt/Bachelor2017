@@ -122,10 +122,10 @@ linjer \\
 \section{Introduction}
 
 In 1973, Peter Weiner presented a linear-time solution to the pattern matching problem, as long as the alphabet was f
-ixed. His structure, which he denoted \emph{bi-tree}, could identify any substring of a text, without specifying all of them \cite{apostolico201640}. His method processed the text from right to left,  such that the bi-tree would be updated to contain longer and longer suffixes. By doing so, he consequently defined the notation of textual inverted index, that would bring forth improvements, analyses, and new applications for more than 40 years after the introduction \cite{apostolico201640}. About three years later Ed McCreight presented a left to right algorithm, and change the data structure name to suffix tree. A name that has stuck ever since \cite{ apostolico201640}. In 2013, the Combinatorial Pattern Matching symposium marked the 40th anniversary of Weiner’s work, with a special session. This data structure and those that followed had a deep impact on string matching. Their range scope extends to music equipment, AI (artificial intelligence), plagiarism detectors, in the field of biology, to name a few \cite{detection, apostolico201640}. In biology, string matching algorithms significantly aid biologists in retrieving and comparing DNA strings, reconstructing DNA strings from overlapping string fragments and looking for new or presented patterns occurring in a DNA\cite{gusfield}. Text-editing applications also adopt string matching algorithms, whenever the application has to acquire an unambiguous event of a user-given pattern, such as a word in some document\cite{introduction, gusfield}. \\ \\
+ixed. His structure, which he denoted \emph{bi-tree}, could identify any substring of a text, without specifying all of them \cite{apostolico201640}. His method processed the text from right to left,  such that the bi-tree would be updated to contain longer and longer suffixes. By doing so, he consequently defined the notation of textual inverted index, that would bring forth improvements, analyses, and new applications for more than 40 years after the introduction \cite{apostolico201640}. About three years later Ed McCreight presented a left to right algorithm, and change the data structure name to suffix tree. A name that has stuck ever since \cite{ apostolico201640}. In 2013, the Combinatorial Pattern Matching symposium marked the 40th anniversary of Weiner’s work, with a special session. This data structure and those that followed had a deep impact on string matching. Their range scope extends to music equipment, AI (artificial intelligence), plagiarism detectors, in the field of biology, to name a few \cite{detection, apostolico201640}. In biology, string matching algorithms significantly aid biologists in retrieving and comparing DNA strings, reconstructing DNA strings from overlapping string fragments and looking for new or presented patterns occurring in a DNA\cite{gusfield}. Text-editing applications also adopt string matching algorithms, whenever the application has to acquire an unambiguous event of a user-given pattern, such as a word in some document\cite{introduction, gusfield}. 
 Suffix trees can be up to 20 times larger than the original source in terms of gigabytes for a genome, consequently being an irritant for applications, where suffix trees were desirable.  In 1990, Udi Manber and Eugene W. Meyers introduced the suffix array, which abolished the majority of the structure of the suffix tree, storing only the suffix indices of the string input in lexicographical order. A suffix array could be created by a preorder traversal of a suffix tree, and can thus be seen as sequences of leaves’ labels of the suffix tree \cite{ apostolico201640}. Although the suffix array could be seen as a dissimilar structure than the suffix tree, it was later shown, in 2001 by Turo Kasai et al. \cite{ apostolico201640}, that suffix arrays are space efficient and concise representation of suffix trees  \cite{ apostolico201640, gusfield}. In 2003 the first linear construction algorithm was presented for direct suffix array construction. In 2004 Mohamed Ibrahim Abouelhoda et al. \cite{enchancedsuffix} show that every algorithm which employs a suffix tree structure, can be systematically replaced with an equivalent algorithm based on a suffix array structure and some additional information \cite{enchancedsuffix}. Several fast suffix array construction algorithms trailed, thus the most notable were presented in 2009 by Nong et al. guaranteeing asymptotic linear time construction, almost optimal space requirement and is fast in practice \cite{newapproach, twoeffecient, apostolico201640}. Data compression and suffix trees are tightly interlocked and in 2000, Paolo Ferragina introduced the FM index $x$, which is a compressed suffix array based on the Burrows-Wheeler transform. This compressed data structure, which may be smaller than the original, supports searching without decompression \cite{apostolico201640}. Suffix arrays today are the most pervasive in software systems, of the suffix tree variants \cite{apostolico201640}.  \\ \\
 String matching can furthermore be found various software applications in the vein of virus scanners (anti-virus) or intrusion detection systems to secure data security over the internet. Commercial anti-malware systems exploit unique malware signatures to detect malicious software as part of their implementation \cite{kruegel2003using, detection}. One method of detecting malicious software on an already infected system is using a malware signature repository.  Malware signatures could, amongst others, consist of unique fixed length hashes of known malicious software. These unique malware fingerprints are then used to recognize malicious software that is infecting a system, hence the repository is searched to find a distinct match if any. This predicament is clearly an exact string matching problem which permits usage of a suffix tree or a suffix array data structure. 
-The purpose of this paper is to study pro and cons of using a suffix array as the main data structure for an implementation of an intrusion detection system, exploiting the signature-based technique. We first give an introduction to suffix trees and suffix arrays, before moving on to an extensive clarification of the linear time construction algorithm SAIS. We illustrate examples of applications using suffix trees which can systematically be replaced by suffix arrays and some extra information. We explain the Burrows-Wheeler transform which is used to create compressed suffix arrays. \\ \\
+The purpose of this paper is to study pro and cons of using a suffix array as the main data structure for an implementation of an intrusion detection system, exploiting the signature-based technique. We first give an introduction to suffix trees and suffix arrays, before moving on to an extensive clarification of the linear time construction algorithm SAIS. We illustrate examples of applications using suffix trees which can systematically be replaced by suffix arrays and some extra information. We explain the Burrows-Wheeler transform which is used to create compressed suffix arrays. \\
 We implement an intrusion detection system which is capable of determining maliciousness of a file on a Windows 10 operated system, using a repository consisting of over 27.000.000 malware MD5 hashes from \href {https://virusshare.com}{VirusShare} \cite{virusshare}. Using Autoruns for Windows, which contains comprehensive auto starting information of programs that are configured to run during system boot or login, the intrusion detection system is capable of automatically scanning all startup programs for maliciousness during system boot \cite{autoruns}. Furthermore,  we implement a live process scanner which runs in the background and scans all stating processes for maliciousness.  
 We compare construction time, applications and space requirements of suffix trees and suffix arrays. We introduce yet another space requirement reduction algorithm SAIS-FLS, for applications using exact string matching on a suffix array data structure, constructed from a concatenation of fixed length distinct strings. SAIS-FLS  is capable of reducing the number of suffix indices with a factor of the fixed string length. We will highlight advantages and disadvantages of the signature-based technique and compare it with its cousin, the anomaly-based techniques and give an elaboration to the term malware. 
 
@@ -820,7 +820,7 @@ The algorithm provided by Chang and Lawler \cite{enchancedsuffix} for computing 
     \label{fig:matchingtest}
 \end{figure}
 
-\subsection{SAIS-FLS - Space requirement reduction for fixed length strings}
+\subsection{SAIS-FLS - Space requirement reduction for fixed length strings} \label{SAIS-FLS}
 
 Suppose that string $S$ consists of fixed length strings concatenated together, where each string $S_0,S_1,...,S_{n-1}$ is terminated with the sentinel $\$$ such that $S=S_0\$S_1\$...S_{n-1}\$ $.
 \\ \\
@@ -1005,43 +1005,35 @@ An example of dynamic signature –based detection proposed by Ellis et al. \cit
 Last but not least, hybrid signature-based detection use both static and dynamic properties to determine maliciousness of a program \cite{idika2007survey}. Polymorph and self-encrypting viruses are designed to obscure themselves and thus prevaricate pattern patching techniques. A self-encrypting virus encrypts itself, consequently obscuring malicious patterns which would normally be detected by pattern matching detection techniques. Mori et al. \cite{idika2007survey} propose a method that decrypts a mobile polymorph and self-encrypting virus in an emulator and performs a static analysis of the system calls made by the virus payload \cite{idika2007survey}. Malicious behaviors are represented by state machines and detection policies are modeled by state machines, which is user-specified. A mobile application is considered malicious whenever a match occur. This technique effectively detected 600 virus/worm samples \cite{idika2007survey}.
 \section{Implementation}
 
-The initial step in the process of implementing our intrusion detection system was to conduct a requirement analysis, to establish key attributes and limitations to our malware intrusion detection system (MIDS). Given that most commercial antimalware systems exploit the signature-based techniques as part of their implementation \cite{kruegel2003using}, we adopt the same approach in the implementation of our MIDS. We primarily focus our attention on the static signature-based technique, hence a static data structure of unique malware signatures. First and foremost as it is easier to implement and configure \cite{kruegel2003using}.  
-We found inspiration from a commercial anti-malware program, namely Kaspersky Internet Security (version 16.0.1.445(g)). We limited our MIDS to handle internal threats, hence malicious software which already infects a system. 
-Primaries should give us the means to compare advantages and disadvantages of using a suffix array data structure. Our main goal with the primary attributes is to compare search times for suffix arrays loaded into memory (including the text) for binary search with and without LCP values and a data structure which was saved as a file, and loaded when needed. The first secondary property evaluates and examines the impact of constant scanning a system, whereas the latter examine the impact on system boot time. Our goal is to let the live scanner and automatic start-up scanner have as little impact on the system as possible. 
-According to a security report from 2015-2016 by AV-TEST, 85.39\% of all identified malware in 2015, was detected in Windows \textsuperscript{\textregistered} \cite{avtestreport}, of such we have chosen to implement our MIDS on Microsoft’s newest Windows\textsuperscript{\textregistered} operating system, hence Windows® 10. The programming language came naturally as we needed a language that supported Windows Service application, SQL database and a graphical user interface (GUI). Windows Service applications are executed as the normal lifecycle when Windows boots up and before any program in the startup item list executes, which is ideal for our solution. We decided to create our MIDS in C# using Windows forms and Windows service, using Microsoft Visual Studio 2015, as this platform supports all of our needs.
-
-\subsection{Malware Intrusion Detecting System (MIDS)}
-
-The initial step in the process of implementing our intrusion detection system was to conduct a requirement analysis, to establish key attributes and limitations to our malware intrusion detection system (MIDS). Given that most commercial antimalware systems exploit the signature-based techniques as part of their implementation \cite{kruegel2003using}, we adopt the same approach in the implementation of our MIDS. We primarily focus our attention on the static signature-based technique, hence a static data structure of unique malware signatures. First and foremost as it is easier to implement and configure \cite{kruegel2003using}. We limited our MIDS to handle internal threats, hence malicious software which already infects a system.\\ 
-According to a security report from 2015-2016 by AV-TEST, 85.39\% of all identified malware in 2015, was detected in Windows \textsuperscript{\textregistered} \cite{avtestreport}, of such we have chosen to implement our MIDS on Microsoft’s newest Windows\textsuperscript{\textregistered} operating system, hence Windows® 10. The programming language came naturally as we needed a language that supported Windows Service application, SQL database and a graphical user interface (GUI). Windows Service applications are executed as the normal lifecycle when Windows boots up and before any program in the startup item list executes, which is ideal for our solution. We decided to create our MIDS in C# using Windows forms and Windows service, using Microsoft Visual Studio 2015, as this platform supports all of our needs.
+The initial step in the process of implementing our intrusion detection system was to conduct a requirement analysis, to establish key attributes and limitations to our malware intrusion detection system (MIDS). Given that most commercial antimalware systems exploit the signature-based techniques as part of their implementation \cite{kruegel2003using}, we adopt the same approach in our MIDS implementation. We primarily focus our attention to the static signature-based technique, hence employing a static data structure of unique malware signatures.   First and foremost as it is easier to implement and configure \cite{kruegel2003using}. We limited our MIDS to handle internal threats, hence malicious software which already infects a system.\\ 
+According to a security report from 2015-2016 by AV-TEST, 85.39\% of all identified malware in 2015, was detected in Windows\textsuperscript{\textregistered} \cite{avtestreport}, of such we have chosen to implement our MIDS on Microsoft’s newest Windows\textsuperscript{\textregistered} operating system, Windows\textsuperscript{\textregistered} 10. The programming language came naturally as we needed a language that supported Windows Service application, SQL database and a graphical user interface (GUI). Windows Service applications are executed as the normal life-cycle when Windows boots up and before any program in the startup item list executes, which is ideal for our solution. We decided to create our MIDS in C\# using Windows forms and Windows service, using Microsoft Visual Studio 2015, as this platform supports all of our needs.
 The malware detection intrusion system consist of two part. First part is a passive user-driven tool to build varieties of data structures and to perform active scanning of files, folders and startup items, as we will denote Anti-malware Program. Second part is an automatic service that scan startup items at system boot and processes in the background with no user interaction,which we denote Anti-malware Service. As the Anti-Malware Program and the Anti-malware Service share core functionalities, we will explain the implementation ideas and strategies behind the Anti-malware Program, and point of similarities and dissimilarities in the section describing the Anti-malware Service implementation.\\ 
 The Anti-malware Program have two primary functions, building and maintaining the data structure and the core function of scanning files for maliciousness. From these primary functions, we defined six primary and two secondary properties for our Anti-malware program. 
 \\ \\
 \textbf{Primaries} 
 \begin{itemize}
-  \item Supports a suffix array data structure, SQL, and cache
+  \item Support for suffix array data structure, SQL, and caching.
   \item The scanner should be able to distinguish between malicious software \emph{malware} and non-malicious clean software \emph{cleanware}.
   \item Malicious signatures should be unique fingerprints for malicious software.
+  \item Support for direct suffix array and text retrieval from the hard disk for low RAM systems.
   \item Detect file maliciousness against our malware signature repository using three different methods:
   	\begin{itemize}
   	\item Direct search by means of database queries. The data structure is saved to hard disk as a database file (Microsoft SQL Server Database File) and loaded when needed.
-  	\item Binary search on a suffix array data structure. Suffix array (including the text) is loaded directly into the memory (RAM). 
-  	\item Binary search with LCP values on a suffix array data structure. Suffix array (including the text) is loaded directly into the memory (RAM). 
+  	\item Binary search on a suffix array data structure. Suffix array (including the text) is loaded directly into the memory (RAM) or fetched from the hard disk. 
+  	\item Binary search with LCP values on a suffix array data structure. Suffix array (including the text) is loaded directly into the memory (RAM) or fetched from the hard disk. 
 	\end{itemize} 
   \item Scan a folder for malicious files against our malware signature repository 
   \item Scan startup files for maliciousness against our malware signature repository
 \end{itemize}
 \textbf{Secondaries} 
 \begin{itemize}
-  \item Support for direct suffix array and text retrieval from the hard disk for low RAM systems.
   \item Support of a suffix tree data structure and searching
 \end{itemize}
-
-The core functions and properties are now defined and we attended to building and managing the Anti-malware Program's data structure. 
+The core functions and properties are now defined and we attend to building and managing the Anti-malware Program's data structure. 
 \\ \\
 \textbf{\emph{Data structure}} 
 \\ \\
-We were given access to VirusShare.com \cite{virusshare} which is a repository of malware samples. VirusShare.com contains live malware for security researchers, incident responders, and forensic analysts, but auxiliary interesting for us, VirusShare.com contains a database of over 27.000.000 MD5 hashes of feasible (not confirmed) malware. MD5 is a message digit algorithm, that takes an input and produce a “fingerprint” of that input \cite{turner2011updated}. MD5 hashes are weak in the sense of computer security, as it's not recommended for digital signatures \cite{turner2011updated} and are breakable  \cite{turner2011updated, wang2005break}. Nevertheless, we can undamaged use it as unique fingerprints of malicious software, given that the chance of randomly finding two different files that produce the same MD5 hash value should be infeasible \cite{thompson2005md5}. Equipped with this knowledge, we are safe to assume that we should be able to calculate the MD5 value for any file in a system,  and if the calculated MD5 hash value for the given file is represented in the signature repository, we can with (almost) certainty conclude it is malicious. Almost, given that we do not know how the malware was acquired, or by whom. A feasible solution to this ambiguity would be to authenticate every MD5 hash from our repository against a commercial repository, say Symantec. Nevertheless, we gave the accumulated repository from VirusShare.com  the benefit of the doubt and only checked a handful of random MD5 hashes against the Symantec repository at \href{https://www.symantec.com/security_response/glossary/define.jsp?letter=m&word=md5-hash}{https://www.symantec.com/security\_response/glossary}, which all checked out. Furthermore, the MIDS will be deployed on a testing environment, where it can do no harm.  \\
+We were given access to VirusShare.com \cite{virusshare} which is a repository of malware samples. VirusShare.com contains live malware for security researchers, incident responders, and forensic analysts, but auxiliary interesting for us, VirusShare.com contains a database of over 27.000.000 MD5 hashes of feasible (not confirmed) malware. MD5 is a message digit algorithm, that takes an input and produce a “fingerprint” of that input \cite{turner2011updated}. MD5 hashes are weak in the sense of computer security, as it's not recommended for digital signatures and are breakable  \cite{turner2011updated, wang2005break}. Nevertheless, we can undamaged use it as unique fingerprints of malicious software, given that the chance of randomly finding two different files that produce the same MD5 hash value should be infeasible \cite{thompson2005md5}. Equipped with this knowledge, we are safe to assume that we should be able to calculate the MD5 value for any file in a system,  and if the calculated MD5 hash value for the given file is represented in the signature repository, we can with (almost) certainty conclude it is malicious. Thought only with a almost certainty, given that we do not know how the malware was acquired, or by whom. A feasible solution to this ambiguity would be to authenticate every MD5 hash from our repository against a commercial repository, say Symantec. Nevertheless, we gave the accumulated repository from VirusShare.com  the benefit of the doubt and only checked a handful of random MD5 hashes against the Symantec repository at \href{https://www.symantec.com/security_response/glossary/define.jsp?letter=m&word=md5-hash}{https://www.symantec.com/security\_response/glossary}, which all checked out. Furthermore, the MIDS will be deployed on a testing environment, where it can do no harm. \\
 We decided to build three different data structures for our MIDS: a suffix tree, suffix array, and a SQL database structure. The main goal of this approach is to compare construction time, space requirement and maintainability. We choose not to write the suffix tree and suffix array implementation ourself but found these elsewhere. Although it an exciting task, the implementation itself is not the goal of the paper, but an overall understanding of the predicament of incorporating a suffix array data structure in a malware intrusion system. \\ \\
 \textbf{Source code for the suffix tree and the suffix array implementation} 
 \begin{itemize}
@@ -1054,57 +1046,52 @@ We decided to build three different data structures for our MIDS: a suffix tree,
 \href{https://github.com/JoshKeegan/SAIS-CSharp}{https://github.com/JoshKeegan/SAIS-CSharp}
 \end{sloppypar}
 \end{itemize}
-The suffix array is based on  Ge Nong et al \cite{twoeffecient} implementation of the SAIS algorithm. For our SQL database structure, we used Microsoft SQL Server Database File. \\
+The suffix array implementation is based on  Ge Nong et al \cite{twoeffecient} implementation of the SAIS algorithm.  Microsoft SQL Server Database File was utilized as our SQL database structure.\\
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{databasecreation}
     \captionsetup{width=0.8\textwidth}
-    \caption{The database downloaded from VirusShare.com \cite{virusshare} was transformed into to several .csv file. The .csv files was then transformed into 15 text files, where all MD5 values was bucket sorted depending of their first character value.}
+    \caption{The database downloaded from VirusShare.com \cite{virusshare} was transformed into to several .csv file. The .csv files was then transformed into 15 text files, where all MD5 values was bucket sorted depending of their first character value. Each MD5 value was concatenated with the sentinel \$, and each bucket's values was merged together to form a single continuous text file. Each of these 15 single text file of concatenated MD5 values was transformed into a suffix array data structure and saved to the hard disk and appended to a SQL database.}
     \label{fig:databasecreation}
 \end{figure}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+We decided to implement a split option for our data structure. This features makes it possible to split the malware data (the over 27.000.000 MD5 values) into smaller manageable chunks depending on a predefined  prefix length of the MD5 values, as exemplified in Fig \ref{fig:databasecreation}. In doing so, sparse RAM systems can load smaller chunks into memory, enabling our program to be used in a large variety of systems. Furthermore, as fetching a single large file from the hard disk to memory could be time consuming, splitting the data will eventually increase pattern search time, as smaller chunks are loaded into memory when needed, thus saving memory consumption. If we want to process a suffix array for some large text $T$ consisting of concatenated fixed length strings, we would need to load the entire array into memory. A large text, say 250 MB, will lead to a large suffix array with a size at least the size of the string itself and thus loading the large suffix array and the text into memory would be time consuming. Thought if we split the text into smaller chunks, say depending on the first character of the individual fixed length strings, we would potentially get smaller text samples and thus smaller suffix arrays. As illustrated in Figure \ref{fig:chunks}, we only load the suffix array and text chunks containing strings with a prefix beginning with $b$ into the memory for processing. As a result, we can load suffix arrays and texts  into memory on the go and discard them afterwards, freeing up memory. Though, suppose without loss of generality, that a redundant task of scanning for an identical pattern exists, such that a suffix array and text for some prefix $x$ is loaded into memory, processed and discarded.Then suppose that this exact pattern scanned with tight intervals, consequently the same text and suffix array for prefix $x$ of the pattern, are loaded and discarded continuously. To combat this redundant predicament, we implemented a cache feature. The cache keep a record of previously scanned \emph{cleanware}, thus removing the redundant task of loading and discarding suffix arrays and texts in to memory for patterns occurring at tight intervals. The cache is saved to hard disk when the Anti-malware program  is terminated and is loaded into memory when on execution and can be turned on and off. 
 \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{chunks}
+    \captionsetup{width=0.8\textwidth}
+    \caption{Searching for a pattern beginning with the character $b$ in text $S$ using a large suffix array and chunked suffix arrays.}
+    \label{fig:chunks}
+\end{figure}
+To insure as low space and memory consumption as possible, we removed unnecessary prefixes from the suffix array data structure using the SAIS-FLS algorithm described in section \ref{SAIS-FLS}. This is feasible because we exploit exact string matching on a set of concatenated fixed length strings. 
+\\ \\
+\textbf{\emph{Scanning technique and implementation methodology}}
+\\ \\
+Our Anti-malware Program scanner supports different search methods: Binary search with or without LCP values, SQL query, and a general \emph{String.Contains} method. The scanner can use the data structure in three different ways: Load chunks of data into memory and discard them when processed, load all data into memory or use a SQL database.
+\\ \\
+\emph{Load chunks of data into memory and discard the when processed}
+\\ \\
+Texts and suffix arrays can be loaded from the hard disk into the memory on the fly, where they can be searched using the binary search algorithm or the \emph{String.Contains} method. If cache option is enabled the search is conducted here initially. If contained within the cache the file is considered \emph{cleanware}. If not, the predefined search methodology commence, if the scanned file is assessed non-malicious (\emph{cleanware}), the computed MD5 hash of the clean file is stored within the cache. The suffix array and text loaded into memory, are discarded, if any, to free memory.
+\\ \\
+\emph{Load all data into memory}
+\\ \\
+There are initially two ways of solving this. First solution, which we did not implement, is to load chunks of data permanently into memory on the fly. The second solution, which we implemented, is to load all the data directly into memory during the initiation of the Anti-malware Program. In worst case, loading data permanently into memory on the fly, could inevitably load all data, thus not saving any memory and increasing search time for cases where data is not contained in memory and loaded from hard disk. Though, suppose the Anti-Malware only needed half of the data from the hard disk to conduct a feral search of files on a system. Then the memory consumption is reduced by half compared to loading the entire data into memory, with a small cost of loading data from the disk when data is not contained in the memory. The second solution ensure that all data is present in memory, increasing search time with the cost of greater memory consumption.
+\\ \\
+\emph{SQL database}
+\\ \\
+We added support for a SQL database, first and foremost to test our suffix array data structure against the SQL database. 
+\\ \\
+
+\begin{figure}[H
     \centering
     \includegraphics[width=0.7\textwidth]{malwaresscanner}
     \captionsetup{width=0.8\textwidth}
-    \caption{The scanner exploit different variety of scanning possibilities and data structures. The scanner supports SQL, a suffix array data structure, and an option to  load suffix array, lcp array and texts from the hard disk for low RAM systems. Cache store already scanned MD5 values \emph{cleanware}, which are assessed clean by the scanner. Suffix arrays can be used in corporation with LCP-values to speed up search. Furthermore, suffix arrays and lcp arrays (with texts) can be loaded directly into memory, to speed up searching for non-cached MD5 values.}
+    \caption{The scanner exploit different variety of scanning possibilities and data structures. The scanner supports SQL, a suffix array data structure, and an option to load suffix array, lcp array and texts from the hard disk for low RAM systems. Cache store already scanned MD5 values \emph{cleanware}, which are assessed clean by the scanner. Suffix arrays can be used in corporation with LCP-values to speed up search. Furthermore, suffix arrays and lcp arrays (with texts) can be loaded directly into memory, to speed up searching for non-cached MD5 values.}
     \label{fig:totalmalware}
 \end{figure}
+\subsection{Anti-malware Program}
+The Anti-malware Program builds and maintain the data structures 
 
-
-\subsection{Malware Intrusion Detecting System Service}
+\subsection{Anti-malware Service}
 Access to startup items when windows boots up - .exe is executed with the startup, and hnce it too late to detect malware
 \begin{itemize}
   \item Live background scanning of processes against our malware signature repository.
@@ -1120,12 +1107,57 @@ files that propagates, repl
     \label{fig:totalmalware}
 \end{figure}
 
-\subsection{Platform and implementation language}
-According to a security report from 2015-2016 by AV-TEST, 85.39\% of all identified malware in 2015, was detected in Windows\textsuperscript{\textregistered} \cite{avtestreport }, of such we have chosen to implement our MIDS on Microsoft’s newest Windows\textsuperscript{\textregistered} operating system, hence Windows \textsuperscript{\textregistered} 10.  
-
 \section{Experimental Results}
+We conducted four different experiments in order to determine pro and cons for utilizing different scanning methods, malware detection techniques, and choice of data structure. 
+\\ \\
+\emph{Data structure experiments and experimental results}
+\\ \\
+We setup to build a suffix tree, a suffix array (based on the Ge Nong \emph{et al.}\cite{twoeffecient} SA-IS algorithm) and a  SAIS-FLA array (eliminating unnecessary prefixes) data structure for our malware signature repository consisting of over 27.000.000 potential malware hashes. Then we build a SQL database 
 
-\section{Discussion}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{resultsuffixtree}
+    \captionsetup{width=0.8\textwidth}
+    \caption{Table of space consumption in bytes for a suffix tree, SAIS based suffix array, SAIS-FLS based suffix array data structure and a SQL database server file (without backup files).}
+    \label{fig:resultsuffixtree}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{sizematters}
+    \captionsetup{width=0.8\textwidth}
+    \caption{Size matters}
+    \label{fig:sizematters}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{quarantine}
+    \captionsetup{width=0.8\textwidth}
+    \caption{Live scanner removed an infected file}
+    \label{fig:quarantine}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{importantcommands}
+    \captionsetup{width=0.8\textwidth}
+    \caption{install service}
+    \label{fig:importantcommands}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{sizematters}
+    \captionsetup{width=0.8\textwidth}
+    \caption{Size matters}
+    \label{fig:sizematters}
+\end{figure}
+
+Scanning
+
 
 \section{Future work}
 
